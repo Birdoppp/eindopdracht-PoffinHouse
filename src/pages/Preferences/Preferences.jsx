@@ -3,7 +3,7 @@ export default function Preferences() {
 
     return(
         <>
-            <div> preferences </div>
+            <h1> Preferences </h1>
         </>
     )
 }

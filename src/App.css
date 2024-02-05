@@ -1,54 +1,49 @@
-* { box-sizing: border-box;
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-header {
+    section {
     display: flex;
     justify-content: center;
-    width: 100vw;
-    height: 40vh;
-
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: papayawhip;
 }
-/*#root {*/
-/*  max-width: 1280px;*/
-/*  margin: 0 auto;*/
-/*  padding: 2rem;*/
-/*  text-align: center;*/
+
+
+/*:root {*/
+
 /*}*/
 
-/*.logo {*/
-/*  height: 6em;*/
-/*  padding: 1.5em;*/
-/*  will-change: filter;*/
-/*  transition: filter 300ms;*/
-/*}*/
-/*.logo:hover {*/
-/*  filter: drop-shadow(0 0 2em #646cffaa);*/
-/*}*/
-/*.logo.react:hover {*/
-/*  filter: drop-shadow(0 0 2em #61dafbaa);*/
+/*.outer-container {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: center;*/
+/*    background-image: linear-gradient(gol, goldenrod);*/
+/*    width: 100%;*/
 /*}*/
 
-/*@keyframes logo-spin {*/
-/*  from {*/
-/*    transform: rotate(0deg);*/
-/*  }*/
-/*  to {*/
-/*    transform: rotate(360deg);*/
-/*  }*/
+/*.inner-container {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    flex-basis: 1200px;*/
+/*    flex-grow: 0;*/
+/*    flex-shrink: 1;*/
+/*    align-items: center;*/
+/*    margin: 10px;*/
+/*    width: 100%;*/
 /*}*/
 
-/*@media (prefers-reduced-motion: no-preference) {*/
-/*  a:nth-of-type(2) .logo {*/
-/*    animation: logo-spin infinite 20s linear;*/
-/*  }*/
-/*}*/
-
-/*.card {*/
-/*  padding: 2em;*/
-/*}*/
-
-/*.read-the-docs {*/
-/*  color: #888;*/
+/*.content-container {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    flex-wrap: wrap;*/
+/*    padding: 10px;*/
+/*    margin: 10px;*/
 /*}*/

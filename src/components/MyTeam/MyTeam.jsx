@@ -4,7 +4,7 @@ export default function MyTeam() {
 
     return (
         <>
-            <div>MyTeam</div>
+            <h1>MyTeam</h1>
         </>
 
     )
