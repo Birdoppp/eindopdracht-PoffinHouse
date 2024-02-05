@@ -15,9 +15,7 @@ function App() {
                <Header/>
            </header>
 
-            <aside>
-            </aside>
-
+            <body>
             <section>
              <Routes>
                  <Route index element={<Home/>}/>;
@@ -26,6 +24,7 @@ function App() {
 
              </Routes>
             </section>
+            </body>
 
             <footer>
             </footer>

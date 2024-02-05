@@ -4,27 +4,28 @@ import './Header.css'
 
 export default function Header() {
 const activeMenu = ({isActive}) => isActive === true ? "active-link" : "default-link"
+
     return(
         <>
-        <div> Header </div>
-
-        <ul>
+       <nav>
+           <ul>
             <li>
                 <NavLink to="/" className= {activeMenu}>
                     Home
                 </NavLink>
             </li>
             <li>
-                <NavLink to="/preferences" className={({isActive}) => isActive === true ? "active-link" : "default-link"}>
+                <NavLink to="/preferences" className={activeMenu}>
                     Preference
                 </NavLink>
             </li>
             <li>
-                <NavLink to="/my-team" className={({isActive}) => isActive === true ? "active-link" : "default-link"}>
+                <NavLink to="/my-team" className={activeMenu}>
                     MyTeam
                 </NavLink>
             </li>
         </ul>
+       </nav>
         </>
     )
 }
