@@ -27,6 +27,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 30px;
 }
 
 li {
@@ -44,7 +45,15 @@ li {
     display: flex;
     font-family: "Dubai Light", serif;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.5em;
+    color: orangered;
+}
+
+.Link{
+    display: flex;
+    font-family: "Dubai Light", serif;
+    font-weight: bold;
+    font-size: 1.5em;
     color: orangered;
 }
 

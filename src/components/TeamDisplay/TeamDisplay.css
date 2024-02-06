@@ -1,7 +1,9 @@
-h1 {
+.Link {
     display: flex;
     font-family: "Dubai Light", serif;
     font-weight: bold;
-    font-size: inherit;
+    font-size: 2em;
     color: orangered;
+
 }
+

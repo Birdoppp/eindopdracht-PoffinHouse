@@ -6,11 +6,16 @@ import Home from "./pages/Home/Home.jsx";
 import Preferences from "./pages/Preferences/Preferences.jsx";
 import MyTeam from "./components/MyTeam/MyTeam.jsx";
 import Login from "./pages/Login/Login.jsx";
+import {BerryBar} from "./components/BerryBar/BerryBar.jsx";
+import BerryToggle from "./components/BerryToggle/BerryToggle.jsx";
+import {useState} from "react";
+import EditTeam from "./pages/EditTeam/EditTeam.jsx";
 
 
 function App() {
-    // const [isOpen, toggleIsOpen] = useState(true)
-    // const handleClickIsOpen = () => toggleIsOpen(prev=>!prev)
+
+    const [isOpen, toggleIsOpen] = useState(true)
+    const handleClickIsOpen = () => toggleIsOpen(prev=>!prev)
 
     return (
         <>
@@ -25,16 +30,19 @@ function App() {
             {/*    <Container/>*/}
             {/*</aside>*/}
 
+            <section className="page-wrapper">
+                <BerryBar isOpen={isOpen}/>
+                <BerryToggle handleClick={handleClickIsOpen} isOpen={isOpen}/>
 
             <section>
              <Routes>
                  <Route index element={<Home/>}/>;
                  <Route path="/preferences" element={<Preferences/>}/>;
-                 <Route path="/my-team" element={<MyTeam/>}/>;
+                 <Route path="/edit-team" element={<EditTeam/>}/>;
                  <Route path="/login" element={<Login/>}/>;
              </Routes>
             </section>
-
+        </section>
             <footer>
             </footer>
         </>

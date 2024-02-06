@@ -1,5 +1,6 @@
 import {NavLink} from "react-router-dom";
 import './Header.css'
+import MyTeam from "../MyTeam/MyTeam.jsx";
 
 
 export default function Header() {
@@ -22,10 +23,13 @@ const activeMenu = ({isActive}) => isActive === true ? "active-link" : "default-
                     Preference
                 </NavLink>
             </li>
+                 <li>
+                     <MyTeam/>
+                 </li>
             <li>
-                <NavLink to="/my-team" className="NavLink">
-                    MyTeam
-                </NavLink>
+                {/*<NavLink to="/my-team" className="NavLink">*/}
+                {/*    MyTeam*/}
+                {/*</NavLink>*/}
             </li>
                <li>
                    <NavLink to="/login" className="NavLink">

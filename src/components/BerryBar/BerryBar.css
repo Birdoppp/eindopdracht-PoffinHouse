@@ -1,0 +1,7 @@
+.aside--isOpen {
+    color: deeppink;
+}
+
+.aside--isClosed {
+    display: none;
+}
