@@ -1,3 +1,4 @@
+/*deze h1 is nu de enige en moet in de app.jsx styling*/
 h1 {
     display: flex;
     font-family: "Dubai Light", serif;
@@ -5,11 +6,26 @@ h1 {
     font-size: inherit;
     color: orangered;
 }
+.my-team-button {
+    font-family: inherit;
+    font-size:1.5rem;
+    font-weight: bolder;
 
-.Link {
-    display: flex;
-    font-family: "Dubai Light", serif;
-    font-weight: bold;
-    font-size: 1.5em;
-    color: darkred;
+    border: cornsilk solid 2px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: cornsilk;
+    width: 6em;
+
+    max-height: 10em;
+
+
+
 }
+/*.Link {*/
+/*    display: flex;*/
+/*    font-family: "Dubai Light", serif;*/
+/*    font-weight: bold;*/
+/*    font-size: 1.5rem;*/
+/*    color: darkred;*/
+/*}*/

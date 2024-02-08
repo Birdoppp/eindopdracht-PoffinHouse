@@ -1,52 +1,54 @@
-import {NavLink} from "react-router-dom";
+import {NavLink, Link} from "react-router-dom";
 import './Header.css'
 import MyTeam from "../MyTeam/MyTeam.jsx";
-
+// import "berry-header" from '../';
+import berries from './../../assets/assorted-collection/header-berries.png'
+import logo from './../../assets/assorted-collection/peacha-basket.png'
+import berry from './../../assets/dex-berry-pics/1.png'
 
 export default function Header() {
-const activeMenu = ({isActive}) => isActive === true ? "active-link" : "default-link"
+    const activePage = ({isActive}) => isActive === true ? "active-link" : "default-link"
 
-    return(
+    return (
         <>
-       <nav>
-           <ul>
+            <nav>
                 {/*<div className="inner-container">*/}
-            <li>
-                <NavLink to="/" className="NavLink">
-                    Home
-                </NavLink>
-            </li>
+                <Link to="/" className={activePage}>
+                    <img src={berry} className='image-logo' alt='peacha'/>
+                </Link>
+
                 {/*</div>*/}
-            <li>
-                <img src={}/>
-            </li>
-             <div className="inner-container2">
-             <li>
-                 <NavLink to="/" className="NavLink">
-                     Home
-                 </NavLink>
-             </li>
-            <li>
-                <NavLink to="/preferences" className="NavLink">
-                    Preference
-                </NavLink>
-            </li>
-             <li>
-                 <MyTeam classname="my-team-button"/>
-             </li>
-            {/*<li>*/}
-            {/*    <NavLink to="/my-team" className="NavLink">*/}
-            {/*        MyTeam*/}
-            {/*    </NavLink>*/}
-            {/*</li>*/}
-               <li>
-                   <NavLink to="/login" className="NavLink">
-                       Login
-                   </NavLink>
-               </li>
-             </div>
-        </ul>
-       </nav>
+                {/*<li className="berrie">*/}
+                {/*    <img className="header-berries" src={berries}/>*/}
+                {/*</li>*/}
+
+                <ul className="links-container">
+                    <div className="inner-container2">
+                        {/*<li>*/}
+                        {/*    <img className="header-berries" src={berries}/>*/}
+                        {/*</li>*/}
+                        <li>
+                            <NavLink to="/" className={activePage}>
+                                Home
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/preferences" className={activePage}>
+                                Preference
+                            </NavLink>
+                        </li>
+                        <li>
+                            <MyTeam classname="my-team-button"/>
+                        </li>
+                        <li>
+                            <NavLink to="/login" className={activePage}>
+                                Login
+                            </NavLink>
+                        </li>
+                    </div>
+                </ul>
+
+            </nav>
         </>
     )
 }

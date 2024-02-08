@@ -1,4 +1,5 @@
 import React from 'react';
+import './BerryToggle.css'
 import {ChevronLeftIcon, ChevronRightIcon} from "@radix-ui/react-icons";
 
 // eslint-disable-next-line react-refresh/only-export-components,react/prop-types,react/display-name
@@ -8,9 +9,14 @@ let berrybutton = ({handleClick, isOpen}) => {
     // const handleClickIsOpen = () => toggleIsOpen(prev=>!prev)
 
     return (
-        <button onClick={handleClick} className="button">
-            { isOpen ? <ChevronLeftIcon/> : <ChevronRightIcon/> }
-        </button>
+        <>
+            <div>
+
+                <button onClick={handleClick} className="toggle-berry">
+                    {isOpen ? <ChevronLeftIcon/> : <ChevronRightIcon/>}
+                </button>
+            </div>
+        </>
     );
 };
 export default berrybutton;

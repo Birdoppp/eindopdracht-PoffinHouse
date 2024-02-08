@@ -14,7 +14,7 @@ import EditTeam from "./pages/EditTeam/EditTeam.jsx";
 
 function App() {
 
-    const [isOpen, toggleIsOpen] = useState(true)
+    const [isOpen, toggleIsOpen] = useState(false)
     const handleClickIsOpen = () => toggleIsOpen(prev=>!prev)
 
     return (
@@ -36,7 +36,7 @@ function App() {
                  </section>
             </section>
             <footer>
-                
+
             </footer>
         </>
     )

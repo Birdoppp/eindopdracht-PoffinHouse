@@ -1,0 +1,20 @@
+.berrybar {position: absolute;
+    background-color: orchid;
+}
+
+
+.toggle-berry {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*border: #646cff solid 1px;*/
+    border: palevioletred solid ;
+    border-width: 2px 2px 2px 0;
+
+    border-radius:0 100px 100px 0;
+    background-color: lightpink;
+    width: 5em;
+    height: 6em;
+}

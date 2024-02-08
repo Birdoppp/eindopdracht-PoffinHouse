@@ -1,0 +1,7 @@
+.individualPokemon {
+    display: flex;
+    width: 100%;
+}
+.pixelball{
+    display: inline;
+}
