@@ -1,9 +1,7 @@
-.Link {
+.Link{
     display: flex;
     font-family: "Dubai Light", serif;
     font-weight: bold;
-    font-size: 2em;
-    color: orangered;
-
+    font-size: 1.5em;
+    color: red;
 }
-

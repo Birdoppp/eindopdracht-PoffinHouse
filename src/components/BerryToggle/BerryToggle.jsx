@@ -1,7 +1,8 @@
 import React from 'react';
 import {ChevronLeftIcon, ChevronRightIcon} from "@radix-ui/react-icons";
 
-export default function BerryToggle({handleClick, isOpen}) {
+// eslint-disable-next-line react-refresh/only-export-components,react/prop-types,react/display-name
+let berrybutton = ({handleClick, isOpen}) => {
 
     // const [isOpen, toggleIsOpen] = useState(true)
     // const handleClickIsOpen = () => toggleIsOpen(prev=>!prev)
@@ -11,5 +12,6 @@ export default function BerryToggle({handleClick, isOpen}) {
             { isOpen ? <ChevronLeftIcon/> : <ChevronRightIcon/> }
         </button>
     );
-}
+};
+export default berrybutton;
 

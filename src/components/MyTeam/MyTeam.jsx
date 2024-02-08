@@ -4,12 +4,20 @@ import TeamDisplay from "../TeamDisplay/TeamDisplay.jsx";
 import './MyTeam.css'
 export default function MyTeam() {
 
+    function showDisplay (Clicked) {
+    return <TeamDisplay/>
+    }
         return (
             <>
-
-                <NavLink to="/edit-team" className="my-team-link">
+                <button onClick="showDisplay()">
                     MyTeam
-                </NavLink>
+                </button>
+
+                {/*<li><NavLink to="/edit-team" className="my-team-link">*/}
+                {/*    MyTeam*/}
+                {/*    </NavLink>*/}
+                {/*</li>*/}
+
 
                 {/*button to team display*/}
             </>

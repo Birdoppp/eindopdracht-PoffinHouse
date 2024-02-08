@@ -23,27 +23,20 @@ function App() {
                <Header/>
            </header>
 
-            {/*<aside*/}
-            {/*    className="berry-bar">*/}
-            {/*    <Aside isOpen={isOpen}/>*/}
-            {/*    <Button handleClick={handleClickIsOpen} isOpen={isOpen}/>*/}
-            {/*    <Container/>*/}
-            {/*</aside>*/}
-
             <section className="page-wrapper">
                 <BerryBar isOpen={isOpen}/>
                 <BerryToggle handleClick={handleClickIsOpen} isOpen={isOpen}/>
-
-            <section>
-             <Routes>
-                 <Route index element={<Home/>}/>;
-                 <Route path="/preferences" element={<Preferences/>}/>;
-                 <Route path="/edit-team" element={<EditTeam/>}/>;
-                 <Route path="/login" element={<Login/>}/>;
-             </Routes>
+                <section>
+                 <Routes>
+                    <Route index element={<Home/>}/>;
+                     <Route path="/preferences" element={<Preferences/>}/>;
+                    <Route path="/edit-team" element={<EditTeam/>}/>;
+                     <Route path="/login" element={<Login/>}/>;
+                </Routes>
+                 </section>
             </section>
-        </section>
             <footer>
+                
             </footer>
         </>
     )
