@@ -117,8 +117,8 @@ li {
     font-family: "Dubai Light", serif;
     font-weight: bold;
     font-size: 1.5em;
-    color: hotpink;
-
+    /*color: #eb2a89;*/
+    color: #ff2e95;
 }
 
 .image-logo{

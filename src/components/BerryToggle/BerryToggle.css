@@ -1,10 +1,17 @@
-.berrybar {position: absolute;
-    background-color: orchid;
+.berryextention {
+    display: flex;
+    flex-direction: column;
+    width: 6em;
+    height: 100%;
+    /*position: absolute;*/
+    background-color: pink;
+    border: palevioletred solid 2px;
+    border-width: 0 2px 2px 0;
 }
 
 
 .toggle-berry {
-    position: relative;
+    /*position: relative;*/
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -4,7 +4,9 @@ export function BerryBar({isOpen}) {
 
     return (
         <div className={`aside ${ isOpen ? "aside--isOpen" : "aside--isClosed"}` }>
-            BerryBar
+            <aside className="berrylist">
+
+            </aside>
         </div>
     );
 }

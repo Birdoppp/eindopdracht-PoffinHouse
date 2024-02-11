@@ -3,6 +3,7 @@ import {InputField} from "../InputField/InputField.jsx";
 import {natures} from "../../constants/constants.jsx";
 import {Dropdown} from "./../Dropdown/Dropdown.jsx";
 import pixelball from './../../assets/assorted-collection/poke-ball-pixel-nbg.png'
+import "./TeamForm.css"
 
 export function TeamForm() {
 
@@ -14,9 +15,9 @@ export function TeamForm() {
             <img className="pixelball" src={pixelball} alt="Pokeball"/>
 
             <InputField
-                name="firstPokemon" type="text"/>
+                name="first Pokemon" type="text"/>
             <Dropdown
-                name="firstNature"
+                name="first Nature"
                 optionsArray={natures}
             />
             </div>
@@ -25,9 +26,9 @@ export function TeamForm() {
                 <img className="pixelball" src={pixelball} alt="Pokeball"/>
 
                 <InputField
-                    name="secondPokemon" type="text"/>
+                    name="second Pokemon" type="text"/>
                 <Dropdown
-                    name="secondNature"
+                    name="second Nature"
                     optionsArray={natures}
                 />
             </div>
@@ -75,13 +76,6 @@ export function TeamForm() {
                     optionsArray={natures}
                 />
             </div>
-
-            <InputField
-                name="secondPokemon" type="text"/>
-            <Dropdown
-            name="secondNature"
-            optionsArray={natures}
-        />
         </>
     );
 }

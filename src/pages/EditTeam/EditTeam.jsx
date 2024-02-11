@@ -15,9 +15,9 @@ export default function EditTeam() {
                     Enter your Pokémon Name and Nature
                 </h1>
 
-                <TeamForm/>
+                <TeamForm type="onsubmit"/>
 
-                {/*    form*/}
+                <button className="send-team"> Ready!</button>
             </div>
         </>
     )

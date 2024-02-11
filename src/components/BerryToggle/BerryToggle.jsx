@@ -10,12 +10,12 @@ let berrybutton = ({handleClick, isOpen}) => {
 
     return (
         <>
-            <div>
+            <div className="berryextention">
+            </div>
 
                 <button onClick={handleClick} className="toggle-berry">
                     {isOpen ? <ChevronLeftIcon/> : <ChevronRightIcon/>}
                 </button>
-            </div>
         </>
     );
 };

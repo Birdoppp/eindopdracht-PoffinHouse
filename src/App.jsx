@@ -23,10 +23,10 @@ function App() {
                <Header/>
            </header>
 
-            <section className="page-wrapper">
+            <div className="page-wrapper">
                 <BerryBar isOpen={isOpen}/>
                 <BerryToggle handleClick={handleClickIsOpen} isOpen={isOpen}/>
-                <section>
+                <section className="page">
                  <Routes>
                     <Route index element={<Home/>}/>;
                      <Route path="/preferences" element={<Preferences/>}/>;
@@ -34,7 +34,7 @@ function App() {
                      <Route path="/login" element={<Login/>}/>;
                 </Routes>
                  </section>
-            </section>
+            </div>
             <footer>
 
             </footer>
