@@ -10,6 +10,7 @@ import {BerryBar} from "./components/BerryBar/BerryBar.jsx";
 import BerryToggle from "./components/BerryToggle/BerryToggle.jsx";
 import {useState} from "react";
 import EditTeam from "./pages/EditTeam/EditTeam.jsx";
+import "./fonts/fonts.css"
 
 
 function App() {

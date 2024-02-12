@@ -2,8 +2,7 @@ import {NavLink, Link} from "react-router-dom";
 import './Header.css'
 import MyTeam from "../MyTeam/MyTeam.jsx";
 // import "berry-header" from '../';
-import berries from './../../assets/assorted-collection/header-berries.png'
-import logo from './../../assets/assorted-collection/peacha-basket.png'
+import logo from './../../assets/assorted-collection/PixelLogoText.png'
 import berry from './../../assets/dex-berry-pics/1.png'
 
 export default function Header() {
@@ -14,7 +13,10 @@ export default function Header() {
             <nav>
                 {/*<div className="inner-container">*/}
                 <Link to="/" className={activePage}>
-                    <img src={berry} className='image-logo' alt='peacha'/>
+                    <div className="logo">
+                    <img src={berry} className='image-logo' alt='cheri-berry'/>
+                    <img src={logo} className='text-logo' alt='Poffin House' />
+                    </div>
                 </Link>
 
                 {/*</div>*/}

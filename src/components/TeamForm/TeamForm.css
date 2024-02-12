@@ -1,13 +1,28 @@
+.edit-team-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50vh;
+
+}
 .individualPokemon {
     display: flex;
-    justify-content: space-evenly;
-    align-content: center;
-    width: 50vw;
-    max-height: 2em;
+    justify-content: space-between;
+    align-items: center;
+    width: 35vw;
+    max-height: 10em;
+    padding: 10px 0;
 }
 .pixelball{
     display: flex;
     align-content: center;
     height: 3em;
     width: 2.5em;
+}
+.team-submit-btn {
+
+    color: orchid;
+    display: flex;
+    justify-content: flex-end;
+
 }

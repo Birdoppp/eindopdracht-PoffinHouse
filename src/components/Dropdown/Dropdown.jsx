@@ -1,7 +1,7 @@
 import './Dropdown.css';
 import React, { useEffect, useState } from 'react';
 
-export function Dropdown({ name, value, optionsArray }) {
+export function Dropdown({ name, label, value, optionsArray }) {
     const [useOptions, setUseOptions] = useState([]);
 
     useEffect(() => {
@@ -12,7 +12,7 @@ export function Dropdown({ name, value, optionsArray }) {
 
     return (
         <>
-            <label htmlFor={name}>{name}</label>
+            <label htmlFor={name}>{label}</label>
             <select id={name} value={value}>
                 {useOptions.map((option, index) => (
                     <option key={index} value={option}>

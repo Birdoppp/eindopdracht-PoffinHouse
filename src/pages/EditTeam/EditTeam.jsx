@@ -7,7 +7,6 @@ export default function EditTeam() {
 
     return (
         <>
-            <div className="edit-page">
                 <img className="team-img" src={blue} alt="Team Blue"/>
 
 
@@ -15,9 +14,10 @@ export default function EditTeam() {
                     Enter your Pokémon Name and Nature
                 </h1>
 
-                <TeamForm type="onsubmit"/>
+            <div className="form-team">
+                <TeamForm/>
 
-                <button className="send-team"> Ready!</button>
+                {/*<button className="send-team"> Ready!</button>*/}
             </div>
         </>
     )

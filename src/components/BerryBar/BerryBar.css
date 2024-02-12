@@ -10,7 +10,7 @@
     justify-content: center;
 
     background-color: pink;
-    border: palevioletred solid 2px;
+    border: #ffafae solid 2px;
     border-width: 0 0 2px 0;
     min-width: 10px;
     /*position: relative;*/

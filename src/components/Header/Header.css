@@ -1,49 +1,55 @@
-/** { box-sizing: border-box;*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*}*/
-
-
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 15vh;
+    height: 14vh;
     background-color: peachpuff;
     /*position: sticky;*/
     /*top: 0;*/
-}
-
-img {
-    display: flex;
-    /*height:1%;*/
-    width: 20%;
-    opacity: 0.99
-
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     /*background-color: mintcream ;*/
     background-image: url(./../../assets/assorted-collection/header-berry.png);
     background-size: contain;
     background-repeat: repeat ;
+
     opacity: 0.8;
     width: 98.5%;
     height: 10vh;
 }
 
-ul {
+.logo {
+    display: flex;
+    flex-direction: column;
+    /*height:1%;*/
+    width: 20%;
+    opacity: 0.99;
+    padding: 10px;
+}
+.image-logo{
+    width: 4.5em;
+    height: 4em;
+    max-height: 100%;
+}
+.text-logo {
+    height: 1em;
+    width: 4.5em;
+}
+
+.links-container{
     /*border: yellow 2px solid;*/
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     /*align-items: center;*/
-    border-radius: 20px;
-    padding: 30px;
+
+    border-radius:20px;
     background-color: pink;
     background-size:contain;
 
@@ -62,16 +68,7 @@ li {
     display: flex;
     width: auto;
     /*background-color: indianred;*/
-    /*opacity: 1.0;*/
-    /*border: 4px hotpink solid;*/
 }
-
-
-/*.header-berries{*/
-/*    display: flex;*/
-/*    justify-content: flex-end;*/
-/*    width: 100px;*/
-/*}*/
 
 .navlink{
     display: flex;
@@ -80,26 +77,7 @@ li {
     font-size: 1.5em;
     color: orangered;
 
-    /*width: fit-content;*/
 }
-.modal{
-
-    display: flex;
-    font-family: "Dubai Light", serif;
-    font-weight: bold;
-    font-size: 1.5em;
-    color: darkred;
-}
-
-/*button{*/
-/*    display: flex;*/
-/*    font-family: "Dubai Light", serif;*/
-/*    font-weight: bold;*/
-/*    font-size: 1.5em;*/
-/*    color: red;*/
-/*    background: inherit;*/
-/*    border: none;*/
-/*}*/
 
 .active-link {
     border: 3px solid wheat;
@@ -117,20 +95,20 @@ li {
     font-family: "Dubai Light", serif;
     font-weight: bold;
     font-size: 1.5em;
-    /*color: #eb2a89;*/
-    color: #ff2e95;
+    color: #eb2a89;
+    /*color: #ff2e95;*/
+    /*color: #f98787;*/
+    /*color:#b15c54;*/
 }
 
-.image-logo{
-    width: 4.5em;
-    height: 4em;
-    max-height: 100%;
-}
+/*.modal{*/
 
-.header-berries{
-    width: 50px;
-    height: 50px;
-}
+/*    display: flex;*/
+/*    font-family: "Dubai Light", serif;*/
+/*    font-weight: bold;*/
+/*    font-size: 1.5em;*/
+/*    color: darkred;*/
+/*}*/
 
 
 .inner-container {
@@ -143,8 +121,6 @@ li {
     justify-content: flex-end;
     align-items: center;
     height: 100%;
-    /*width: 40%;*/
-    /*background-color: indianred;*/
 }
 
 a:visited{
