@@ -13,13 +13,14 @@ function AuthContextProvider( { children } ) {
     } );
     const navigate = useNavigate();
 
-    const[team, setTeam]= useState([
-        { name: '', nature: '' }, // Initial state for the first Pokémon
-        { name: '', nature: '' }, // Initial state for the second Pokémon
-        { name: '', nature: '' }, // Initial state for the third Pokémon
-        { name: '', nature: '' }, // Initial state for the fourth Pokémon
-        { name: '', nature: '' }, // Initial state for the fifth Pokémon
-        { name: '', nature: '' }])  // Initial state for the sixth Pokémon])
+    // const localTeam = JSON.parse(localStorage.getItem("team"))
+    // const[team, setTeam]= useState([
+    //     { name: '' || localTeam[0].name, nature: '' || localTeam[0].nature }, // Initial state for the first Pokémon
+    //     { name: '' || localTeam[1].name, nature: '' || localTeam[1].nature }, // Initial state for the second Pokémon
+    //     { name: '' || localTeam[2].name, nature: '' || localTeam[2].nature }, // Initial state for the third Pokémon
+    //     { name: '' || localTeam[3].name, nature: '' || localTeam[3].nature }, // Initial state for the fourth Pokémon
+    //     { name: '' || localTeam[4].name, nature: '' || localTeam[4].nature }, // Initial state for the fifth Pokémon
+    //     { name: '' || localTeam[5].name, nature: '' || localTeam[5].nature }])  // Initial state for the sixth Pokémon])
 
     // MOUNTING EFFECT
     useEffect( () => {
@@ -95,7 +96,6 @@ function AuthContextProvider( { children } ) {
 
         } catch ( e ) {
             console.error( e );
-            // ging er iets mis? Plaatsen we geen data in de state
             toggleIsAuth( {
                 isAuth: false,
                 user: null,
@@ -106,8 +106,8 @@ function AuthContextProvider( { children } ) {
 
     const contextData = {
         ...isAuth,
-        team,
-        setTeam,
+        // team,
+        // setTeam,
         login,
         logout
     };

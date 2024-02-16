@@ -4,7 +4,7 @@ import './TeamDisplay.css'
 import PokemonCard from "../PokemonCard/PokemonCard.jsx";
 import pokemonCards from './../../helpers/pokemonCards.jsx'
 import {useContext, useEffect, useState} from "react";
-import {AuthContext} from "../../context/AuthContext.jsx";
+
 
 export default function TeamDisplay({isOpen}) {
 
@@ -13,6 +13,7 @@ export default function TeamDisplay({isOpen}) {
     useEffect(() => {
         setTeam(JSON.parse(localStorage.getItem("team")));
     }, [JSON.parse(localStorage.getItem("team"))])
+
     return (
         <>
             <div className={`team ${isOpen ? "team--isOpen" : "team--isClosed"}`}>

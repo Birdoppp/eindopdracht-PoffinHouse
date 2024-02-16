@@ -6,10 +6,10 @@ import { natures } from "../../constants/constants.jsx";
 import { Dropdown } from "./../Dropdown/Dropdown.jsx";
 import pixelball from './../../assets/assorted-collection/poke-ball-pixel-nbg.png';
 import Button from "../Button/Button.jsx";
-import { AuthContext } from "../../context/AuthContext.jsx";
+import {LocalTeamContext} from "../../context/LocalTeamContext.jsx";
 
 export function TeamForm() {
-    const { team, setTeam } = useContext(AuthContext);
+    const { team, setTeam } = useContext(LocalTeamContext);
     const [formChanged, setFormChanged] = useState(false);
 
     const handleInputChange = (index, field, value) => {
