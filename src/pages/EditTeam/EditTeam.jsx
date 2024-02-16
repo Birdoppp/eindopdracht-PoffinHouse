@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import './EditTeam.css'
 import {TeamForm} from "../../components/TeamForm/TeamForm.jsx";
 import blue from './../../assets/pokemon-assets/blueteam.png'
 
-export default function EditTeam() {
 
+export default function EditTeam() {
+    // const [team, setTeam] = useState({})
     return (
         <>
                 <img className="team-img" src={blue} alt="Team Blue"/>

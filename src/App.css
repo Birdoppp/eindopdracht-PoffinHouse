@@ -1,4 +1,4 @@
-import './fonts/fonts.css'
+/*import './fonts/fonts.css'*/
 
 * {
     margin: 0;
@@ -10,9 +10,10 @@ import './fonts/fonts.css'
     display: flex;
     /*justify-content: center;*/
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     width: 100%;
-    position: relative;
+    /*position: relative;*/
     background-color: papayawhip;
     /*--border-color: #ffefd5*/
 
@@ -21,11 +22,15 @@ import './fonts/fonts.css'
 .page {
     display: flex;
     flex-direction:column;
-    justify-content: flex-start;
+    justify-items: flex-start;
     align-items: center;
+
     height: 100%;
     min-height: 100vh;
     width: 100%;
+    background-color: papayawhip;
+
+    padding: 30px 20px;
 }
 
 h1 {
@@ -66,8 +71,4 @@ h1 {
 .aside--isClosed {
     display: none;
     min-width: 10px;
-}
-
-.page-wrapper {
-    /*box-sizing: border-box;*/
 }

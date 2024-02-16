@@ -1,24 +1,27 @@
-
 import {Link, NavLink} from "react-router-dom";
-export default function TeamDisplay() {
+import {fakeTeam} from "../../constants/constants.jsx";
+import './TeamDisplay.css'
+import PokemonCard from "../PokemonCard/PokemonCard.jsx";
+import pokemonCards from './../../helpers/pokemonCards.jsx'
+import {useContext, useEffect, useState} from "react";
+import {AuthContext} from "../../context/AuthContext.jsx";
 
+export default function TeamDisplay({isOpen}) {
+
+    const [team, setTeam] = useState([])
+
+    useEffect(() => {
+        setTeam(JSON.parse(localStorage.getItem("team")));
+    }, [JSON.parse(localStorage.getItem("team"))])
     return (
         <>
-            {/*isOpen={modalOpen} onClose={closeModal*/}
-            <h1>
-            team display
-            </h1>
-            {/* team components*/}
-            {/*<ol>*/}
+            <div className={`team ${isOpen ? "team--isOpen" : "team--isClosed"}`}>
+                {pokemonCards(team)}
+                <Link to="/edit-team" className="my-team-link">
+                    Edit your Team
+                </Link>
+            </div>
 
-            {/*<li>*/}
-            {/*<NavLink to="/edit-team" className="my-team-link">*/}
-            {/*    MyTeam*/}
-            {/*</NavLink>*/}
-            {/*</li>*/}
-            {/*</ol>*/}
-        {/*    Edit team button . link naar Edit Team pagina*/}
-        {/*    context*/}
         </>
     );
 }

@@ -1,12 +1,20 @@
-import {NavLink, Link} from "react-router-dom";
+import {NavLink, Link, useNavigate} from "react-router-dom";
 import './Header.css'
 import MyTeam from "../MyTeam/MyTeam.jsx";
 // import "berry-header" from '../';
-import logo from './../../assets/assorted-collection/PixelLogoText.png'
+import logo from './../../assets/assorted-collection/PoffinHouse-mini-pixel.png'
 import berry from './../../assets/dex-berry-pics/1.png'
+import {useContext, useState} from "react";
+import {AuthContext} from "../../context/AuthContext.jsx";
+import TeamDisplay from "../TeamDisplay/TeamDisplay.jsx";
 
 export default function Header() {
     const activePage = ({isActive}) => isActive === true ? "active-link" : "default-link"
+    const { isAuth, logout } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const [isOpen, toggleIsOpen] = useState(false)
+    const handleClickIsOpen = () => toggleIsOpen(prev => !prev)
+
 
     return (
         <>
@@ -40,11 +48,12 @@ export default function Header() {
                             </NavLink>
                         </li>
                         <li>
-                            <MyTeam classname="my-team-button"/>
+                            <MyTeam classname="my-team-button" handleClick={handleClickIsOpen} isOpen={isOpen}/>
+                            <TeamDisplay isOpen={isOpen}/>
                         </li>
                         <li>
-                            <NavLink to="/login" className={activePage}>
-                                Login
+                            <NavLink to="/member" className={activePage}>
+                                Member
                             </NavLink>
                         </li>
                     </div>

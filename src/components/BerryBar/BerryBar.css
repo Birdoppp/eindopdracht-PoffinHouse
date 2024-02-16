@@ -1,4 +1,32 @@
+.berrytool-wrapper {
+    display: flex;
+    border: #646cff solid 2px;
+    height: fit-content;
+    width: fit-content;
+    min-height: 90vh;
+    min-width: 20vw;
 
+
+}
+
+.berrylist {
+    border: fuchsia solid 2px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: ghostwhite;
+}
+
+.berry-dex {
+    border:orange solid 2px;
+    background-color: #b15c54;
+    min-width: 20vw;
+}
+
+
+/*-----------------------------------------------------------------------*/
+/*For the whole pink Tool*/
 .aside {
     width: 100%;
     height: 100%;

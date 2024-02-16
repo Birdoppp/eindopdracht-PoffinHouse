@@ -2,21 +2,19 @@
 import {Link, NavLink} from "react-router-dom";
 import TeamDisplay from "../TeamDisplay/TeamDisplay.jsx";
 import './MyTeam.css'
-import {useState} from "react";
-export default function MyTeam() {
-    const [modalOpen, setModalOpen] = useState(false);
+import React, {useState} from "react";
+let teamButton = ({handleClick, isOpen}) => {
 
-    const openModal = () => setModalOpen(true);
-    const closeModal = () => setModalOpen(false);
+    // const [isOpen, toggleIsOpen] = useState(true)
+    // const handleClickIsOpen = () => toggleIsOpen(prev=>!prev)
 
-    return (   
+    return (
         <>
-            <button className="my-team-button" onClick={TeamDisplay}> My Team </button>
-            {/*<TeamDisplay isOpen={modalOpen} onClose={closeModal}>*/}
-            {/*    /!*<h2>Modal Content</h2>*!/*/}
-            {/*    /!*<p>This is the content of the modal.</p>*!/*/}
-            {/*</TeamDisplay>*/}
+            <button onClick={handleClick} className="toggle-team">
+                {isOpen ? "My Pokémon" : "My Team"}
+            </button>
         </>
     );
+};
+export default teamButton;
 
-}

@@ -1,5 +1,5 @@
 
-.my-team-button {
+.toggle-team {
     font-family: inherit;
     font-size: 1.5rem;
     font-weight: bolder;
@@ -10,7 +10,7 @@
     color: cornsilk;
     width: 6em;
 
-    max-height: 10em;
-
+    /*max-height: 10em;*/
+    position: relative;
 
 }

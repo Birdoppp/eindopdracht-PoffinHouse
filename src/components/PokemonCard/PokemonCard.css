@@ -1,0 +1,24 @@
+.text-wrapper {
+    /*border: green solid 2px;*/
+    display: flex;
+    justify-items: auto;
+    align-items: center;
+    padding: 0.25em;
+    /*align-content: center;*/
+}
+
+.text-wrapper p {
+    /*border: #646cff solid 2px;*/
+    display: flex;
+    justify-items: auto;
+    margin: 0.2em;
+    justify-content: center;
+
+
+}
+.small-pixelball {
+    /*border: #eb2a89 3px solid;*/
+    /*height: 9em;*/
+    width: 1.5em;
+    padding-right: 2px;
+}

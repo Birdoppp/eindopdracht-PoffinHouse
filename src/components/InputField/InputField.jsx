@@ -1,7 +1,12 @@
+// InputField.jsx
 import React from 'react';
-import './InputField.css'
+import './InputField.css';
 
-function InputField({ name, type, label, value, changeHandler}) {
+function InputField({ name, type, label, value, onChange }) {
+    const handleChange = (e) => {
+        onChange(e.target.value);
+    };
+
     return (
         <>
             <label htmlFor={`${name}-field`}>{label}</label>
@@ -10,19 +15,10 @@ function InputField({ name, type, label, value, changeHandler}) {
                 id={`${name}-field`}
                 type={type}
                 value={value}
-                onChange={(e) => changeHandler(e.target.value)}
+                onChange={handleChange}
             />
         </>
     );
 }
 
 export default InputField;
-
-// export function InputField({name, type}) {
-//     return (
-//         <>
-//             <label htmlFor={name}>{name}</label>
-//             <input type={type} name={name} id={name}></input>
-//         </>
-//     )
-// }

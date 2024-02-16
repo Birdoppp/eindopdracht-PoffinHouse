@@ -1,4 +1,5 @@
 export const natures = [
+    {"name": "" },
     {"name": "hardy", "url": "https://pokeapi.co/api/v2/nature/1/"},
     {"name": "bold", "url": "https://pokeapi.co/api/v2/nature/2/"},
     {"name": "modest", "url": "https://pokeapi.co/api/v2/nature/3/"},
@@ -20,3 +21,26 @@ export const natures = [
     {"name": "quirky", "url": "https://pokeapi.co/api/v2/nature/19/"},
     {"name": "naive", "url": "https://pokeapi.co/api/v2/nature/20/"}
 ];
+
+
+export const fakeTeam = [
+    {
+        name: "pikachu",
+        nature: "bold"
+    },{
+        name: "pikachu",
+        nature: "bold"
+    },{
+        name: "pikachu",
+        nature: "bold"},{
+        name: "pikachu",
+        nature: "bold"
+    },{
+        name: "pikachu",
+        nature: "bold"
+    },{
+        name: "pikachu",
+        nature: "bold"
+    }
+]
+

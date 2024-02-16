@@ -10,7 +10,7 @@ let berrybutton = ({handleClick, isOpen}) => {
 
     return (
         <>
-            <div className="berryextention">
+            <div className="berry-extention">
             </div>
 
                 <button onClick={handleClick} className="toggle-berry">
