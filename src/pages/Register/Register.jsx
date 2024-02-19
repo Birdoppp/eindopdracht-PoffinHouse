@@ -30,15 +30,20 @@ function Register() {
         toggleLoading(true);
 
         try {
-            await axios.post('http://localhost:5173/register', {
+        const response =   await axios.post('https://api.datavortex.nl/poffinhouse/users', {
                 email: data.email,
                 username: data.username,
                 password: data.password
             },{
-                cancelToken: source.token,
-            });
+                headers:{
+                'Content-Type':'application/json',
+                'X-Api-Key':'poffinhouse:Fe5GnFylcoSkSNVH3gKd'
+                }
+            }
+            )
+            console.log(response)
 
-            // als alles goed gegaan is, linken we door naar de login-pagina
+        // als alles goed gegaan is, linken we door naar de login-pagina
             navigate('/login');
         } catch(e) {
             console.error(e);

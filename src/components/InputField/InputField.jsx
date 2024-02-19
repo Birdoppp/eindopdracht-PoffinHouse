@@ -2,10 +2,10 @@
 import React from 'react';
 import './InputField.css';
 
-function InputField({ name, type, label, value, onChange }) {
-    const handleChange = (e) => {
-        onChange(e.target.value);
-    };
+function InputField({ name, type, label, value, handleChange }) {
+    // const handleChange = (e) => {
+    //     onChange(e.target.value);
+    // };
 
     return (
         <>

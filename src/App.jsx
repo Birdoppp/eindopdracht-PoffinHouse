@@ -1,10 +1,9 @@
 import './App.css'
 import "./fonts/fonts.css"
-import {useContext, useState} from "react";
+import React, {useContext, useState} from "react";
 import {Navigate, Route, Routes} from "react-router-dom";
 import Home from "./pages/Home/Home.jsx";
 import Preferences from "./pages/Preferences/Preferences.jsx";
-import MyTeam from "./components/MyTeam/MyTeam.jsx";
 import EditTeam from "./pages/EditTeam/EditTeam.jsx";
 import {AuthContext} from "./context/AuthContext.jsx";
 import Header from "./components/Header/Header.jsx";
@@ -16,6 +15,7 @@ import Member from "./pages/Member/Member.jsx";
 import TeamDisplay from "./components/TeamDisplay/TeamDisplay.jsx";
 
 
+
 function App() {
 
     const {isAuth} = useContext(AuthContext);
@@ -24,13 +24,16 @@ function App() {
 
     return (
         <>
-            <header>
+            <header className="nav-bar">
                 <Header/>
             </header>
 
-            <div className="page-wrapper">
+            <div className="content-wrapper">
+                <div className="berry-tool-wrapper">
                 <BerryBar isOpen={isOpen}/>
                 <BerryToggle handleClick={handleClickIsOpen} isOpen={isOpen}/>
+                </div>
+
                 <section className="page">
                     <Routes>
                         <Route index element={<Home/>}/>;
@@ -40,6 +43,7 @@ function App() {
                         <Route path="/register" element={<Register/>}/>;
                         <Route path="/member" element={isAuth ? <Member/> : <Navigate to="/login"/>}/>;
                         <Route path="/my-team" element={<TeamDisplay/>}/>;
+                        {/*<Route path="/berry/:berryId" element={<BerryDexCard/>} />*/}
                     </Routes>
                 </section>
             </div>

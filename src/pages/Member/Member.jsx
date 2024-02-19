@@ -39,22 +39,24 @@ function Member() {
 
     return (
         <>
-            <h1>Profielpagina</h1>
+            <h1>Hi {user.username}!</h1>
             <section>
-                <h2>Gegevens</h2>
-                <p><strong>Gebruikersnaam:</strong> {user.username}</p>
+                <h2>User data</h2>
+                <p><strong>Username:</strong> {user.username}</p>
                 <p><strong>Email:</strong> {user.email}</p>
             </section>
 
             {/*Als er keys in ons object zitten hebben we data, en dan renderen we de content*/}
             {Object.keys(profileData).length > 0 &&
                 <section>
-                    <h2>Strikt geheime profiel-content</h2>
+                    <h2>profile-content</h2>
                     <h3>{profileData.title}</h3>
                     <p>{profileData.content}</p>
                 </section>
             }
             <p>Terug naar de <Link to="/">Homepagina</Link></p>
+            <button>Logout</button>
+            {/*    button roept logout-funtie aan */}
         </>
     );
 }

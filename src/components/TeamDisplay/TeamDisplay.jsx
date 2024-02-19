@@ -1,23 +1,30 @@
 import {Link, NavLink} from "react-router-dom";
-import {fakeTeam} from "../../constants/constants.jsx";
 import './TeamDisplay.css'
 import PokemonCard from "../PokemonCard/PokemonCard.jsx";
-import pokemonCards from './../../helpers/pokemonCards.jsx'
+import fetchPokemon from '../../helpers/fetchPokemon.jsx'
 import {useContext, useEffect, useState} from "react";
+import {TeamContext} from "../../context/TeamContext.jsx";
 
 
 export default function TeamDisplay({isOpen}) {
 
-    const [team, setTeam] = useState([])
+    const { team, setTeam } = useContext(TeamContext);
 
     useEffect(() => {
         setTeam(JSON.parse(localStorage.getItem("team")));
-    }, [JSON.parse(localStorage.getItem("team"))])
+    }, [])
 
     return (
         <>
             <div className={`team ${isOpen ? "team--isOpen" : "team--isClosed"}`}>
-                {pokemonCards(team)}
+                {/* Filtering out empty names */}
+                {team.filter(pokemon => pokemon.name.trim() !== "").map((pokemon, index) => (
+                    <PokemonCard
+                        key={index}
+                        name={pokemon.name}
+                        nature={pokemon.nature}
+                    />
+                ))}
                 <Link to="/edit-team" className="my-team-link">
                     Edit your Team
                 </Link>

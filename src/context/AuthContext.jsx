@@ -106,8 +106,6 @@ function AuthContextProvider( { children } ) {
 
     const contextData = {
         ...isAuth,
-        // team,
-        // setTeam,
         login,
         logout
     };

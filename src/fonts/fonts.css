@@ -106,3 +106,23 @@
     font-style: normal;
 
 }
+/*---------------------------------------------------*/
+
+@font-face {
+    font-family: 'clover';
+    src: url('clover-webfont.woff2') format('woff2'),
+         url('clover-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*---------------------------------------------------*/
+
+@font-face {
+    font-family: 'bubbleboddy';
+    src: url('bubbleboddyneuetriallight-q5v1-webfont.woff2') format('woff2'),
+         url('bubbleboddyneuetriallight-q5v1-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

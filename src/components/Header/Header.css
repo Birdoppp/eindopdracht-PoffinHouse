@@ -5,7 +5,7 @@ header {
     width: 100%;
     height: 14vh;
     background-color: peachpuff;
-    /*position: sticky;*/
+    /*position: relative;*/
     /*top: 0;*/
 }
 
@@ -63,28 +63,28 @@ nav {
 
 li {
     list-style: none;
-    font-family: "Dubai Light", serif;
+    font-family: "pixelate", serif;
     margin: 0 10px;
     display: flex;
     width: auto;
     /*background-color: indianred;*/
 }
 
-.navlink{
-    display: flex;
-    font-family: "Dubai Light", serif;
-    font-weight: bold;
-    font-size: 1.5em;
-    color: orangered;
+/*.navlink{*/
+/*    display: flex;*/
+/*    font-family: "pixelate", serif;*/
+/*    font-weight: bold;*/
+/*    font-size: 1.4em;*/
+/*    color: orangered;*/
 
-}
+/*}*/
 
 .active-link {
     border: 3px solid wheat;
     background-color: peachpuff;
     border-radius: 25px;
     color: coral;
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: bolder;
     font-family: inherit;
 }
@@ -92,12 +92,12 @@ li {
 .default-link{
     border: 3px solid transparent;
     display: flex;
-    font-family: "Dubai Light", serif;
+    font-family: "pixelate", serif;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.4em;
     /*color: #eb2a89;*/
-    color: #ff2e95;
-    /*color: #f98787;*/
+    /*color: #ff2e95;*/
+    color: #f98787;
     /*color:#b15c54;*/
 }
 

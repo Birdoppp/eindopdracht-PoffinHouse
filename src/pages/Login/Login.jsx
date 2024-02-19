@@ -25,8 +25,8 @@ function Login() {
         toggleError(false);
 
         try {
-            const result = await axios.post('http://localhost:5173/login', {
-                email: data.email,
+            const result = await axios.post('https://api.datavortex.nl/poffinhouse/users/authenticate', {
+                username: data.username,
                 password: data.password
             },{
                 cancelToken: source.token,
@@ -35,7 +35,7 @@ function Login() {
             console.log(result.data);
 
             // geef de JWT token aan de login-functie van de context mee
-            login(result.data.accessToken);
+            login(result.data.jwt);
 
         } catch(e) {
             console.error(e);
@@ -50,12 +50,12 @@ function Login() {
             <h1>Login</h1>
 
             <form onSubmit={handleSubmit(onSubmit)}>
-                <label htmlFor="email-field">
-                    Emailadres:
+                <label htmlFor="username-field">
+                    Username:
                     <input
-                        type="email"
-                        id="email-field"
-                        {...register("email")}
+                        type="username"
+                        id="username-field"
+                        {...register("username")}
                     />
                 </label>
 
