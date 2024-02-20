@@ -20,7 +20,7 @@ export default function Header() {
         <>
             <nav>
                 {/*<div className="inner-container">*/}
-                <Link to="/" className={activePage}>
+                <Link to="/" className="activePage">
                     <div className="logo">
                     <img src={berry} className='image-logo' alt='cheri-berry'/>
                     <img src={logo} className='text-logo' alt='Poffin House' />

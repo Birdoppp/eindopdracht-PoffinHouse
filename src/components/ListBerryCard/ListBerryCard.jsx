@@ -1,28 +1,21 @@
 import './ListBerryCard.css'
-import React, {useEffect} from 'react';
-import {fetchBerryData} from "../../helpers/fetchBerryData.js";
-import Button from "../Button/Button.jsx";
+import React from "react";
 
-function ListBerryCard({name, url, berryId}) {
-    useEffect(() => {
-     void  fetchBerryData(
-       )
-    }, []);
+
+const ListBerryCard = ({ name, url, onSelect}) => {
+    // console.log(url)
+    // Function to handle button click and pass the berry name to the parent component
+    const handleClick = () => {
+        console.log(`${name} berry selected!`)
+        onSelect(name);
+    };
 
     return (
-        <>
-            <li>
-                    <Button className="single-berry">
-               {/*{berryId}*/}
-                        {name}
-                {/*  img component rename to berry name value only, src img map, met matching name, `${ berry-name }`.png */}
-                {/*<Link to={url}>*/}
-                {/*        {name}*/}
-                    </Button>
-                {/*</Link>*/}
-            </li>
-        </>
+        <li className="single-berry">
+            {/*img from items sprites*/}
+            <button className="single-berry" onClick={handleClick}>{name} berry</button>
+        </li>
     );
-}
+};
 
 export default ListBerryCard;

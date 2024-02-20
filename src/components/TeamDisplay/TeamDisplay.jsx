@@ -1,8 +1,7 @@
-import {Link, NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 import './TeamDisplay.css'
 import PokemonCard from "../PokemonCard/PokemonCard.jsx";
-import fetchPokemon from '../../helpers/fetchPokemon.jsx'
-import {useContext, useEffect, useState} from "react";
+import {useContext, useEffect} from "react";
 import {TeamContext} from "../../context/TeamContext.jsx";
 
 

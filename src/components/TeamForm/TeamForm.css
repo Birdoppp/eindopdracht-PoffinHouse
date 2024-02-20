@@ -5,13 +5,18 @@
     height: 50vh;
 
 }
+
 .individualPokemon {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 35vw;
     max-height: 10em;
-    padding: 10px 0;
+    padding: 0.5em 0;
+}
+
+.individualPokemon label{
+    padding: 10px ;
 }
 .pixelball{
     display: flex;

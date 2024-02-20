@@ -1,4 +1,3 @@
-// TeamForm.jsx
 import React, {useContext, useState} from 'react';
 import "./TeamForm.css";
 import InputField from "../InputField/InputField.jsx";
@@ -11,20 +10,8 @@ import {TeamContext} from "../../context/TeamContext.jsx";
 export function TeamForm() {
     const {team, setTeam} = useContext(TeamContext);
     const test = localStorage.getItem('team')
-    console.log(JSON.parse(test))
-    // Use state for each Pokémon's name and nature
-    // const [pokemonNames, setPokemonNames] = useState(JSON.parse(test) || Array(6).fill(""));
-    // const [pokemonNatures, setPokemonNatures] = useState(JSON.parse(test) || Array(6).fill(""));
 
     const [combined, setCombined] = useState(JSON.parse(test) || team);
-
-    // Handle form changes for Pokémon's name
-    // const handleNameChange = (index, name) => {
-    //     const newPokemonNames = [...pokemonNames];
-    //     console.log(index)
-    //     newPokemonNames[index] = name;
-    //     setPokemonNames(newPokemonNames);
-    // };
 
     const handleNameChange = (index, value) => {
         const updatedTeam = [...combined];
@@ -38,34 +25,6 @@ export function TeamForm() {
         setCombined(updatedTeam);
     };
 
-    // const handleChangeTest(e, index){
-    //     const inputName = e.target.name
-    //     const inputValue = e.target.value
-    //
-    //     setTeam({
-    //         ...team,
-    //         [inputName]: inputValue,
-    //     })
-    // }
-
-    // Handle form changes for Pokémon's nature
-    // const handleNatureChange = (index, nature) => {
-    //     const newPokemonNatures = [...pokemonNatures];
-    //     newPokemonNatures[index] = nature;
-    //     setPokemonNatures(newPokemonNatures);
-    // };
-
-    // useEffect(() => {
-    //     console.log(team)
-    //     // Update the team context with the new data whenever names or natures change
-    //     // console.log("pokemon names ", pokemonNames)
-    //     // console.log("pokemon nature", pokemonNatures)
-    //     const updatedTeam = team.map((name, index) => ({
-    //         name: name,
-    //         nature: team[index]
-    //     }));
-    //     setTeam(updatedTeam);
-    // }, []);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -81,7 +40,6 @@ export function TeamForm() {
         console.log("Form submitted:", updatedTeam);
     };
 
-    console.log(team)
     return (
         <>
             <form className="Edit-team-form" onSubmit={handleSubmit}>

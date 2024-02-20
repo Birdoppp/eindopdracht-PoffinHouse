@@ -1,8 +1,10 @@
 .single-berry{
     font-family: "bubbleboddy", sans-serif;
-    font-size: 1.5em;
-    color: black;
+    font-size: 1em;
+    color: darkred;
     text-decoration: none;
+    border: transparent 2px solid;
+    border-radius: 20px;
     /*font-weight: bold;*/
 
 }

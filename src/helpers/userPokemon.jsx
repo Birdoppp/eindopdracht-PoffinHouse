@@ -1,9 +1,8 @@
 import PokemonCard from "../components/PokemonCard/PokemonCard.jsx";
 
-export default function fetchPokemon(userTeam) {
+export default function userPokemon(userTeam) {
     // console.log(userTeam)
-    if (userTeam && userTeam.length > 0) {
-        // console.log("hoi")
+
         return (
             userTeam.map((pokemon, index) => (
                 <PokemonCard
@@ -14,4 +13,3 @@ export default function fetchPokemon(userTeam) {
             ))
         );
     }
-}

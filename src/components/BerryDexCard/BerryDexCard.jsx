@@ -1,26 +1,22 @@
 import './BerryDexCard.css'
-import { useParams } from 'react-router-dom';
-import {useEffect, useState} from "react";
-import {fetchBerryData} from "../../helpers/fetchBerryData.js";
+import React from "react";
+import BerryRadarChart from "./../BerryRadarChart/BerryRadarChart.jsx";
 
-
-function BerryDexCard() {
-    const { berryName } = useParams();
-    const [berryData, setBerryData] = useState(null);
-
-    // useEffect(() => {
-    //     fetchBerryData(berryName);
-    // }, []);
-
-    if (!berryData) {
-        return <div>Loading...</div>;
-    }
+function BerryDexCard({ selectedBerry }) {
+    // console.log(selectedBerry)
 
     return (
-        <div className="berry-dex">
-            <h2>{berryData.name}</h2>
-            <p>{berryData.description}</p>
-        </div>
-    )
+        <ul className="berry-dex-card">
+            <li>
+                {/* Img conditionally rendered based on selectedBerry */}
+            </li>
+            <li>
+                {/* Pass selectedBerry to BerryRadarChart */}
+                <BerryRadarChart selectedBerry={selectedBerry} />
+
+            </li>
+        </ul>
+    );
 }
-export default BerryDexCard
+
+export default BerryDexCard;
