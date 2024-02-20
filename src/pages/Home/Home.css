@@ -1,0 +1,15 @@
+/*@font-face {*/
+/*    font-family: "sf pixelate F";*/
+/*    src: local("sf pixelate F");*/
+    /*url('./../../assets/fonts/pixeloid-font/PixeloidMono-d94EV.ttf');*/
+
+/*}*/
+
+.welcome-img {
+    display:flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    /*align-items: flex-start;*/
+
+    width: 50%;
+}

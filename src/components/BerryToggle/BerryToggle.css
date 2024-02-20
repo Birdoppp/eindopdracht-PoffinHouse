@@ -1,0 +1,32 @@
+.berry-extention {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 5em;
+    height: 100%;
+    min-height: 100vh;
+
+    background-color: pink;
+    border: #ffafae solid 2px;
+    border-width: 0 2px 2px 0;
+}
+
+.toggle-berry {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*border: #646cff solid 1px;*/
+    border: #fd9f9f solid ;
+    border-width: 2px 2px 2px 0;
+
+    border-radius:0 100px 100px 0;
+    background-color: lightpink;
+    width: 5em;
+    height: 7em;
+}
+
+.pink-toggle{
+    display: flex;
+    align-items: center;
+
+}

@@ -1,0 +1,57 @@
+/*Needs to change the Ready-button*/
+.form-team button {
+    background: linear-gradient(to bottom right, #b15c54, #fd9f9f);
+    border: 0;
+    border-radius: 12px;
+    color: floralwhite;
+
+    display: inline-block;
+    font-family: "Segoe UI",sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.5;
+
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.form-team button:active{
+    background: linear-gradient(to bottom right, orangered, crimson);
+}
+
+
+.edit-page {
+    height: 100vh;
+    width: 100%;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.edit-title {
+    color: black;
+    font-family: "Dubai Light", serif;
+    font-weight: bold;
+    font-size: 2em;
+    padding: 10px 0;
+}
+
+.team-img {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-content: space-evenly;
+    /*border: orchid 2px solid;*/
+    width: 35em;
+    padding: 10px 0;
+}
+.form-team {
+    display: flex;
+    justify-content: flex-end;
+    min-height: fit-content;
+    background-color: papayawhip;
+}
