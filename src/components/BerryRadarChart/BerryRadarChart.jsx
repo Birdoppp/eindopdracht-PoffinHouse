@@ -24,6 +24,12 @@ function BerryRadarChart({selectedBerry}) {
         void fetchBerryFlavors();
     }, [selectedBerry]);
 
+    // Sets flavors to trigger empty radar chart
+    useEffect(() => {
+        setFlavors([0,0,0,0,0])
+    }, []);
+
+
     useEffect(() => {
         const createRadarChart = () => {
             if (chartInstance) {
@@ -32,23 +38,27 @@ function BerryRadarChart({selectedBerry}) {
             }
 
             const flavorsData = flavors.map((flavor) => flavor.potency);
+
+            console.log(selectedBerry.name + flavorsData)
             const ctx = document.getElementById(`${selectedBerry.name}-chart`);
             const newChartInstance = new Chart(ctx, {
                 type: "radar",
                 data: {
-                    labels: ["Sweet", "Bitter", "Dry", "Sour", "Spicy"],
+                    labels: ["Spicy", "Dry", "Sweet", "Bitter", "Sour"],
                     datasets: [
                         {
                             label: selectedBerry.name,
-                            data: flavorsData,
+                            data: flavorsData  ,
                             backgroundColor: "rgba(255, 99, 132, 0.2)",
                             borderColor: "rgba(255, 99, 132, 1)",
                             borderWidth: 2,
+                            style: "fill"
                         },
                     ],
                 },
                 options: {
                     scales: {
+
                         r: {
                             min: -10,
                             max: 40,
@@ -57,6 +67,18 @@ function BerryRadarChart({selectedBerry}) {
                             },
                         },
                     },
+                    // plugins: {
+                    //     tooltip: {
+                    //         backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                    //         titleColor: '#ffffff',
+                    //         bodyColor: '#ffffff',
+                    //         callbacks: {
+                    //             labelTextColor: function(context) {
+                    //                 return 'rgb(139, 0, 0)';
+                    //             }
+                    //         }
+                    //     }
+                    // }
                 },
             });
 
@@ -74,7 +96,7 @@ function BerryRadarChart({selectedBerry}) {
                 chartInstance.destroy();
             }
         };
-    }, [selectedBerry]);
+    }, [flavors]);
 
     return <canvas className="radar-chart" id={`${selectedBerry.name}-chart`}/>;
 }

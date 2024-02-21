@@ -3,7 +3,7 @@ import './Header.css'
 import MyTeam from "../MyTeam/MyTeam.jsx";
 // import "berry-header" from '../';
 import logo from './../../assets/assorted-collection/PoffinHouse-mini-pixel.png'
-import berry from './../../assets/dex-berry-pics/1.png'
+import berry from './../../assets/assorted-collection/1.png'
 import {useContext, useState} from "react";
 import {AuthContext} from "../../context/AuthContext.jsx";
 import TeamDisplay from "../TeamDisplay/TeamDisplay.jsx";

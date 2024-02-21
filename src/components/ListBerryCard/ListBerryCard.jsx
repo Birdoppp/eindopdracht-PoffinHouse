@@ -11,10 +11,16 @@ const ListBerryCard = ({ name, url, onSelect}) => {
     };
 
     return (
-        <li className="single-berry">
+        <ul className="single-berry">
+        <li className="list-berry-name">
             {/*img from items sprites*/}
-            <button className="single-berry" onClick={handleClick}>{name} berry</button>
+            <button className="list-berry-name-button" onClick={handleClick}>{name} berry</button>
         </li>
+
+            <li>
+                <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/${name}-berry.png`} alt="berrydex-img"/>
+            </li>
+        </ul>
     );
 };
 

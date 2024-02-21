@@ -6,7 +6,7 @@ import BerryDexCard from "../BerryDexCard/BerryDexCard.jsx";
 
 export function BerryBar({isOpen}) {
     const [berries, setBerries] = useState([]);
-    const [selectedBerry, setSelectedBerry] = useState({}); // State to hold the selected berry
+    const [selectedBerry, setSelectedBerry] = useState({name: ""}); // State to hold the selected berry
 
     useEffect(() => {
         async function fetchBerry() {
@@ -15,6 +15,8 @@ export function BerryBar({isOpen}) {
                     "https://pokeapi.co/api/v2/berry/?offset=0&limit=64"
                 );
                 setBerries(response.data.results);
+                // setSelectedBerry(response.data.results[0])
+                console.log(response.data.results)
             } catch (e) {
                 console.error(e);
             }

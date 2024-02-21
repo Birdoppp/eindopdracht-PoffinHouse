@@ -1,6 +1,15 @@
 .single-berry{
+    display: flex;
+    justify-content: revert;
+
+.list-berry-name{
+    display: flex;
+    justify-content: center;
+}
     font-family: "bubbleboddy", sans-serif;
     font-size: 1em;
+    /*background-color: #646cff;*/
+    width: 10em;
     color: darkred;
     text-decoration: none;
     border: transparent 2px solid;
