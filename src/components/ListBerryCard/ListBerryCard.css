@@ -1,17 +1,52 @@
-.single-berry{
+.single-berry-wrapper {
     display: flex;
-    justify-content: revert;
+}
 
-.list-berry-name{
+.single-berry {
     display: flex;
     justify-content: center;
+    flex-shrink: 0;
+    text-align: center;
+    width: 100%;
+    /*margin: 1px;*/
+    min-width: 15em;
+    line-height: 1em;
+    border: #ffafae dashed;
+    border-width: 1px 0;
 }
+
+.list-berry-id {
+    font-family: "Segoe UI", sans-serif;
+    font-weight: bold;
+    font-size: 0.7em;
+    color: #b15c54;
+
+    height: 100%;
+    width: 5px;
+    text-align: center;
+
+    padding-top: 0.5em;
+}
+
+.vertical-line {
+    height: 100%;
+    width: 2px;
+    background-color: pink;
+
+}
+
+.list-berry-name-button {
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: center;
+    align-items: center;
+    width: 7em;
+
     font-family: "bubbleboddy", sans-serif;
     font-size: 1em;
-    /*background-color: #646cff;*/
-    width: 10em;
     color: darkred;
     text-decoration: none;
+    background-color: transparent;
     border: transparent 2px solid;
     border-radius: 20px;
     /*font-weight: bold;*/

@@ -23,24 +23,69 @@ export const natures = [
 ];
 
 
-export const fakeTeam = [
-    {
-        name: "pikachu",
-        nature: "bold"
-    },{
-        name: "pikachu",
-        nature: "bold"
-    },{
-        name: "pikachu",
-        nature: "bold"},{
-        name: "pikachu",
-        nature: "bold"
-    },{
-        name: "pikachu",
-        nature: "bold"
-    },{
-        name: "pikachu",
-        nature: "bold"
-    }
-]
-
+export const berryID = [
+    { name: "cheri", id: 1 },
+    { name: "chesto", id: 2 },
+    { name: "pecha", id: 3 },
+    { name: "rawst", id: 4 },
+    { name: "aspear", id: 5 },
+    { name: "leppa", id: 6 },
+    { name: "oran", id: 7 },
+    { name: "persim", id: 8 },
+    { name: "lum", id: 9 },
+    { name: "sitrus", id: 10 },
+    { name: "figy", id: 11 },
+    { name: "wiki", id: 12 },
+    { name: "mago", id: 13 },
+    { name: "aguav", id: 14 },
+    { name: "iapapa", id: 15 },
+    { name: "razz", id: 16 },
+    { name: "bluk", id: 17 },
+    { name: "nanab", id: 18 },
+    { name: "wepear", id: 19 },
+    { name: "pinap", id: 20 },
+    { name: "pomeg", id: 21 },
+    { name: "kelpsy", id: 22 },
+    { name: "qualot", id: 23 },
+    { name: "hondew", id: 24 },
+    { name: "grepa", id: 25 },
+    { name: "tamato", id: 26 },
+    { name: "cornn", id: 27 },
+    { name: "magost", id: 28 },
+    { name: "rabuta", id: 29 },
+    { name: "nomel", id: 30 },
+    { name: "spelon", id: 31 },
+    { name: "pamtre", id: 32 },
+    { name: "watmel", id: 33 },
+    { name: "durin", id: 34 },
+    { name: "belue", id: 35 },
+    { name: "occa", id: 36 },
+    { name: "passho", id: 37 },
+    { name: "wacan", id: 38 },
+    { name: "rindo", id: 39 },
+    { name: "yache", id: 40 },
+    { name: "chople", id: 41 },
+    { name: "kebia", id: 42 },
+    { name: "shuca", id: 43 },
+    { name: "coba", id: 44 },
+    { name: "payapa", id: 45 },
+    { name: "tanga", id: 46 },
+    { name: "charti", id: 47 },
+    { name: "kasib", id: 48 },
+    { name: "haban", id: 49 },
+    { name: "colbur", id: 50 },
+    { name: "babiri", id: 51 },
+    { name: "chilan", id: 52 },
+    { name: "liechi", id: 53 },
+    { name: "ganlon", id: 54 },
+    { name: "salac", id: 55 },
+    { name: "petaya", id: 56 },
+    { name: "apicot", id: 57 },
+    { name: "lansat", id: 58 },
+    { name: "starf", id: 59 },
+    { name: "enigma", id: 60 },
+    { name: "micle", id: 61 },
+    { name: "custap", id: 62 },
+    { name: "jaboca", id: 63 },
+    { name: "rowap", id: 64 }
+];

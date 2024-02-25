@@ -7,8 +7,8 @@ function PokemonCard({index, name, nature}) {
         <section id={index} className="pokemon-card">
             <div className="text-wrapper" >
                 <img className="small-pixelball" src={pixelball} alt="small-pixelball"/>
-                <p>{name}</p>
-                <p>{nature}</p>
+                <p className="name"> {name}</p>
+                <p className="nature">{nature}</p>
             </div>
         </section>
     );

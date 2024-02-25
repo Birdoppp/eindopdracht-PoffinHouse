@@ -17,8 +17,9 @@
 
 .team--isOpen {
   background-color: cornsilk;
-    border: #ffafae solid 2px;
+    border: #ffafae solid;
     border-width: 0 2px 2px 2px;
+
 
 
 }

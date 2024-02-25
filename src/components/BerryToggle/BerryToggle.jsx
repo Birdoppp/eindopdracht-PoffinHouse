@@ -11,7 +11,7 @@ let BerryToggle = ({handleClick, isOpen}) => {
     return (
         <>
             <div className="pink-toggle">
-            <div className="berry-extention">
+            <div className={isOpen ? "berry-extension-closed" : "berry-extension-open"}>
             </div>
 
                 <button onClick={handleClick} className="toggle-berry">

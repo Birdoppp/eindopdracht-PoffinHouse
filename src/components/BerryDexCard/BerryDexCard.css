@@ -1,3 +1,86 @@
 .berry-dex-card {
-    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    /*flex-wrap: wrap;*/
+    align-items: center;
+    justify-content: center;
+    border: yellow 2px solid;
+    height: 100%;
+    width: 100%;
+}
+
+.no-berry-text {
+    display: flex;
+    justify-content: center;
+    font-family: pixelate, sans-serif;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 2em;
+    margin-bottom: 2em;
+    color: papayawhip;
+
+}
+
+.dex-container1 {
+    /*border: orangered solid 2px;*/
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: fit-content;
+    min-height: 7em;
+}
+
+.berry-img {
+    /*border: cornflowerblue 2px solid;*/
+    display: flex;
+    height: 7em;
+    width: 6em;
+}
+
+.dex-container2 {
+    /*border: #b15c54 solid 2px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 7em;
+    min-width: 9em;
+
+}
+
+.berry-name {
+    color: floralwhite;
+    /*padding: 2em 0;*/
+    height: 2em;
+    font-size: 1.5em;
+}
+
+.berry-id {
+    font-family: pixelate, sans-serif;
+    font-size: 1em;
+    /*padding: 2em 0;*/
+    height: 2em;
+}
+
+.dex-container3 {
+    /*border: salmon solid 2px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 20em;
+
+}
+
+.berry-description-box {
+    border: palegreen solid 2px;
+    height: 100%;
+    min-height: 3em;
+    width: 100%;
+    min-width: 10em;
+}
+
+.berry-dex-footer {
+    display: flex;
+    justify-content: center;
 }

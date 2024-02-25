@@ -1,12 +1,17 @@
 import React from 'react';
 
-function Button({ clickHandler, children, type, disabled }) {
+function Button({ clickHandler, children, type, name, value}) {
+
+
     return (
         <button
             onClick={clickHandler}
             type={type}
-            disabled={disabled || false}
+            name={name}
+            value={value}
+
         >
+            {name}
             {children}
         </button>
     );

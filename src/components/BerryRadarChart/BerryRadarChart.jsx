@@ -4,6 +4,7 @@ import Chart from "chart.js/auto";
 import axios from "axios";
 
 function BerryRadarChart({selectedBerry}) {
+    // console.log(selectedBerry)
     const [chartInstance, setChartInstance] = useState(null); // State to hold the chart instance
     const [flavors, setFlavors] = useState([]); // flavor of the selected berry
 
@@ -39,9 +40,8 @@ function BerryRadarChart({selectedBerry}) {
 
             const flavorsData = flavors.map((flavor) => flavor.potency);
 
-            console.log(selectedBerry.name + flavorsData)
-            const ctx = document.getElementById(`${selectedBerry.name}-chart`);
-            const newChartInstance = new Chart(ctx, {
+            const context = document.getElementById(`${selectedBerry.name}-chart`);
+            const newChartInstance = new Chart(context, {
                 type: "radar",
                 data: {
                     labels: ["Spicy", "Dry", "Sweet", "Bitter", "Sour"],
@@ -66,6 +66,11 @@ function BerryRadarChart({selectedBerry}) {
                                 stepSize: 10,
                             },
                         },
+                    },
+                    dataLabels: {
+                        style: {
+                            colors: ['#F44336', '#E91E63', '#9C27B0']
+                        }
                     },
                     // plugins: {
                     //     tooltip: {
@@ -96,7 +101,7 @@ function BerryRadarChart({selectedBerry}) {
                 chartInstance.destroy();
             }
         };
-    }, [flavors]);
+    }, [flavors,selectedBerry]);
 
     return <canvas className="radar-chart" id={`${selectedBerry.name}-chart`}/>;
 }

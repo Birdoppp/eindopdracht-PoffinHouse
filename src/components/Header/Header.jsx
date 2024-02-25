@@ -10,7 +10,7 @@ import TeamDisplay from "../TeamDisplay/TeamDisplay.jsx";
 
 export default function Header() {
     const activePage = ({isActive}) => isActive === true ? "active-link" : "default-link"
-    const { isAuth, logout } = useContext(AuthContext);
+    const {isAuth, logout} = useContext(AuthContext);
     const navigate = useNavigate();
     const [isOpen, toggleIsOpen] = useState(false)
     const handleClickIsOpen = () => toggleIsOpen(prev => !prev)
@@ -22,8 +22,8 @@ export default function Header() {
                 {/*<div className="inner-container">*/}
                 <Link to="/" className="activePage">
                     <div className="logo">
-                    <img src={berry} className='image-logo' alt='cheri-berry'/>
-                    <img src={logo} className='text-logo' alt='Poffin House' />
+                        <img src={berry} className='image-logo' alt='cheri-berry'/>
+                        <img src={logo} className='text-logo' alt='Poffin House'/>
                     </div>
                 </Link>
 

@@ -97,8 +97,8 @@ li {
     font-size: 1.4em;
     /*color: #eb2a89;*/
     /*color: #ff2e95;*/
-    color: #f98787;
-    /*color:#b15c54;*/
+    /*color: #f98787;*/
+    color:deeppink;
 }
 
 /*.modal{*/
@@ -139,7 +139,6 @@ a:visited{
     color: cornsilk;
     width: 6em;
 
-    max-height: 10em;
 
 
 }
