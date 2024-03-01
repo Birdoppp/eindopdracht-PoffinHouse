@@ -28,13 +28,13 @@ font-family: game_paused, sans-serif;
     border: 0;
     border-radius: 12px;
     color: floralwhite;
-    cursor: pointer;
+
     display: inline-block;
-    font-family: "Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-family: "Segoe UI",Roboto,sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 2.5;
-    outline: transparent;
+    /*outline: transparent;*/
     padding: 0 1rem;
     text-align: center;
     text-decoration: none;

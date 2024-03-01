@@ -22,22 +22,18 @@ function Login() {
     }, []);
 
     async function onSubmit(data) {
-        toggleError(false);
-
+        toggleError(false); // Reset error state
+        console.log(data);
         try {
             const result = await axios.post('https://api.datavortex.nl/poffinhouse/users/authenticate', {
                 username: data.username,
                 password: data.password
-            },{
+            }, {
                 cancelToken: source.token,
             });
-            // log het resultaat in de console
             console.log(result.data);
-
-            // geef de JWT token aan de login-functie van de context mee
             login(result.data.jwt);
-
-        } catch(e) {
+        } catch (e) {
             console.error(e);
             toggleError(true);
         }
@@ -72,9 +68,10 @@ function Login() {
 
                 <button
                     type="submit"
+                    onClick={onSubmit}
                     className="form-button"
                 >
-                    Inloggen
+                    Log in
                 </button>
             </form>
 

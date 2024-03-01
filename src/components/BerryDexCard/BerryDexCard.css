@@ -1,12 +1,13 @@
 .berry-dex-card {
     display: flex;
     flex-direction: column;
-    /*flex-wrap: wrap;*/
+
     align-items: center;
     justify-content: center;
-    border: yellow 2px solid;
-    height: 100%;
+
+    min-height:30em;
     width: 100%;
+    padding: 1em;
 }
 
 .no-berry-text {
@@ -72,13 +73,13 @@
 
 }
 
-.berry-description-box {
-    border: palegreen solid 2px;
-    height: 100%;
-    min-height: 3em;
-    width: 100%;
-    min-width: 10em;
-}
+/*.berry-description-box {*/
+/*    border: palegreen solid 2px;*/
+/*    height: 100%;*/
+/*    min-height: 6em;*/
+/*    width: 100%;*/
+/*    max-width: 20em;*/
+/*}*/
 
 .berry-dex-footer {
     display: flex;

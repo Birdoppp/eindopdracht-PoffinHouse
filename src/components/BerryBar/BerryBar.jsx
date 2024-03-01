@@ -5,14 +5,28 @@ import ListBerryCard from "../ListBerryCard/ListBerryCard.jsx";
 import BerryDexCard from "../BerryDexCard/BerryDexCard.jsx";
 import { berryID } from "../../constants/constants.jsx";
 
+export default BerryBar;
+
 export function BerryBar({ isOpen }) {
     const [berries, setBerries] = useState([]);
     const [selectedBerry, setSelectedBerry] = useState({ name: "" });
     const [selectedFlavor, setSelectedFlavor] = useState('');
     const [filteredBerries, setFilteredBerries] = useState(null);
-    const [sortOrder, setSortOrder] = useState('asc'); // State to toggle sorting order
-    const [searchQuery, setSearchQuery] = useState(''); // State to store the search query
-    const [filterDisabled, setFilterDisabled] = useState(false); // State to track filter button disable status
+    const [sortOrder, setSortOrder] = useState('asc');
+    const [searchQuery, setSearchQuery] = useState('');
+    const [filterDisabled, setFilterDisabled] = useState(false);
+
+    useEffect(() => {
+        // Check if searchQuery is an empty string
+        if (searchQuery.length === 0) {
+            // If searchQuery is an empty string, enable the filter buttons
+            setFilterDisabled(false);
+        } else {
+            // If searchQuery is not an empty string, disable the filter buttons
+            setFilterDisabled(true);
+        }
+    }, [searchQuery]);
+
 
     // Gets all Berries from API
     useEffect(() => {
@@ -62,22 +76,6 @@ export function BerryBar({ isOpen }) {
         setSortOrder(prevOrder => prevOrder === 'asc' ? 'desc' : 'asc');
     };
 
-    // Handle search input change
-    const handleSearchChange = (e) => {
-        const query = e.target.value;
-        setSearchQuery(query);
-        setFilteredBerries(null); // Clear filtered berries when searching
-        setFilterDisabled(query !== ''); // Disable filter buttons when searching
-        // Use the callback function to ensure the state is updated before checking its length
-        setSearchQuery(query => {
-            if (searchQuery.length <= 0) {
-                setFilterDisabled(false); // Enable filter buttons when search query is cleared
-            }
-            console.log(searchQuery)
-            return query;
-        });
-    };
-
     // Filter berries by search query
     const filteredBySearch = berries.filter(berry =>
         berry.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -107,22 +105,22 @@ export function BerryBar({ isOpen }) {
                     <button className="sour-button" onClick={() => handleButtonClick('5')} disabled={filterDisabled}>Sour</button>
                     {filteredBerries && <button className="reset-button" onClick={handleDeselectAll}>Show All</button>}
                     <button className="sort-button" onClick={toggleSortingOrder}>Sort by <br/> berry number</button>
-                </div>
                     <div className="search-bar">
                         <input
                             type="text"
                             placeholder="Search berries..."
                             value={searchQuery}
-                            onChange={handleSearchChange}
+                            onChange={(e) => setSearchQuery(e.target.value)}
                         />
-                        {/*{searchQuery && (*/}
-                        {/*    <button className="clear-search-button" onClick={() => setSearchQuery('')}>*/}
-                        {/*        Clear*/}
-                        {/*    </button>*/}
-                        {/*)}*/}
-                        {/* eslint-disable-next-line react/no-unescaped-entities */}
+                        {searchQuery && (
+                            <button className="clear-search-button" onClick={() => setSearchQuery("")}>
+                                Clear
+                            </button>
+                        )}
+                        {/*eslint-disable-next-line react/no-unescaped-entities*/}
                         {searchQuery && <div className="search-message">Showing results for "{searchQuery}"</div>}
                     </div>
+                </div>
                 <div className="berry-tool">
                     <ul className="berry-list">
                         {sortedBerries().map((sorted, index) => (
@@ -144,5 +142,3 @@ export function BerryBar({ isOpen }) {
         </div>
     );
 }
-
-export default BerryBar;

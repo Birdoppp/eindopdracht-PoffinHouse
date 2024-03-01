@@ -13,23 +13,15 @@ function AuthContextProvider( { children } ) {
     } );
     const navigate = useNavigate();
 
-    // const localTeam = JSON.parse(localStorage.getItem("team"))
-    // const[team, setTeam]= useState([
-    //     { name: '' || localTeam[0].name, nature: '' || localTeam[0].nature }, // Initial state for the first Pokémon
-    //     { name: '' || localTeam[1].name, nature: '' || localTeam[1].nature }, // Initial state for the second Pokémon
-    //     { name: '' || localTeam[2].name, nature: '' || localTeam[2].nature }, // Initial state for the third Pokémon
-    //     { name: '' || localTeam[3].name, nature: '' || localTeam[3].nature }, // Initial state for the fourth Pokémon
-    //     { name: '' || localTeam[4].name, nature: '' || localTeam[4].nature }, // Initial state for the fifth Pokémon
-    //     { name: '' || localTeam[5].name, nature: '' || localTeam[5].nature }])  // Initial state for the sixth Pokémon])
-
     // MOUNTING EFFECT
     useEffect( () => {
         // haal de JWT op uit Local Storage
         const token = localStorage.getItem( 'token' );
-
+        console.log(token)
         // als er WEL een token is, haal dan opnieuw de gebruikersdata op
-        if ( token ) {
+        if ( token != null) {
             const decoded = jwtDecode( token );
+            console.log(decoded)
             void fetchUserData( decoded.sub, token );
         } else {
             // als er GEEN token is doen we niks, en zetten we de status op 'done'
@@ -48,7 +40,7 @@ function AuthContextProvider( { children } ) {
         const decoded = jwtDecode( JWT );
 
         // geef de ID, token en redirect-link mee aan de fetchUserData functie (staat hieronder)
-        void fetchUserData( decoded.sub, JWT, '/profile' );
+        void fetchUserData( decoded.sub, JWT, '/member' );
         // link de gebruiker door naar de profielpagina
         // navigate('/profile');
     }
@@ -69,21 +61,20 @@ function AuthContextProvider( { children } ) {
     async function fetchUserData( id, token, redirectUrl ) {
         try {
             // haal gebruikersdata op met de token en id van de gebruiker
-            const result = await axios.get( `http://localhost:5173/600/users/${ id }`, {
+            const result = await axios.get( `https://api.datavortex.nl/poffinhouse/users/${id}`, {
                 headers: {
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${ token }`,
                 },
             } );
-
+            console.log(result.data)
             // zet de gegevens in de state
             toggleIsAuth( {
                 ...isAuth,
                 isAuth: true,
                 user: {
                     username: result.data.username,
-                    email: result.data.email,
-                    id: result.data.id,
+                    email: result.data.email
                 },
                 status: 'done',
             } );

@@ -1,62 +1,71 @@
-import './Member.css'
-import {useContext, useEffect, useState} from 'react';
-import {Link} from 'react-router-dom';
-import {AuthContext} from './../../context/AuthContext';
+import './Member.css';
+import { useContext, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { AuthContext } from './../../context/AuthContext';
 import axios from 'axios';
 
 function Member() {
     const [profileData, setProfileData] = useState({});
-    const {user} = useContext(AuthContext);
+    const { user, logout } = useContext(AuthContext);
 
     useEffect(() => {
         const source = axios.CancelToken.source();
+        console.log(user.username);
 
-        // we halen de pagina-content op in de mounting-cycle
         async function fetchProfileData() {
-            // haal de token uit de Local Storage om in het GET-request te bewijzen dat we geauthoriseerd zijn
             const token = localStorage.getItem('token');
+            const username = user.username;
 
             try {
-                const result = await axios.get('http://localhost:5173/660/private-content', {
+                const result = await axios.get(`https://api.datavortex.nl/poffinhouse/users/${username}`, {
                     headers: {
                         "Content-Type": "application/json",
                         Authorization: `Bearer ${token}`,
                     },
                     cancelToken: source.token,
                 });
+
+                console.log(result);
                 setProfileData(result.data);
             } catch (e) {
-                console.error(e);
+                if (axios.isCancel(e)) {
+                    console.log("Request canceled", e.message);
+                } else {
+                    console.error(e);
+                }
             }
         }
 
-        void fetchProfileData();
-
-        return function cleanup() {
-            source.cancel();
+        if (user.username) {
+            void fetchProfileData();
         }
-    }, [])
+
+        return () => {
+            source.cancel();
+        };
+    }, [user.username]);
+
+    useEffect(() => {
+        console.log(profileData);
+    }, [profileData]);
 
     return (
         <>
             <h1>Hi {user.username}!</h1>
-            <section>
+            <section className="member-content">
                 <h2>User data</h2>
                 <p><strong>Username:</strong> {user.username}</p>
                 <p><strong>Email:</strong> {user.email}</p>
             </section>
 
-            {/*Als er keys in ons object zitten hebben we data, en dan renderen we de content*/}
             {Object.keys(profileData).length > 0 &&
                 <section>
-                    <h2>profile-content</h2>
-                    <h3>{profileData.title}</h3>
-                    <p>{profileData.content}</p>
+                    <h2>Profile Content</h2>
+                    <p>{profileData.username}</p>
                 </section>
             }
-            <p>Terug naar de <Link to="/">Homepagina</Link></p>
-            <button>Logout</button>
-            {/*    button roept logout-funtie aan */}
+            <p>Back to <Link to="/">Homepage</Link></p>
+            <button onClick={logout}>Logout</button>
         </>
     );
 }

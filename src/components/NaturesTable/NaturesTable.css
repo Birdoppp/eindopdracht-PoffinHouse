@@ -1,0 +1,62 @@
+.spicy{
+    background: #F5AC78;
+}
+.sour{
+    background: #FAE078;
+}
+.dry{
+    background: #9DB7F5;
+}
+.bitter{
+    background: #A7DB8D;
+}
+.sweet{
+    background: #FA92B2;
+}
+
+.no-preference {
+    background: #bbbbe8;
+}
+.nature-table {
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid #bbbbe8;
+    background: #a0a0c4;
+    margin: auto;
+}
+.nature-table-text{
+    background: #bbbbe8;
+}
+
+.disliked-th{
+    background: #ddf;
+    color: #768DE5;
+    padding: 1em;
+}
+.favorite-th{
+    background: #ddf;
+    color: #EF737D;
+    padding: 1em;
+}
+
+.table-rule{
+    background: #ddf
+}
+
+
+
+
+th:active {
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #ff6, 0 0 60px #ff6, 0 0 70px #ff6;
+    }
+    to {
+        box-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff6, 0 0 50px #ff6, 0 0 60px #ff6, 0 0 70px #ff6, 0 0 80px #ff6;
+    }
+}
+

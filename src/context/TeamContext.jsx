@@ -17,6 +17,15 @@ const TeamContextProvider = ({ children }) => {
         if (storedTeam.length === 6) {
             setTeam(storedTeam);
         }
+        else {
+            setTeam([
+                {name: '' , nature: '' }, // Initial state for the first Pokémon
+                {name: '' , nature: '' }, // Initial state for the second Pokémon
+                {name: '' , nature: '' }, // Initial state for the third Pokémon
+                {name: '' , nature: '' }, // Initial state for the fourth Pokémon
+                {name: '' , nature: '' }, // Initial state for the fifth Pokémon
+                {name: '' , nature: '' }])
+        }
     }, []);
 
     const teamContextData = {
