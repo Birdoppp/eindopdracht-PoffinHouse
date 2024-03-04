@@ -26,9 +26,10 @@ function BerryRadarChart({selectedBerry}) {
     }, [selectedBerry]);
 
     // Sets flavors to trigger empty radar chart
-    useEffect(() => {
-        setFlavors([0,0,0,0,0])
-    }, []);
+    //
+    // useEffect(() => {
+    //     setFlavors([0,0,0,0,0])
+    // }, []);
 
 
     useEffect(() => {

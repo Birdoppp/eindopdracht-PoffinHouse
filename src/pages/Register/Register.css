@@ -2,17 +2,18 @@
     min-height: 50vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding-top: 3em;
 }
-.register-page-wrapper label{
-    margin: 20px 0;
+.register-page-wrapper input{
+    margin: 20px 0 20px 20px;
 }
-label{
+.register-page-wrapper label{
     font-family: "pixelate", sans-serif;
     font-weight: normal;
     font-style: oblique;
     color: maroon;
+    /*padding-right: 1em;*/
 }
 .error-EN{
 font-family: game_paused, sans-serif;

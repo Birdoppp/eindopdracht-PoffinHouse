@@ -3,19 +3,21 @@
     width: 9em;
     /*height: 20em;*/
     min-height: fit-content;
-    z-index: 2000;
     min-width: fit-content;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute; top: 6em;
+
+    position: absolute;
+    top: 6em;
     border-radius: 0 15px 15px 15px;
-    /*position: relative;*/
 }
 
+
 .team--isOpen {
+    z-index: 3000;
   background-color: cornsilk;
     border: #ffafae solid;
     border-width: 0 2px 2px 2px;

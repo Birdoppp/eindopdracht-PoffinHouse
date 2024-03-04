@@ -101,14 +101,6 @@ li {
     color:deeppink;
 }
 
-/*.modal{*/
-
-/*    display: flex;*/
-/*    font-family: "Dubai Light", serif;*/
-/*    font-weight: bold;*/
-/*    font-size: 1.5em;*/
-/*    color: darkred;*/
-/*}*/
 
 
 .inner-container {
@@ -139,6 +131,7 @@ a:visited{
     color: cornsilk;
     width: 6em;
 
-
-
+}
+.team-display{
+    z-index: 8000;
 }

@@ -7,7 +7,7 @@ import Preferences from "./pages/Preferences/Preferences.jsx";
 import EditTeam from "./pages/EditTeam/EditTeam.jsx";
 import {AuthContext} from "./context/AuthContext.jsx";
 import Header from "./components/Header/Header.jsx";
-import {BerryBar} from "./components/BerryBar/BerryBar.jsx";
+import BerryBar from "./components/BerryBar/BerryBar.jsx";
 import BerryToggle from "./components/BerryToggle/BerryToggle.jsx";
 import Login from "./pages/Login/Login.jsx";
 import Register from "./pages/Register/Register.jsx";

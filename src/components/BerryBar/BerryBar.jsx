@@ -5,9 +5,7 @@ import ListBerryCard from "../ListBerryCard/ListBerryCard.jsx";
 import BerryDexCard from "../BerryDexCard/BerryDexCard.jsx";
 import { berryID } from "../../constants/constants.jsx";
 
-export default BerryBar;
-
-export function BerryBar({ isOpen }) {
+export default function BerryBar({ isOpen }) {
     const [berries, setBerries] = useState([]);
     const [selectedBerry, setSelectedBerry] = useState({ name: "" });
     const [selectedFlavor, setSelectedFlavor] = useState('');
@@ -15,18 +13,7 @@ export function BerryBar({ isOpen }) {
     const [sortOrder, setSortOrder] = useState('asc');
     const [searchQuery, setSearchQuery] = useState('');
     const [filterDisabled, setFilterDisabled] = useState(false);
-
-    useEffect(() => {
-        // Check if searchQuery is an empty string
-        if (searchQuery.length === 0) {
-            // If searchQuery is an empty string, enable the filter buttons
-            setFilterDisabled(false);
-        } else {
-            // If searchQuery is not an empty string, disable the filter buttons
-            setFilterDisabled(true);
-        }
-    }, [searchQuery]);
-
+    const [searchDisabled, setSearchDisabled] = useState(false);
 
     // Gets all Berries from API
     useEffect(() => {
@@ -60,15 +47,37 @@ export function BerryBar({ isOpen }) {
         }
     };
 
+
     const handleButtonClick = (flavorName) => {
         setSelectedFlavor(flavorName);
         void fetchBerriesByFlavor(flavorName);
+        setSearchQuery('');
+        setSearchDisabled(true); // Disable search bar when filter button is clicked
     };
 
+    useEffect(() => {
+        // Check if searchQuery is an empty string
+        if (searchQuery.length === 0) {
+            // If searchQuery is an empty string, enable the filter buttons
+            setFilterDisabled(false);
+        } else {
+            // If searchQuery is not an empty string, disable the filter buttons
+            setFilterDisabled(true);
+        }
+    }, [searchQuery]);
+
     // Function to deselect filtered berries
+    // Filter berries by search query
+    const filteredBySearch = berries.filter(berry =>
+        berry.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
     const handleDeselectAll = () => {
-        setFilteredBerries(null);
-        setFilterDisabled(false); // Enable filter buttons
+        setFilteredBerries("");
+        setSearchQuery("");
+        setSearchDisabled(false); // Enable search bar when show all button is clicked
+
+
     };
 
     // Toggle sorting order
@@ -76,23 +85,17 @@ export function BerryBar({ isOpen }) {
         setSortOrder(prevOrder => prevOrder === 'asc' ? 'desc' : 'asc');
     };
 
-    // Filter berries by search query
-    const filteredBySearch = berries.filter(berry =>
-        berry.name.toLowerCase().includes(searchQuery.toLowerCase())
-    );
 
     // Sort berries by ID based on the current sorting order
     const sortedBerries = () => {
         const targetBerries = filteredBerries || filteredBySearch;
         return targetBerries.slice().sort((a, b) => {
-            const berryA = berryID.find(item => item.name === (a.berry ? a.berry.name : a.name));
-            const berryB = berryID.find(item => item.name === (b.berry ? b.berry.name : b.name));
+            const berryA = berryID.find(berry => berry.name === (a.berry ? a.berry.name : a.name));
+            const berryB = berryID.find(berry => berry.name === (b.berry ? b.berry.name : b.name));
             const orderFactor = sortOrder === 'asc' ? 1 : -1;
             return orderFactor * (berryA.id - berryB.id);
         });
     };
-
-
 
     return (
         <div className={`aside ${isOpen ? "aside--isOpen" : "aside--isClosed"}`}>
@@ -106,19 +109,22 @@ export function BerryBar({ isOpen }) {
                     {filteredBerries && <button className="reset-button" onClick={handleDeselectAll}>Show All</button>}
                     <button className="sort-button" onClick={toggleSortingOrder}>Sort by <br/> berry number</button>
                     <div className="search-bar">
-                        <input
-                            type="text"
-                            placeholder="Search berries..."
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                        />
+                        <div className="inner-search-container">
+                            <input
+                                type="text"
+                                placeholder={searchDisabled ? 'Please select Show All' : 'Search berries...'}
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                                disabled={searchDisabled}
+                            />
+                            {searchQuery && <div className="search-message">Showing results for "{searchQuery}"
+                            </div>}
+                        </div>
                         {searchQuery && (
                             <button className="clear-search-button" onClick={() => setSearchQuery("")}>
                                 Clear
                             </button>
                         )}
-                        {/*eslint-disable-next-line react/no-unescaped-entities*/}
-                        {searchQuery && <div className="search-message">Showing results for "{searchQuery}"</div>}
                     </div>
                 </div>
                 <div className="berry-tool">
@@ -137,7 +143,7 @@ export function BerryBar({ isOpen }) {
                         {selectedBerry && <BerryDexCard selectedBerry={selectedBerry} />}
                     </section>
                 </div>
-                <footer className="berry-dex-footer"> For the flavor-potency of All berries in one list &nbsp; click&nbsp;<a href="https://bulbapedia.bulbagarden.net/wiki/Flavor" target="_blank" rel="noreferrer"> Here </a>! </footer>
+                <footer className="berry-dex-footer"> For the flavor-potency of All berries in one list &nbsp; click&nbsp;<a href="https://bulbapedia.bulbagarden.net/wiki/Flavor" target="_blank" > Here </a>! </footer>
             </div>
         </div>
     );

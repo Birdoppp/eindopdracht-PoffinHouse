@@ -1,53 +1,70 @@
-.spicy{
-    background: #F5AC78;
-}
-.sour{
-    background: #FAE078;
-}
-.dry{
-    background: #9DB7F5;
-}
-.bitter{
-    background: #A7DB8D;
-}
-.sweet{
-    background: #FA92B2;
-}
-
-.no-preference {
-    background: #bbbbe8;
-}
 .nature-table {
-    width: 50%;
+    width: 30em;
     text-align: center;
     border-radius: 10px;
     border: 3px solid #bbbbe8;
     background: #a0a0c4;
     margin: auto;
-}
-.nature-table-text{
-    background: #bbbbe8;
+    color: snow;
 }
 
-.disliked-th{
+
+.table-rule {
+    background: #d1d1ff
+}
+.nature-table th {
+    /*color: #768DE5;*/
+    /*font-size: small;*/
+}
+
+#nature-table-text {
+    background: #bbbbe8;
+    color: snow;
+}
+
+#disliked-th {
     background: #ddf;
     color: #768DE5;
     padding: 1em;
 }
-.favorite-th{
+
+#favorite-th {
     background: #ddf;
-    color: #EF737D;
+    color: #fc6673;
     padding: 1em;
 }
 
-.table-rule{
-    background: #ddf
+.spicy {
+    background: #e87f7f;
+    color: #b74545;
+}
+
+.sour {
+    background: #FAE078;
+    color: #e88002;
+}
+
+.dry {
+    background: #9DB7F5;
+    color: #5177e7;
+}
+
+.bitter {
+    background: #A7DB8D;
+    color: limegreen;
+}
+
+.sweet {
+    background: lightpink;
+    color: hotpink;
+}
+
+.no-preference {
+    background: #bbbbe8;
 }
 
 
-
-
-th:active {
+.nature-table p:active {
     animation: glow 1s ease-in-out infinite alternate;
 }
 

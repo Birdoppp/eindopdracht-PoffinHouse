@@ -1,4 +1,4 @@
-.text-wrapper {
+.pokemon-info {
     /*border: green solid 2px;*/
     display: flex;
     /*justify-items: auto;*/
@@ -9,7 +9,7 @@
     /*align-content: center;*/
 }
 
-.text-wrapper p {
+.pokemon-info p {
     /*border: #646cff solid 2px;*/
     display: flex;
     justify-items: auto;

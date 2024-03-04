@@ -49,7 +49,7 @@ export default function Header() {
                         </li>
                         <li>
                             <MyTeam classname="my-team-button" handleClick={handleClickIsOpen} isOpen={isOpen}/>
-                            <TeamDisplay isOpen={isOpen}/>
+                            <TeamDisplay classname="team-display" isOpen={isOpen}/>
                         </li>
                         <li>
                             <NavLink to="/member" className={activePage}>
