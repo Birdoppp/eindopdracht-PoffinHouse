@@ -6,12 +6,15 @@ import {Dropdown} from "./../Dropdown/Dropdown.jsx";
 import pixelball from './../../assets/assorted-collection/poke-ball-pixel-nbg.png';
 import Button from "../Button/Button.jsx";
 import {TeamContext} from "../../context/TeamContext.jsx";
+import authContext, {AuthContext} from "../../context/AuthContext.jsx";
 
 export function TeamForm() {
     const {team, setTeam} = useContext(TeamContext);
-    const test = localStorage.getItem('team')
+    const {user} = useContext(AuthContext);
 
-    const [combined, setCombined] = useState(JSON.parse(test) || team);
+    const teamList = localStorage.getItem('team')
+
+    const [combined, setCombined] = useState(JSON.parse(teamList) || team);
 
     const handleNameChange = (index, value) => {
         const updatedTeam = [...combined];
@@ -36,8 +39,9 @@ export function TeamForm() {
         // Update the team state with the new array
         setTeam(updatedTeam);
         // Update the local storage with the updated team data
-        localStorage.setItem("team", JSON.stringify(updatedTeam));
+        localStorage.setItem(`team-${user.username}`, JSON.stringify(updatedTeam));
         console.log("Form submitted:", updatedTeam);
+
     };
 
     return (

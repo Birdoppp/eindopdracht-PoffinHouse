@@ -1,23 +1,21 @@
-header {
+.nav-bar {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 14vh;
+    height: 7em;
     background-color: peachpuff;
-    /*position: relative;*/
-    /*top: 0;*/
+
 }
 
-nav {
+.nav-inner-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    /*background-color: mintcream ;*/
     background-image: url(./../../assets/assorted-collection/header-berry.png);
     background-size: contain;
-    background-repeat: repeat ;
+    background-repeat: repeat;
 
     opacity: 0.8;
     width: 98.5%;
@@ -27,57 +25,47 @@ nav {
 .logo {
     display: flex;
     flex-direction: column;
-    /*height:1%;*/
+
     width: 20%;
     opacity: 0.99;
     padding: 10px;
 }
-.image-logo{
+
+.image-logo {
     width: 4.5em;
     height: 4em;
     max-height: 100%;
 }
+
 .text-logo {
     height: 1em;
     width: 4.5em;
 }
 
-.links-container{
+.links-container {
     /*border: yellow 2px solid;*/
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    /*align-items: center;*/
 
-    border-radius:20px;
+    border-radius: 20px;
     background-color: pink;
-    background-size:contain;
+    background-size: contain;
 
     height: 100%;
     width: 35%;
     min-width: 30%;
     flex-basis: fit-content;
-    /*flex-grow: 0.2;*/
-    /*opacity: 0.8;*/
 }
 
-li {
+.page-link {
     list-style: none;
     font-family: "pixelate", serif;
     margin: 0 10px;
     display: flex;
     width: auto;
-    /*background-color: indianred;*/
 }
 
-/*.navlink{*/
-/*    display: flex;*/
-/*    font-family: "pixelate", serif;*/
-/*    font-weight: bold;*/
-/*    font-size: 1.4em;*/
-/*    color: orangered;*/
-
-/*}*/
 
 .active-link {
     border: 3px solid wheat;
@@ -89,7 +77,7 @@ li {
     font-family: inherit;
 }
 
-.default-link{
+.default-link {
     border: 3px solid transparent;
     display: flex;
     font-family: "pixelate", serif;
@@ -98,16 +86,12 @@ li {
     /*color: #eb2a89;*/
     /*color: #ff2e95;*/
     /*color: #f98787;*/
-    color:deeppink;
+    color: deeppink;
 }
 
 
 
-.inner-container {
-    display: flex;
-}
-
-.inner-container2 {
+.links-container {
     /*border: orangered solid 4px ;*/
     display: flex;
     justify-content: flex-end;
@@ -115,23 +99,41 @@ li {
     height: 100%;
 }
 
-a:visited{
-    style: none;
-}
 
+
+.team-tool-container{
+    display: flex;
+    flex-direction: column;
+    font-family: "pixelate", sans-serif;
+}
 
 .my-team-button {
-    font-family: inherit;
-    font-size: 1.5rem;
-    font-weight: bolder;
-
     border: cornsilk solid 2px;
+    position: relative;
+    width: 6em;
     border-radius: 5px;
     background-color: transparent;
-    color: cornsilk;
-    width: 6em;
 
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: cornsilk;
 }
-.team-display{
+
+.team-display {
     z-index: 8000;
+}
+
+.no-member-text--isClosed{
+    display: none;
+}
+
+.no-member-text--isOpen{
+    z-index: 3000;
+    background-color: cornsilk;
+    border: #ffafae solid;
+    border-width: 0 2px 2px 2px;
+
+    position: absolute;
+    top: 5.5em;
+    border-radius: 0 15px 15px 15px;
 }

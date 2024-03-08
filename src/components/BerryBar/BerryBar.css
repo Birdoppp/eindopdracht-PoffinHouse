@@ -68,7 +68,6 @@
     display: flex;
     min-width: 20em;
     width: fit-content;
-    /*flex-wrap: wrap;*/
 }
 
 /*------------------------------------------------------------------*/
@@ -143,7 +142,6 @@
 
 
 .aside--isOpen {
-
     color: hotpink;
 }
 

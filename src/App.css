@@ -10,6 +10,17 @@
 
 }
 
+li {
+    list-style: none;
+    font-family: "pixelate", serif;
+    margin: 0 10px;
+    display: flex;
+    width: auto;
+}
+
+a:visited {
+    style: none;
+}
 
 .content-wrapper {
     transition: width 4s ease-out;
@@ -26,6 +37,7 @@
 
 
 }
+
 .berry-tool-wrapper {
     display: flex;
     justify-content: center;
@@ -40,7 +52,7 @@
 
 .page {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-items: flex-start;
     align-items: center;
 
@@ -58,7 +70,7 @@ h1 {
     font-weight: normal;
     font-style: normal;
     font-size: 1.5em;
-   color: #b15c54;
+    color: #b15c54;
 }
 
 

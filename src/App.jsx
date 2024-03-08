@@ -43,13 +43,9 @@ function App() {
                         <Route path="/register" element={<Register/>}/>;
                         <Route path="/member" element={isAuth ? <Member/> : <Navigate to="/login"/>}/>;
                         <Route path="/my-team" element={<TeamDisplay/>}/>;
-                        {/*<Route path="/berry/:berryId" element={<BerryDexCard/>} />*/}
                     </Routes>
                 </section>
             </div>
-            <footer>
-
-            </footer>
         </>
     )
 }

@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Router>
             <AuthContextProvider>
                 <TeamContextProvider>
-                <App/>
+                    <App/>
                 </TeamContextProvider>
             </AuthContextProvider>
         </Router>

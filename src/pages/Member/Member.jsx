@@ -8,6 +8,7 @@ function Member() {
     const [profileData, setProfileData] = useState({});
     const { user, logout } = useContext(AuthContext);
 
+
     useEffect(() => {
         const source = axios.CancelToken.source();
         console.log(user.username);
@@ -47,7 +48,7 @@ function Member() {
 
     useEffect(() => {
         console.log(profileData);
-    }, [profileData]);
+    }, [profileData, user.username]);
 
     return (
         <>

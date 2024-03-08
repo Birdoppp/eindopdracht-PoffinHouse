@@ -40,20 +40,20 @@ function AuthContextProvider( { children } ) {
         const decoded = jwtDecode( JWT );
 
         // geef de ID, token en redirect-link mee aan de fetchUserData functie (staat hieronder)
-        void fetchUserData( decoded.sub, JWT, '/member' );
+        void fetchUserData( decoded.sub, JWT, '/' );
         // link de gebruiker door naar de profielpagina
         // navigate('/profile');
     }
 
     function logout() {
-        localStorage.clear();
+        localStorage.removeItem("token");
         toggleIsAuth( {
             isAuth: false,
             user: null,
             status: 'done',
         } );
 
-        console.log( 'Gebruiker is uitgelogd!' );
+        console.log( 'Member logged out' );
         navigate( '/' );
     }
 
@@ -79,8 +79,6 @@ function AuthContextProvider( { children } ) {
                 status: 'done',
             } );
 
-            // als er een redirect URL is meegegeven (bij het mount-effect doen we dit niet) linken we hiernnaartoe door
-            // als we de history.push in de login-functie zouden zetten, linken we al door voor de gebuiker is opgehaald!
             if ( redirectUrl ) {
                 navigate( redirectUrl );
             }
