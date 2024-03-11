@@ -5,7 +5,6 @@ import './BerryDescription.css'
 
 function BerryDescription(berry) {
     const [itemDescription, setItemDescription] = useState("");
-    console.log(berry.selectedBerry)
 
     useEffect(() => {
         const fetchDescription = async () => {
@@ -16,7 +15,7 @@ function BerryDescription(berry) {
 
                 setItemDescription(description);
             } catch (error) {
-                console.error('Error fetching banaan:', error);
+                console.error('Error fetching berry:', error);
             }
         };
 

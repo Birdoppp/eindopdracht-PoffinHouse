@@ -5,6 +5,9 @@ import blue from './../../assets/pokemon-assets/blueteam.png'
 
 
 export default function EditTeam() {
+
+
+
     return (
         <>
             <img className="team-img" src={blue} alt="Team Blue"/>

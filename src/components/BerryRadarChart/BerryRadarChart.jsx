@@ -102,7 +102,7 @@ function BerryRadarChart({selectedBerry}) {
                 chartInstance.destroy();
             }
         };
-    }, [flavors,selectedBerry]);
+    }, [flavors]);
 
     return <canvas className="radar-chart" id={`${selectedBerry.name}-chart`}/>;
 }

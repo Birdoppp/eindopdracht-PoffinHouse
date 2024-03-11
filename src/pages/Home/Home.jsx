@@ -1,6 +1,6 @@
 import "./Home.css"
 import welcome from './../../assets/assorted-collection/welcome.gif'
-import {PokedexGen4} from "../../components/Pokedex/Pokedex.jsx";
+import {PokedexGen4} from "../../components/PokedexImageSlider/PokedexImageSlider.jsx";
 import {Link} from "react-router-dom";
 
 export default function Home() {

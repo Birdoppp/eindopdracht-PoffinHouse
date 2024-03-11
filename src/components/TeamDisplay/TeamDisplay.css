@@ -27,6 +27,11 @@
     display: none;
 }
 
+.no-team-text{
+    width: inherit;
+    text-align: center;
+}
+
 .my-team-link {
     display: inline-block;
     border: 0;

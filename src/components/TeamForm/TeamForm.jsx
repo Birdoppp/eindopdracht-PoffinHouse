@@ -1,20 +1,34 @@
-import React, {useContext, useState} from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import "./TeamForm.css";
 import InputField from "../InputField/InputField.jsx";
-import {natures} from "../../constants/constants.jsx";
-import {Dropdown} from "./../Dropdown/Dropdown.jsx";
+import { natures } from "../../constants/constants.jsx";
+import { Dropdown } from "./../Dropdown/Dropdown.jsx";
 import pixelball from './../../assets/assorted-collection/poke-ball-pixel-nbg.png';
 import Button from "../Button/Button.jsx";
-import {TeamContext} from "../../context/TeamContext.jsx";
-import authContext, {AuthContext} from "../../context/AuthContext.jsx";
+import { TeamContext } from "../../context/TeamContext.jsx";
+import { AuthContext } from "../../context/AuthContext.jsx";
 
 export function TeamForm() {
-    const {team, setTeam} = useContext(TeamContext);
-    const {user} = useContext(AuthContext);
+    const { team, setTeam } = useContext(TeamContext);
+    const { user } = useContext(AuthContext);
+    const [combined, setCombined] = useState(JSON.parse(localStorage.getItem(`team-${user.username}`)) || [
+        {name: '' , nature: '' }, // Initial state for the first Pokémon
+        {name: '' , nature: '' }, // Initial state for the second Pokémon
+        {name: '' , nature: '' }, // Initial state for the third Pokémon
+        {name: '' , nature: '' }, // Initial state for the fourth Pokémon
+        {name: '' , nature: '' }, // Initial state for the fifth Pokémon
+        {name: '' , nature: '' }])// Initial state for the sixth Pokémon
 
-    const teamList = localStorage.getItem('team')
-
-    const [combined, setCombined] = useState(JSON.parse(teamList) || team);
+    // useEffect(() => {
+    //     const storedTeam = localStorage.getItem(`team-${user.username}`);
+    //     console.log(storedTeam)
+    //     console.log(team)
+    //     if (storedTeam) {
+    //         setCombined(JSON.parse(storedTeam));
+    //     } else {
+    //         setCombined(team);
+    //     }
+    // }, []);
 
     const handleNameChange = (index, value) => {
         const updatedTeam = [...combined];
@@ -28,28 +42,25 @@ export function TeamForm() {
         setCombined(updatedTeam);
     };
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Map over the combined state and create a new array with the updated values
+
         const updatedTeam = combined.map((pokemon) => ({
             name: pokemon.name,
             nature: pokemon.nature
         }));
-        // Update the team state with the new array
         setTeam(updatedTeam);
         // Update the local storage with the updated team data
         localStorage.setItem(`team-${user.username}`, JSON.stringify(updatedTeam));
         console.log("Form submitted:", updatedTeam);
-
     };
 
     return (
         <>
             <form className="Edit-team-form" onSubmit={handleSubmit}>
-                {combined.map((pokemon, index) => (
+                {Object.keys(combined).length>0 && combined.map((pokemon, index) => (
                     <div className="individualPokemon" key={index}>
-                        <img className="pixelball" src={pixelball} alt="Pokeball"/>
+                        <img className="pixelball" src={pixelball} alt="Pokeball" />
                         <InputField
                             name={`pokemon-${index}`}
                             type="text"

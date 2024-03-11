@@ -29,10 +29,13 @@ function App() {
             </header>
 
             <div className="content-wrapper">
+                {/*<div className="sticky-wrapper">*/}
                 <div className="berry-tool-wrapper">
                 <BerryBar isOpen={isOpen}/>
                 <BerryToggle handleClick={handleClickIsOpen} isOpen={isOpen}/>
-                </div>
+                    </div>
+                {/*<div className="sticky-sibling"></div>*/}
+                {/*</div>*/}
 
                 <section className="page">
                     <Routes>

@@ -15,7 +15,7 @@ export default function TeamDisplay({ isOpen }) {
 
     return (
         <div className={`team ${isOpen ? "team--isOpen" : "team--isClosed"}`}>
-            {team[0].name !== "" ? (
+            {team && team[0].name !== "" ? (
                 team.filter(pokemon => pokemon.name.trim() !== "").map((pokemon, index) => (
                     <PokemonCard
                         key={index}
@@ -24,7 +24,7 @@ export default function TeamDisplay({ isOpen }) {
                     />
                 ))
             ) : (
-                <p>no team</p>
+                <p className="no-team-text"> No Pokémon in team </p>
             )}
             <Link to="/edit-team" className="my-team-link">
                 Edit your Team

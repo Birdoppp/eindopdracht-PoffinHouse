@@ -11,7 +11,7 @@ function Member() {
 
     useEffect(() => {
         const source = axios.CancelToken.source();
-        console.log(user.username);
+        // console.log(user.username);
 
         async function fetchProfileData() {
             const token = localStorage.getItem('token');
@@ -26,7 +26,7 @@ function Member() {
                     cancelToken: source.token,
                 });
 
-                console.log(result);
+                // console.log(result);
                 setProfileData(result.data);
             } catch (e) {
                 if (axios.isCancel(e)) {
@@ -47,7 +47,7 @@ function Member() {
     }, [user.username]);
 
     useEffect(() => {
-        console.log(profileData);
+        // console.log(profileData);
     }, [profileData, user.username]);
 
     return (
