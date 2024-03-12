@@ -15,7 +15,6 @@
     border-radius: 0 15px 15px 15px;
 }
 
-
 .team--isOpen {
     z-index: 3000;
     background-color: cornsilk;
@@ -27,10 +26,14 @@
     display: none;
 }
 
+/**/
+
 .no-team-text{
     width: inherit;
     text-align: center;
 }
+
+/**/
 
 .my-team-link {
     display: inline-block;
@@ -48,7 +51,6 @@
 
     color: floralwhite;
     text-decoration: none;
-    /*transition: box-shadow .2s ease-in-out;*/
 }
 
 .my-team-link:hover {

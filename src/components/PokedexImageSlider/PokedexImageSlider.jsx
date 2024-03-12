@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import mudkip from './../../assets/pokedex-assets/Emerald_summary_2.png'
 
 export const ImageSlider = ({pokedexImages}) => {
-    const [currentIndex, setCurrentIndex] = useState(1);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     const goToNextImage = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % pokedexImages.length);
@@ -44,6 +44,7 @@ export const PokedexGen4 = () => {
         </div>
     );
 };
+
 export const PokedexGen3 = () => {
     const gen3Images = [
         "https://archives.bulbagarden.net/media/upload/9/9a/Emerald_summary_1.png",

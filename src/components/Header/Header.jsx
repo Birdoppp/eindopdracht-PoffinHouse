@@ -45,8 +45,7 @@ export default function Header() {
                             {user ?
                                 <TeamDisplay classname="team-display" isOpen={isOpen}/>
                                 :
-                                <div
-                                    className={`no-member-text ${isOpen ? "no-member-text--isOpen" : "no-member-text--isClosed"}`}>
+                                <div className={`no-member-text ${isOpen ? "no-member-text--isOpen" : "no-member-text--isClosed"}`}>
                                     Please login to <br/> save your team! </div>}
                         </li>
                         <li className="page-link">

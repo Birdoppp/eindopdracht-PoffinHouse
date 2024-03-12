@@ -105,3 +105,21 @@ export const pokedexImages = {
     7:"https://archives.bulbagarden.net/media/upload/1/19/Diamond_summary_6_desc.png",
     8:"https://archives.bulbagarden.net/media/upload/2/2d/Diamond_summary_7.png"
 }
+
+
+const gen3Images = [
+    "https://archives.bulbagarden.net/media/upload/9/9a/Emerald_summary_1.png",
+    "https://archives.bulbagarden.net/media/upload/e/ec/Emerald_summary_2.png",
+    "https://archives.bulbagarden.net/media/upload/9/98/Emerald_summary_3.png",
+    "https://archives.bulbagarden.net/media/upload/8/81/Emerald_summary_3_desc.png",
+    "https://archives.bulbagarden.net/media/upload/4/47/Emerald_summary_4.png",
+    "https://archives.bulbagarden.net/media/upload/2/2d/Emerald_summary_4_desc.png",
+
+];
+
+const genImages = [
+    "https://archives.bulbagarden.net/media/upload/e/ec/Emerald_summary_2.png",
+    "https://archives.bulbagarden.net/media/upload/c/c5/FR_summary_2.png",
+    "https://archives.bulbagarden.net/media/upload/c/ca/FR_summary_3.png",
+    "https://archives.bulbagarden.net/media/upload/b/b5/FR_summary_3_desc.png"
+]

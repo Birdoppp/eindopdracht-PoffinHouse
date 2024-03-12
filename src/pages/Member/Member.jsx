@@ -1,17 +1,16 @@
 import './Member.css';
-import { useContext, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { AuthContext } from './../../context/AuthContext';
+import {useContext, useEffect, useState} from 'react';
+import {Link} from 'react-router-dom';
+import {AuthContext} from './../../context/AuthContext';
 import axios from 'axios';
+import NewPassword from "../../components/NewPassword/NewPassword.jsx";
 
 function Member() {
     const [profileData, setProfileData] = useState({});
-    const { user, logout } = useContext(AuthContext);
-
+    const {user, logout} = useContext(AuthContext);
 
     useEffect(() => {
         const source = axios.CancelToken.source();
-        // console.log(user.username);
 
         async function fetchProfileData() {
             const token = localStorage.getItem('token');
@@ -26,7 +25,6 @@ function Member() {
                     cancelToken: source.token,
                 });
 
-                // console.log(result);
                 setProfileData(result.data);
             } catch (e) {
                 if (axios.isCancel(e)) {
@@ -46,28 +44,34 @@ function Member() {
         };
     }, [user.username]);
 
-    useEffect(() => {
-        // console.log(profileData);
-    }, [profileData, user.username]);
 
     return (
-        <>
-            <h1>Hi {user.username}!</h1>
+        <div className="member-page">
+            <h1 className="hi-member">Hi {user.username}!</h1>
+
+
             <section className="member-content">
                 <h2>User data</h2>
                 <p><strong>Username:</strong> {user.username}</p>
                 <p><strong>Email:</strong> {user.email}</p>
             </section>
 
-            {Object.keys(profileData).length > 0 &&
-                <section>
-                    <h2>Profile Content</h2>
-                    <p>{profileData.username}</p>
-                </section>
-            }
-            <p>Back to <Link to="/">Homepage</Link></p>
-            <button onClick={logout}>Logout</button>
-        </>
+            {/*{Object.keys(profileData).length > 0 &&*/}
+            {/*    <section>*/}
+            {/*        <h2>Profile Content</h2>*/}
+            {/*        <p>{profileData.username}</p>*/}
+            {/*    </section>*/}
+            {/*}*/}
+
+            <section className="password-wrapper">
+                <NewPassword/>
+            </section>
+
+            <section>
+                <p className="">Back to <Link to="/">Homepage</Link></p>
+                <button className="logout-btn" onClick={logout}>Logout</button>
+            </section>
+        </div>
     );
 }
 

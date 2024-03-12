@@ -5,19 +5,17 @@ import { useForm } from 'react-hook-form'
 import axios from 'axios';
 
 function Register() {
-    // hookform voor het formulier
-    const { handleSubmit, register } = useForm();
 
-    // state voor functionaliteit
+    const { handleSubmit, register } = useForm();
     const [error, toggleError] = useState(false);
     const [loading, toggleLoading] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
 
     const navigate = useNavigate();
 
-    // we maken een canceltoken aan voor ons netwerk-request
+
     const source = axios.CancelToken.source();
 
-    // mocht onze pagina ge-unmount worden voor we klaar zijn met data ophalen, aborten we het request
     useEffect(() => {
         return function cleanup() {
             source.cancel();
@@ -25,9 +23,14 @@ function Register() {
     }, []);
 
     async function onSubmit(data) {
-        console.log(data)
         toggleError(false);
         toggleLoading(true);
+
+        if (data.password.length < 8) {
+            toggleError(true);
+            toggleLoading(false);
+            return;
+        }
 
         try {
         const response =   await axios.post('https://api.datavortex.nl/poffinhouse/users', {
@@ -39,20 +42,19 @@ function Register() {
                 'Content-Type':'application/json',
                 'X-Api-Key':'poffinhouse:Fe5GnFylcoSkSNVH3gKd'
                 }
-            }
-            )
+            });
             console.log(response)
 
-        // als alles goed gegaan is, linken we door naar de login-pagina
+
             navigate('/login');
         } catch(e) {
             console.error(e);
+            setErrorMessage(e.response.data);
             toggleError(true);
         }
 
         toggleLoading(false);
     }
-
     return (
         <div className="register-page-wrapper">
             <h1>Register</h1>
@@ -84,8 +86,8 @@ function Register() {
                         {...register("password")}
                     />
                 </label>
-                {error && <p className="error-EN">This account already exists. Please try a different e-mailadres.</p>}
-                {error && <p className="error-U">This account already exists. Please try a different e-mailadres.</p>}
+                {error && <p className="error-EN">{errorMessage}</p>}
+                {error && <p className="error-U">{errorMessage}</p>}
                 <button
                     type="submit"
                     className="form-button"

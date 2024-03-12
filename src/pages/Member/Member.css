@@ -1,3 +1,12 @@
-.member-content p {
-    font-family: pixelate, sans-serif;
+
+.member-page button {
+    margin-top: 0.5em;
+}
+
+.member-page section {
+    padding: 2em 0 0.5em 0;
+}
+
+.hi-member {
+    padding-top: 2em;
 }
