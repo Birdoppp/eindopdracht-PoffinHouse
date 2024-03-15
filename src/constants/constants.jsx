@@ -95,17 +95,18 @@ export const berryID = [
     { name: "rowap", id: 64 }
 ];
 
-export const pokedexImages = {
-    1:"https://archives.bulbagarden.net/media/upload/4/44/Diamond_summary_1.png",
-    2:"https://archives.bulbagarden.net/media/upload/1/13/Diamond_summary_2.png",
-    3:"https://archives.bulbagarden.net/media/upload/3/3e/Diamond_summary_3.png",
-    4:"https://archives.bulbagarden.net/media/upload/d/dc/Diamond_summary_4.png",
-    5:"https://archives.bulbagarden.net/media/upload/0/03/Diamond_summary_5.png",
-    6:"https://archives.bulbagarden.net/media/upload/0/02/Diamond_summary_6.png",
-    7:"https://archives.bulbagarden.net/media/upload/1/19/Diamond_summary_6_desc.png",
-    8:"https://archives.bulbagarden.net/media/upload/2/2d/Diamond_summary_7.png"
-}
+const gen4Images = [
+    "https://archives.bulbagarden.net/media/upload/4/44/Diamond_summary_1.png",
+    "https://archives.bulbagarden.net/media/upload/1/13/Diamond_summary_2.png",
+    "https://archives.bulbagarden.net/media/upload/3/3e/Diamond_summary_3.png",
+    "https://archives.bulbagarden.net/media/upload/d/dc/Diamond_summary_4.png",
+    "https://archives.bulbagarden.net/media/upload/0/03/Diamond_summary_5.png",
+    "https://archives.bulbagarden.net/media/upload/0/02/Diamond_summary_6.png",
+    "https://archives.bulbagarden.net/media/upload/1/19/Diamond_summary_6_desc.png",
+    "https://archives.bulbagarden.net/media/upload/2/2d/Diamond_summary_7.png",
+    "https://archives.bulbagarden.net/media/upload/e/ee/Diamond_summary_7_desc.png"
 
+];
 
 const gen3Images = [
     "https://archives.bulbagarden.net/media/upload/9/9a/Emerald_summary_1.png",

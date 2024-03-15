@@ -48,6 +48,7 @@ export function NewPassword() {
     return (
         <div className="password-wrapper">
             <h2>Change Password</h2>
+            <form autoComplete='off' onSubmit={handleChangePassword}>
             <div>
                 <label htmlFor="newPassword">New Password:</label>
                 <input type="password" id="newPassword" value={newPassword}
@@ -58,7 +59,8 @@ export function NewPassword() {
                 <input type="password" id="confirmPassword" value={confirmPassword}
                        onChange={(e) => setConfirmPassword(e.target.value)}/>
             </div>
-            <button className="password-btn" onClick={handleChangePassword}>Change Password</button>
+            <button className="password-btn" type='submit'>Change Password</button>
+            </form>
             {errorMessage && <p className="password-error">{errorMessage}</p>}
             {successMessage && <p className="pasword-success">{successMessage}</p>}
         </div>

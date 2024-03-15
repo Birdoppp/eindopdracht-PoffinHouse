@@ -53,7 +53,7 @@ export function TeamForm() {
         <>
             <form className="Edit-team-form" onSubmit={handleSubmit}>
                 {Object.keys(combined).length > 0 && combined.map((pokemon, index) => (
-                    <div className="individual-pokemon-wrapper">
+                    <div className="individual-pokemon-wrapper" key={index}>
                         <div className="individual-pokemon" key={index}>
                             <img className="pixelball" src={pixelball} alt="Pokeball"/>
                             <InputField

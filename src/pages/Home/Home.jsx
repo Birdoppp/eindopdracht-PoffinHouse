@@ -34,7 +34,18 @@ export default function Home() {
                                                                                       className="in-text-link"> preferences </Link>
                 and be how to make the best poffins, for desired effect on our Pokémon.
             </section>
+
             <section>
+                <PokedexGen4/>
+            </section> <section>
+                <PokedexGen4/>
+            </section> <section>
+                <PokedexGen4/>
+            </section> <section>
+                <PokedexGen4/>
+            </section> <section>
+                <PokedexGen4/>
+            </section> <section>
                 <PokedexGen4/>
             </section>
         </>

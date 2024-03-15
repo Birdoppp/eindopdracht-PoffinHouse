@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './PokedexImageSlider.css'
 import mudkip from './../../assets/pokedex-assets/Emerald_summary_2.png'
 
 export const ImageSlider = ({pokedexImages}) => {
@@ -17,9 +18,11 @@ export const ImageSlider = ({pokedexImages}) => {
 
     return (
         <div className="image-slider">
-            <button className="image-back-btn" onClick={goToPreviousImage}>&lt;</button>
             <img src={`${pokedexImages[currentIndex].toString()}`} alt={`Image ${currentIndex + 1}`}/>
-            <button className="img-next-btn" onClick={goToNextImage}>&gt;</button>
+            <div className="dex-button-wrapper">
+            <button className="image-back-btn" onClick={goToPreviousImage}>&lt;</button>
+            <button className="image-next-btn" onClick={goToNextImage}>&gt;</button>
+            </div>
         </div>
     );
 };

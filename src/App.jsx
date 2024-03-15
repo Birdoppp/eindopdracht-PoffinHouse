@@ -15,7 +15,6 @@ import Member from "./pages/Member/Member.jsx";
 import TeamDisplay from "./components/TeamDisplay/TeamDisplay.jsx";
 
 
-
 function App() {
 
     const {isAuth} = useContext(AuthContext);
@@ -29,13 +28,15 @@ function App() {
             </header>
 
             <div className="content-wrapper">
-                {/*<div className="sticky-wrapper">*/}
-                <div className="berry-tool-wrapper">
-                <BerryBar isOpen={isOpen}/>
-                <BerryToggle handleClick={handleClickIsOpen} isOpen={isOpen}/>
-                    </div>
-                {/*<div className="sticky-sibling"></div>*/}
-                {/*</div>*/}
+                        {/*<div className="berry-tool-wrapper">*/}
+                    {/*<div className="sticky-wrapper">*/}
+                <div className="berry-container">
+                            <BerryBar isOpen={isOpen}/>
+                            <BerryToggle handleClick={handleClickIsOpen} isOpen={isOpen}/>
+                        {/*</div>*/}
+
+                    {/*</div>*/}
+                </div>
 
                 <section className="page">
                     <Routes>
