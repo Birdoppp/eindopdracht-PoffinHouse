@@ -1,18 +1,27 @@
 .register-page-wrapper{
-    min-height: 50vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    /*justify-content: space-evenly;*/
     padding-top: 3em;
 }
-.register-page-wrapper label{
-    margin: 20px 0;
+.register-title {
+    margin-bottom: 1em;
 }
-label{
+.register-page-wrapper input{
+    margin: 20px 0 10px 20px;
+    height: 1em;
+    padding: 1em;
+    border-radius: 12px;
+    border: 1px solid lightgrey;
+    box-shadow: 0 0 20px -18px;
+}
+.register-page-wrapper label{
     font-family: "pixelate", sans-serif;
     font-weight: normal;
     font-style: oblique;
     color: maroon;
+    /*padding-right: 1em;*/
 }
 .error-EN{
 font-family: game_paused, sans-serif;
@@ -28,14 +37,15 @@ font-family: game_paused, sans-serif;
     border: 0;
     border-radius: 12px;
     color: floralwhite;
-    cursor: pointer;
+
     display: inline-block;
-    font-family: "Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-family: "Segoe UI",Roboto,sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 2.5;
-    outline: transparent;
+    /*outline: transparent;*/
     padding: 0 1rem;
+    margin: 1em 0;
     text-align: center;
     text-decoration: none;
     transition: box-shadow .2s ease-in-out;

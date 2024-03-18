@@ -1,0 +1,77 @@
+.nature-table {
+    text-align: center;
+    width: 30em;
+    margin: auto;
+    border-radius: 10px;
+    border: 3px solid #bbbbe8;
+    background: #a0a0c4;
+    color: snow;
+}
+
+.table-rule {
+    background: #d1d1ff
+}
+
+#nature-table-text {
+    background: #bbbbe8;
+    color: snow;
+}
+
+#disliked-th {
+    background: #ddf;
+    color: #768DE5;
+    padding: 1em;
+}
+
+#favorite-th {
+    background: #ddf;
+    color: #fc6673;
+    padding: 1em;
+}
+
+.spicy {
+    background: #e87f7f;
+    color: #b74545;
+}
+
+.sour {
+    background: #FAE078;
+    color: #e88002;
+}
+
+.dry {
+    background: #9DB7F5;
+    color: #5177e7;
+}
+
+.bitter {
+    background: #A7DB8D;
+    color: limegreen;
+}
+
+.sweet {
+    background: lightpink;
+    color: hotpink;
+}
+
+.no-preference {
+    background: #bbbbe8;
+}
+
+
+.nature-table p:active {
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+.nature-table p:hover {
+     cursor: pointer;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 102, 0.5), 0 0 60px rgba(255, 255, 102, 0.5), 0 0 70px rgba(255, 255, 102, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 102, 0.5), 0 0 50px rgba(255, 255, 102, 0.5), 0 0 60px rgba(255, 255, 102, 0.5), 0 0 70px rgba(255, 255, 102, 0.5), 0 0 80px rgba(255, 255, 102, 0.5);
+    }
+}

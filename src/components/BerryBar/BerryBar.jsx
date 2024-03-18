@@ -5,14 +5,16 @@ import ListBerryCard from "../ListBerryCard/ListBerryCard.jsx";
 import BerryDexCard from "../BerryDexCard/BerryDexCard.jsx";
 import { berryID } from "../../constants/constants.jsx";
 
-export function BerryBar({ isOpen }) {
+export default function BerryBar({ isOpen }) {
     const [berries, setBerries] = useState([]);
     const [selectedBerry, setSelectedBerry] = useState({ name: "" });
     const [selectedFlavor, setSelectedFlavor] = useState('');
+    const [selectedButton, setSelectedButton] = useState('');
     const [filteredBerries, setFilteredBerries] = useState(null);
-    const [sortOrder, setSortOrder] = useState('asc'); // State to toggle sorting order
-    const [searchQuery, setSearchQuery] = useState(''); // State to store the search query
-    const [filterDisabled, setFilterDisabled] = useState(false); // State to track filter button disable status
+    const [sortOrder, setSortOrder] = useState('asc');
+    const [searchQuery, setSearchQuery] = useState('');
+    const [filterDisabled, setFilterDisabled] = useState(false);
+    const [searchDisabled, setSearchDisabled] = useState(false);
 
     // Gets all Berries from API
     useEffect(() => {
@@ -36,7 +38,7 @@ export function BerryBar({ isOpen }) {
         setSelectedBerry(selected);
     };
 
-    // FilterTool for berries
+    // FilterTool for berries by flavor
     const fetchBerriesByFlavor = async (flavorName) => {
         try {
             const response = await axios.get(`https://pokeapi.co/api/v2/berry-flavor/${flavorName}/`);
@@ -46,15 +48,33 @@ export function BerryBar({ isOpen }) {
         }
     };
 
+    // handleClick for flavor-buttons
     const handleButtonClick = (flavorName) => {
+        setSelectedButton(flavorName);
         setSelectedFlavor(flavorName);
         void fetchBerriesByFlavor(flavorName);
+        setSearchDisabled(true); // Disable search bar when filter button is clicked
     };
 
-    // Function to deselect filtered berries
+    // Disable flavor-buttons if search input is active
+    useEffect(() => {
+        if (searchQuery.length === 0) {
+            setFilterDisabled(false);
+        } else {
+            setFilterDisabled(true);
+        }
+    }, [searchQuery]);
+
+    // Filter berries by search query
+    const filteredBySearch = berries.filter(berry =>
+        berry.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
+    // Handle for Show all button
     const handleDeselectAll = () => {
-        setFilteredBerries(null);
-        setFilterDisabled(false); // Enable filter buttons
+        setSelectedButton("")
+        setFilteredBerries("");
+        setSearchDisabled(false);
     };
 
     // Toggle sorting order
@@ -62,69 +82,49 @@ export function BerryBar({ isOpen }) {
         setSortOrder(prevOrder => prevOrder === 'asc' ? 'desc' : 'asc');
     };
 
-    // Handle search input change
-    const handleSearchChange = (e) => {
-        const query = e.target.value;
-        setSearchQuery(query);
-        setFilteredBerries(null); // Clear filtered berries when searching
-        setFilterDisabled(query !== ''); // Disable filter buttons when searching
-        // Use the callback function to ensure the state is updated before checking its length
-        setSearchQuery(query => {
-            if (searchQuery.length <= 0) {
-                setFilterDisabled(false); // Enable filter buttons when search query is cleared
-            }
-            console.log(searchQuery)
-            return query;
-        });
-    };
-
-    // Filter berries by search query
-    const filteredBySearch = berries.filter(berry =>
-        berry.name.toLowerCase().includes(searchQuery.toLowerCase())
-    );
 
     // Sort berries by ID based on the current sorting order
     const sortedBerries = () => {
         const targetBerries = filteredBerries || filteredBySearch;
         return targetBerries.slice().sort((a, b) => {
-            const berryA = berryID.find(item => item.name === (a.berry ? a.berry.name : a.name));
-            const berryB = berryID.find(item => item.name === (b.berry ? b.berry.name : b.name));
+            const berryA = berryID.find(berry => berry.name === (a.berry ? a.berry.name : a.name));
+            const berryB = berryID.find(berry => berry.name === (b.berry ? b.berry.name : b.name));
             const orderFactor = sortOrder === 'asc' ? 1 : -1;
             return orderFactor * (berryA.id - berryB.id);
         });
     };
 
-
-
     return (
         <div className={`aside ${isOpen ? "aside--isOpen" : "aside--isClosed"}`}>
             <div className="berry-bar">
                 <div className="filter-tool">
-                    <button className="spicy-button" onClick={() => handleButtonClick('1')} disabled={filterDisabled}>Spicy</button>
-                    <button className="dry-button" onClick={() => handleButtonClick('2')} disabled={filterDisabled}>Dry</button>
-                    <button className="sweet-button" onClick={() => handleButtonClick('3')} disabled={filterDisabled}>Sweet</button>
-                    <button className="bitter-button" onClick={() => handleButtonClick('4')} disabled={filterDisabled}>Bitter</button>
-                    <button className="sour-button" onClick={() => handleButtonClick('5')} disabled={filterDisabled}>Sour</button>
-                    {filteredBerries && <button className="reset-button" onClick={handleDeselectAll}>Show All</button>}
+                    <button className={`spicy-button ${selectedButton === '1' ? 'selected' : ''}`} onClick={() => handleButtonClick('1')} disabled={filterDisabled}>Spicy</button>
+                    <button className={`dry-button ${selectedButton === '2' ? 'selected' : ''}`} onClick={() => handleButtonClick('2')} disabled={filterDisabled}>Dry</button>
+                    <button className={`sweet-button ${selectedButton === '3' ? 'selected' : ''}`} onClick={() => handleButtonClick('3')} disabled={filterDisabled}>Sweet</button>
+                    <button className={`bitter-button ${selectedButton === '4' ? 'selected' : ''}`} onClick={() => handleButtonClick('4')} disabled={filterDisabled}>Bitter</button>
+                    <button className={`sour-button ${selectedButton === '5' ? 'selected' : ''}`} onClick={() => handleButtonClick('5')} disabled={filterDisabled}>Sour</button>
+                    {filteredBerries && <button className="show-all-button" onClick={handleDeselectAll}>Show All</button>}
                     <button className="sort-button" onClick={toggleSortingOrder}>Sort by <br/> berry number</button>
+
+                            <input
+                                className="search-bar"
+                                type="text"
+                                placeholder={searchDisabled ? 'Please select Show All' : 'Search berries...'}
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                                disabled={searchDisabled}
+                            />
+
+                        {searchQuery && (
+                            <button className="clear-search-button" onClick={() => setSearchQuery("")}>
+                                Clear
+                            </button>
+                        )}
+
                 </div>
-                    <div className="search-bar">
-                        <input
-                            type="text"
-                            placeholder="Search berries..."
-                            value={searchQuery}
-                            onChange={handleSearchChange}
-                        />
-                        {/*{searchQuery && (*/}
-                        {/*    <button className="clear-search-button" onClick={() => setSearchQuery('')}>*/}
-                        {/*        Clear*/}
-                        {/*    </button>*/}
-                        {/*)}*/}
-                        {/* eslint-disable-next-line react/no-unescaped-entities */}
-                        {searchQuery && <div className="search-message">Showing results for "{searchQuery}"</div>}
-                    </div>
                 <div className="berry-tool">
                     <ul className="berry-list">
+                        {searchQuery && <div className="search-message"> Showing results for <strong>{searchQuery} </strong>  </div>}
                         {sortedBerries().map((sorted, index) => (
                             <ListBerryCard
                                 key={index}
@@ -139,10 +139,8 @@ export function BerryBar({ isOpen }) {
                         {selectedBerry && <BerryDexCard selectedBerry={selectedBerry} />}
                     </section>
                 </div>
-                <footer className="berry-dex-footer"> For the flavor-potency of All berries in one list &nbsp; click&nbsp;<a href="https://bulbapedia.bulbagarden.net/wiki/Flavor" target="_blank" rel="noreferrer"> Here </a>! </footer>
+                <footer className="berry-dex-footer"> For the flavor-potency of All berries in one list &nbsp; click&nbsp; <a href="https://bulbapedia.bulbagarden.net/wiki/Flavor" target="_blank" > Here </a>! </footer>
             </div>
         </div>
     );
 }
-
-export default BerryBar;

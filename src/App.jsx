@@ -7,13 +7,12 @@ import Preferences from "./pages/Preferences/Preferences.jsx";
 import EditTeam from "./pages/EditTeam/EditTeam.jsx";
 import {AuthContext} from "./context/AuthContext.jsx";
 import Header from "./components/Header/Header.jsx";
-import {BerryBar} from "./components/BerryBar/BerryBar.jsx";
+import BerryBar from "./components/BerryBar/BerryBar.jsx";
 import BerryToggle from "./components/BerryToggle/BerryToggle.jsx";
 import Login from "./pages/Login/Login.jsx";
 import Register from "./pages/Register/Register.jsx";
 import Member from "./pages/Member/Member.jsx";
 import TeamDisplay from "./components/TeamDisplay/TeamDisplay.jsx";
-
 
 
 function App() {
@@ -29,9 +28,14 @@ function App() {
             </header>
 
             <div className="content-wrapper">
-                <div className="berry-tool-wrapper">
-                <BerryBar isOpen={isOpen}/>
-                <BerryToggle handleClick={handleClickIsOpen} isOpen={isOpen}/>
+                        {/*<div className="berry-tool-wrapper">*/}
+                    {/*<div className="sticky-wrapper">*/}
+                <div className="berry-container">
+                            <BerryBar isOpen={isOpen}/>
+                            <BerryToggle handleClick={handleClickIsOpen} isOpen={isOpen}/>
+                        {/*</div>*/}
+
+                    {/*</div>*/}
                 </div>
 
                 <section className="page">
@@ -43,13 +47,9 @@ function App() {
                         <Route path="/register" element={<Register/>}/>;
                         <Route path="/member" element={isAuth ? <Member/> : <Navigate to="/login"/>}/>;
                         <Route path="/my-team" element={<TeamDisplay/>}/>;
-                        {/*<Route path="/berry/:berryId" element={<BerryDexCard/>} />*/}
                     </Routes>
                 </section>
             </div>
-            <footer>
-
-            </footer>
         </>
     )
 }

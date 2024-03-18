@@ -3,6 +3,7 @@ import React from "react";
 import BerryRadarChart from "./../BerryRadarChart/BerryRadarChart.jsx";
 import {berryID} from "../../constants/constants.jsx";
 import uppercaseCharAt from "../../helpers/uppercaseCharAt.js";
+import BerryDescription from "../BerryDescription/BerryDescription.jsx";
 
 
 function BerryDexCard({selectedBerry}) {
@@ -29,7 +30,7 @@ function BerryDexCard({selectedBerry}) {
                             </li>
                             <div className="dex-container2">
                                 <li className="berry-name">
-                                    <h2>{uppercaseCharAt(selectedBerry.name,0)}</h2>
+                                    <h2>{uppercaseCharAt(selectedBerry.name, 0)}</h2>
                                 </li>
                                 <li>
                                     <h3 className="berry-id">
@@ -43,9 +44,7 @@ function BerryDexCard({selectedBerry}) {
                                 <BerryRadarChart selectedBerry={selectedBerry}/>
                             </li>
                             <li>
-                                <div className="berry-description-box">
-                                    <p className="berry-description"></p>
-                                </div>
+                                 <BerryDescription selectedBerry={selectedBerryID}/>
                             </li>
                         </div>
                     </ul> : <h1 className="no-berry-text"> Please <br/>select <br/> berry!</h1>

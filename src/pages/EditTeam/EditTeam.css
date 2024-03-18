@@ -42,7 +42,7 @@
 
 .team-img {
     display: flex;
-    flex-shrink: 0;
+    flex-shrink: 1;
     justify-content: center;
     align-content: space-evenly;
     /*border: orchid 2px solid;*/
