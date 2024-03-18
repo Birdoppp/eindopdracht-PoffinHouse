@@ -43,7 +43,7 @@ function Login() {
     return (
         <>
             <div className="login-page-wrapper">
-                <h1>Login</h1>
+                <h1 className="login-title">Log in</h1>
 
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <label htmlFor="username-field">
@@ -64,7 +64,7 @@ function Login() {
                         />
                     </label>
                     {error && <p className="error-EN">{error}</p>}
-                    {error && <p className="error-U">Combination of the e-mailadres and password are invalid</p>}
+                    {/*{error && <p className="error-U">Combination of the e-mailadres and password are invalid</p>}*/}
 
                     <button
                         type="submit"
@@ -74,7 +74,7 @@ function Login() {
                     </button>
                 </form>
 
-                <p>Are you not a member yet? Click <Link to="/register">here</Link> to create an account.</p>
+                <p>Are you not a member yet?<br/> Click <Link to="/register">here</Link> to create an account.</p>
             </div>
         </>
     );

@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './PokedexImageSlider.css'
-import mudkip from './../../assets/pokedex-assets/Emerald_summary_2.png'
 
 export const ImageSlider = ({pokedexImages}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -72,7 +71,7 @@ export const PokedexGen3 = () => {
 
 export const PokedexGen = () => {
     const genImages = [
-        "https://archives.bulbagarden.net/media/upload/e/ec/Emerald_summary_2.png",
+        "https://archives.bulbagarden.net/media/upload/a/a0/FR_summary_1.png",
         "https://archives.bulbagarden.net/media/upload/c/c5/FR_summary_2.png",
         "https://archives.bulbagarden.net/media/upload/c/ca/FR_summary_3.png",
         "https://archives.bulbagarden.net/media/upload/b/b5/FR_summary_3_desc.png"

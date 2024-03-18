@@ -11,10 +11,30 @@
     /*border: 3px solid green;*/
     /*min-height: 50vh;*/
 }
+
+.login-title{
+    margin-bottom: 1em;
+
+}
+
 .login-page-wrapper label{
-    /*margin-right: 1em;*/
+    font-family: "pixelate", sans-serif;
+    font-weight: normal;
+    font-style: oblique;
+    color: maroon;
 }
 
 .login-page-wrapper input{
-    margin: 15px 0 10px 20px;
+    margin: 20px 0 10px 20px;
+    height: 1em;
+    padding: 1em;
+    border-radius: 12px;
+    border: 1px solid lightgrey;
+    outline: none;
+    box-shadow: 0 0 20px -18px;
+}
+
+.login-button{
+    margin: 10px;
+    padding: 10px;
 }

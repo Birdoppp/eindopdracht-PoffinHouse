@@ -1,28 +1,26 @@
 .berry-bar {
     display: flex;
     flex-direction: column;
-    /*justify-content: flex-start;*/
-    /*border: #646cff solid 2px;*/
+
     height: fit-content;
     width: 100%;
     min-height: 60vh;
     min-width: 40vw;
+
     position: sticky;
     top: 0;
     z-index: 999;
-
 }
+
+/*--------------------------------------------------------------*/
 
 .filter-tool {
     display: flex;
-    /*flex-wrap: wrap;*/
     justify-content: left;
     align-items: center;
 
-    /*flex-direction: column;*/
     width: 100%;
     min-height: 80px;
-    /*min-height: 9vh;*/
     background-color: #fd9f9f;
 }
 
@@ -31,10 +29,16 @@
     justify-content: center;
     align-items: center;
     border: transparent solid 2px;
+
     height: 3em;
     width: 4em;
     margin: 0 4px;
     border-radius: 20px;
+}
+
+.filter-tool button.selected {
+    border-color: palegoldenrod;
+    color: white;
 }
 
 .spicy-button {
@@ -56,18 +60,29 @@
 .sour-button {
     background-color: gold;
 }
+.show-all-button{
+    background-color: floralwhite;
+}
 
 .sort-button {
     background-color: papayawhip;
-    display: flex;
-    justify-items: right;
     min-height: 5em;
 }
 
 /*------------------------------------------------------------------*/
+
 .search-bar {
-    display: flex;
-    width: fit-content;
+    height: 1em;
+    padding: 1em;
+    border-radius: 12px;
+    border: 1px solid lightgrey;
+    line-height: 1.5em;
+    font-size: 0.9em;
+}
+
+.clear-search-button {
+    border: cornsilk 2px solid;
+    background-color: cornsilk;
 }
 
 /*------------------------------------------------------------------*/
@@ -76,7 +91,6 @@
 }
 
 .berry-list {
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,6 +109,10 @@
 
 }
 
+.search-message {
+    font-size: 0.9em;
+    color: indianred;
+}
 
 .berry-display {
     display: flex;
@@ -121,22 +139,19 @@
 /*-----------------------------------------------------------------------*/
 /*For the whole pink Tool*/
 .aside {
-    width: 100%;
-    height: calc(100% - 7.2em);
-    /*min-height: 80vh;*/
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
 
+    width: 0;
+    height: calc(100% - 7.2em);
 
     background-color: pink;
     border: #ffafae solid;
     border-width: 0 0 2px 0;
-    min-width: 10px;
     position: relative;
 
-    transition: width 4s ease-out;
 }
 
 
@@ -144,6 +159,8 @@
     color: hotpink;
     border: #fd9f9f solid;
     border-width: 0 2px 2px 0;
+    width: 100%;
+
 
 }
 

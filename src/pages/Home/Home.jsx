@@ -1,6 +1,6 @@
 import "./Home.css"
 import welcome from './../../assets/assorted-collection/welcome.gif'
-import {PokedexGen4} from "../../components/PokedexImageSlider/PokedexImageSlider.jsx";
+import {PokedexGen, PokedexGen3, PokedexGen4} from "../../components/PokedexImageSlider/PokedexImageSlider.jsx";
 import {Link} from "react-router-dom";
 
 export default function Home() {
@@ -37,16 +37,12 @@ export default function Home() {
 
             <section>
                 <PokedexGen4/>
-            </section> <section>
-                <PokedexGen4/>
-            </section> <section>
-                <PokedexGen4/>
-            </section> <section>
-                <PokedexGen4/>
-            </section> <section>
-                <PokedexGen4/>
-            </section> <section>
-                <PokedexGen4/>
+            </section>
+            <section>
+                <PokedexGen/>
+            </section>
+            <section>
+                <PokedexGen3/>
             </section>
         </>
 

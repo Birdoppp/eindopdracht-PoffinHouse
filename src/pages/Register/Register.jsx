@@ -57,7 +57,7 @@ function Register() {
     }
     return (
         <div className="register-page-wrapper">
-            <h1>Register</h1>
+            <h1 className="register-title">Register</h1>
 
             <form onSubmit={handleSubmit(onSubmit)}>
                 <label htmlFor="email-field">
