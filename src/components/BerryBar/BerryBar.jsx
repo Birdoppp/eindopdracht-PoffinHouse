@@ -9,7 +9,7 @@ export default function BerryBar({ isOpen }) {
     const [berries, setBerries] = useState([]);
     const [selectedBerry, setSelectedBerry] = useState({ name: "" });
     const [selectedFlavor, setSelectedFlavor] = useState('');
-    const [selectedButton, setSelectedButton] = useState('');
+    const [selectedButton, setSelectedButton] = useState('All');
     const [filteredBerries, setFilteredBerries] = useState(null);
     const [sortOrder, setSortOrder] = useState('asc');
     const [searchQuery, setSearchQuery] = useState('');
@@ -72,7 +72,7 @@ export default function BerryBar({ isOpen }) {
 
     // Handle for Show all button
     const handleDeselectAll = () => {
-        setSelectedButton("")
+        setSelectedButton("All")
         setFilteredBerries("");
         setSearchDisabled(false);
     };
@@ -103,7 +103,7 @@ export default function BerryBar({ isOpen }) {
                     <button className={`sweet-button ${selectedButton === '3' ? 'selected' : ''}`} onClick={() => handleButtonClick('3')} disabled={filterDisabled}>Sweet</button>
                     <button className={`bitter-button ${selectedButton === '4' ? 'selected' : ''}`} onClick={() => handleButtonClick('4')} disabled={filterDisabled}>Bitter</button>
                     <button className={`sour-button ${selectedButton === '5' ? 'selected' : ''}`} onClick={() => handleButtonClick('5')} disabled={filterDisabled}>Sour</button>
-                    {filteredBerries && <button className="show-all-button" onClick={handleDeselectAll}>Show All</button>}
+                    <button className={`show-all-button ${selectedButton === 'All'? 'selected' : ''}`} onClick={handleDeselectAll}>Show All</button>
                     <button className="sort-button" onClick={toggleSortingOrder}>Sort by <br/> berry number</button>
 
                             <input
@@ -124,7 +124,7 @@ export default function BerryBar({ isOpen }) {
                 </div>
                 <div className="berry-tool">
                     <ul className="berry-list">
-                        {searchQuery && <div className="search-message"> Showing results for <strong>{searchQuery} </strong>  </div>}
+                        {searchQuery && <div className="search-message"> Showing results for: <strong> {searchQuery} </strong>  </div>}
                         {sortedBerries().map((sorted, index) => (
                             <ListBerryCard
                                 key={index}

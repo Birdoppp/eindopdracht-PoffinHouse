@@ -13,6 +13,7 @@ import Login from "./pages/Login/Login.jsx";
 import Register from "./pages/Register/Register.jsx";
 import Member from "./pages/Member/Member.jsx";
 import TeamDisplay from "./components/TeamDisplay/TeamDisplay.jsx";
+import NotFound from "./pages/NotFound/NotFound.jsx";
 
 
 function App() {
@@ -28,14 +29,9 @@ function App() {
             </header>
 
             <div className="content-wrapper">
-                        {/*<div className="berry-tool-wrapper">*/}
-                    {/*<div className="sticky-wrapper">*/}
                 <div className="berry-container">
-                            <BerryBar isOpen={isOpen}/>
-                            <BerryToggle handleClick={handleClickIsOpen} isOpen={isOpen}/>
-                        {/*</div>*/}
-
-                    {/*</div>*/}
+                    <BerryBar isOpen={isOpen}/>
+                    <BerryToggle handleClick={handleClickIsOpen} isOpen={isOpen}/>
                 </div>
 
                 <section className="page">
@@ -47,6 +43,7 @@ function App() {
                         <Route path="/register" element={<Register/>}/>;
                         <Route path="/member" element={isAuth ? <Member/> : <Navigate to="/login"/>}/>;
                         <Route path="/my-team" element={<TeamDisplay/>}/>;
+                        <Route path="/*" element={<NotFound/>}/>;
                     </Routes>
                 </section>
             </div>

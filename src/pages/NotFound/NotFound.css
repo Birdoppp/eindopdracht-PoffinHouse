@@ -1,0 +1,48 @@
+.error-title {
+    padding-top: 2em;
+
+}
+
+.filter-tool {
+    color: palevioletred;
+}
+
+.error-wrapper {
+    display: flex;
+    width: 30vw;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0 0.5em 2em 0.5em;
+}
+
+.error-wrapper img {
+    width: 22vw;
+}
+
+.error-page-EN {
+    font-family: pixelate_shaded, sans-serif;
+    font-weight: bold;
+    margin-bottom: 1em;
+    color: darkred;
+}
+
+.error-page-U {
+    font-family: unown, sans-serif;
+    font-weight: bold;
+    color: darkred;
+
+}
+
+.home-link-EN {
+    font-family: pixelate_shaded, sans-serif;
+    font-size: inherit;
+    font-weight: bold;
+    color: coral;
+}
+
+.home-link-U {
+    font-family: unown, sans-serif;
+    font-size: inherit;
+    font-weight: bold;
+    color: coral;
+}
