@@ -12,12 +12,12 @@ export function TeamForm() {
     const {team, setTeam} = useContext(TeamContext);
     const {user} = useContext(AuthContext);
     const [combined, setCombined] = useState(JSON.parse(localStorage.getItem(`team-${user.username}`)) || [
-        {name: '', nature: ''}, // Initial state for the first Pokémon
-        {name: '', nature: ''}, // Initial state for the second Pokémon
-        {name: '', nature: ''}, // Initial state for the third Pokémon
-        {name: '', nature: ''}, // Initial state for the fourth Pokémon
-        {name: '', nature: ''}, // Initial state for the fifth Pokémon
-        {name: '', nature: ''}])// Initial state for the sixth Pokémon
+        {name: '', nature: ''}, // Initial state for the first Pokémon in form
+        {name: '', nature: ''}, // Initial state for the second Pokémon in form
+        {name: '', nature: ''}, // Initial state for the third Pokémon in form
+        {name: '', nature: ''}, // Initial state for the fourth Pokémon in from
+        {name: '', nature: ''}, // Initial state for the fifth Pokémon in from
+        {name: '', nature: ''}])// Initial state for the sixth Pokémon in from
 
     const [charCounts, setCharCounts] = useState(Array(combined.length).fill(0));
     const handleNameChange = (index, value) => {
