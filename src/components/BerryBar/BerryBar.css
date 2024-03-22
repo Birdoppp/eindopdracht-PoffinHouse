@@ -62,7 +62,8 @@
     background-color: gold;
 }
 .show-all-button{
-    background-color: floralwhite;
+    background-color: #fc6673;
+    color: floralwhite;
 }
 .show-all-button.selected{
     background-color: #fc6673;
