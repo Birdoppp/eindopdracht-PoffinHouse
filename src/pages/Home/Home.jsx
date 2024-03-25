@@ -1,6 +1,10 @@
 import "./Home.css"
 import welcome from './../../assets/assorted-collection/welcome.gif'
-import {PokedexGen, PokedexGen3, PokedexGen4} from "../../components/PokedexImageSlider/PokedexImageSlider.jsx";
+import {
+    EmpoleonDex,
+    BulbaDex,
+    MudkipDex,
+} from "../../components/PokedexImageSlider/PokedexImageSlider.jsx";
 import {Link} from "react-router-dom";
 
 export default function Home() {
@@ -34,15 +38,14 @@ export default function Home() {
                                                                                       className="in-text-link"> preferences </Link>
                 and be how to make the best poffins, for desired effect on our Pokémon.
             </section>
-
             <section>
-                <PokedexGen4/>
+            <EmpoleonDex/>
             </section>
             <section>
-                <PokedexGen/>
+                <BulbaDex/>
             </section>
             <section>
-                <PokedexGen3/>
+                <MudkipDex/>
             </section>
         </>
 

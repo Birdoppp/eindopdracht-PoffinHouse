@@ -1,3 +1,4 @@
+
 export const natures = [
     { name: "" },
     { id: 1, name: "Hardy", increased_stat: "—", decreased_stat: "—", favorite_flavor: "—", disliked_flavor: "—", url: "https://pokeapi.co/api/v2/nature/1/" },
@@ -94,33 +95,3 @@ export const berryID = [
     { name: "jaboca", id: 63 },
     { name: "rowap", id: 64 }
 ];
-
-const gen4Images = [
-    "https://archives.bulbagarden.net/media/upload/4/44/Diamond_summary_1.png",
-    "https://archives.bulbagarden.net/media/upload/1/13/Diamond_summary_2.png",
-    "https://archives.bulbagarden.net/media/upload/3/3e/Diamond_summary_3.png",
-    "https://archives.bulbagarden.net/media/upload/d/dc/Diamond_summary_4.png",
-    "https://archives.bulbagarden.net/media/upload/0/03/Diamond_summary_5.png",
-    "https://archives.bulbagarden.net/media/upload/0/02/Diamond_summary_6.png",
-    "https://archives.bulbagarden.net/media/upload/1/19/Diamond_summary_6_desc.png",
-    "https://archives.bulbagarden.net/media/upload/2/2d/Diamond_summary_7.png",
-    "https://archives.bulbagarden.net/media/upload/e/ee/Diamond_summary_7_desc.png"
-
-];
-
-const gen3Images = [
-    "https://archives.bulbagarden.net/media/upload/9/9a/Emerald_summary_1.png",
-    "https://archives.bulbagarden.net/media/upload/e/ec/Emerald_summary_2.png",
-    "https://archives.bulbagarden.net/media/upload/9/98/Emerald_summary_3.png",
-    "https://archives.bulbagarden.net/media/upload/8/81/Emerald_summary_3_desc.png",
-    "https://archives.bulbagarden.net/media/upload/4/47/Emerald_summary_4.png",
-    "https://archives.bulbagarden.net/media/upload/2/2d/Emerald_summary_4_desc.png",
-
-];
-
-const genImages = [
-    "https://archives.bulbagarden.net/media/upload/e/ec/Emerald_summary_2.png",
-    "https://archives.bulbagarden.net/media/upload/c/c5/FR_summary_2.png",
-    "https://archives.bulbagarden.net/media/upload/c/ca/FR_summary_3.png",
-    "https://archives.bulbagarden.net/media/upload/b/b5/FR_summary_3_desc.png"
-]

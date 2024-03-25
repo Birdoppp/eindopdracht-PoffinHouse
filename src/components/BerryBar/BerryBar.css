@@ -61,12 +61,13 @@
 .sour-button {
     background-color: gold;
 }
+
+#sour-button.selected {
+  color: darkgrey;
+}
 .show-all-button{
     background-color: #fc6673;
     color: floralwhite;
-}
-.show-all-button.selected{
-    background-color: #fc6673;
 }
 
 .sort-button {
