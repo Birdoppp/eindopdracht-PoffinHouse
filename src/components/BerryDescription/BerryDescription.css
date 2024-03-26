@@ -1,11 +1,7 @@
 .berry-description{
-    /*border: palegreen solid 2px;*/
     height: 8em;
     width: 100%;
     max-width: 20em;
     white-space: pre-wrap;
-
     color: dimgrey;
-    font-family: "Segoe UI", sans-serif;
-    font-weight: normal;
-}
+ }

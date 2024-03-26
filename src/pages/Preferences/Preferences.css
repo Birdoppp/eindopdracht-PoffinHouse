@@ -1,23 +1,6 @@
-.preference-wrapper{
-    /*display: inline-block;*/
-    /*align-items: center;*/
-    /*flex-wrap: wrap;*/
-    /*min-width:30em;*/
+.preference-page-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 
-    position: relative;
-    z-index: 0;
-}
-.preferences-tab-text{
-    border: #fd9f9f 2px solid;
-    z-index: 0;
-    width: 8em;
-    height: 6.5em;
-    text-align: center;
-    position: absolute ;
-    top: 7em;
-    left: -10em;
-}
-.preferences-tab{
-    display: inline-block;
-    z-index: 0;
-}

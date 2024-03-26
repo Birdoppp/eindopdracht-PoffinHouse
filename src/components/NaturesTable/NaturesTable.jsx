@@ -2,7 +2,7 @@ import React from 'react';
 import './NaturesTable.css'
 
 
-function NaturesTable({ natures, onFlavorClick}) {
+function NaturesTable({natures, onFlavorClick, selectedNature, dislikedFlavor, favoriteFlavor, noPreference }) {
 
     return (
         <div>
@@ -13,13 +13,37 @@ function NaturesTable({ natures, onFlavorClick}) {
                     </th>
                 </tr>
                 <tr>
-                    <td rowSpan="2" colSpan="2" id="nature-table-text"> <i><b>No preference ↘</b></i>
-                    </td>
+                    <th className="flavor-container" rowSpan="2" colSpan="1" >
+            {selectedNature && (
+                <div className="preferences-tab-text">
+                    <h3 className="selected-nature">{selectedNature}</h3>
+                    {!noPreference && (
+                        <div>
+                            <h5>Favorite flavor: </h5>
+                            <p>{favoriteFlavor}</p>
+                            <h5>Disliked flavor:</h5>
+                            <p>{dislikedFlavor}</p>
+                        </div>
+                    )}
+                    {noPreference && (
+                        <div>
+                            <p>This Nature<br/> has no <br/> Preference</p>
+                        </div>
+                    )}
+                </div>
+            )}
+
+
+                    </th>
+
                     <th
-                        colSpan="5" id="disliked-th" > Disliked flavor <br/>  (decreased stat ↓)
+                        colSpan="7" id="disliked-th" > Disliked flavor <br/>  (decreased stat ↓)
                     </th>
                 </tr>
                 <tr>
+                    <td  rowSpan="1" colSpan="1"
+                        id="nature-table-text"> <i>No preference </i>
+                    </td>
                     <th className="spicy"> Spicy <br/> (↓Attack)
                     </th>
                     <th className="sour"> Sour <br/> (↓Defense)

@@ -2,7 +2,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: cornsilk;
+    width: fit-content;
+
+    background-color: pink;
+    margin: 4px;
+    padding: 0.5em;
+    border: #f6919a 2px solid;
     border-radius: 12px;
 }
 

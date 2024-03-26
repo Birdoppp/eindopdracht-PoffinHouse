@@ -100,12 +100,3 @@ h1 {
     color: #b15c54;
 }
 
-
-.aside--isOpen {
-
-}
-
-.aside--isClosed {
-    display: none;
-    min-width: 10px;
-}

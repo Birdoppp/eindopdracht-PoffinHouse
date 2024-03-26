@@ -18,7 +18,7 @@ export const PokedexImageSlider = ({pokedexImages}) => {
 
     return (
         <div className="image-slider">
-            <img src={`${pokedexImages[currentIndex].toString()}`} alt={`Image ${currentIndex + 1}`}/>
+            <img src={`${pokedexImages[currentIndex]}`} alt={`Image ${currentIndex + 1}`}/>
             <div className="dex-button-wrapper">
                 <button className="image-back-btn" onClick={goToPreviousImage}>&lt;</button>
                 <button className="image-next-btn" onClick={goToNextImage}>&gt;</button>
