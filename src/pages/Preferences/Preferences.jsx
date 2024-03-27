@@ -4,6 +4,7 @@ import {natures} from "../../constants/constants.jsx";
 import NaturesTable from "../../components/NaturesTable/NaturesTable.jsx";
 import {EmpoleonDex} from "../../components/PokedexImageSlider/PokedexImageSlider.jsx";
 
+
 function Preferences() {
     const [selectedNature, setSelectedNature] = useState("")
     const [dislikedFlavor, setDislikedFlavor] = useState("");
@@ -27,6 +28,11 @@ function Preferences() {
     return (
         <div className="preference-page-wrapper">
             <section>
+                Each Pokémon has its own unique nature, influencing how it behaves in battle and how it grows as it
+                levels up. Whether your Pikachu is bashful, your Charizard is adamant, or your Eevee is quirky, each
+                nature brings its own set of characteristics and traits to the table.
+            </section>
+            <section>
                 <NaturesTable
                     selectedNature={selectedNature}
                     dislikedFlavor={dislikedFlavor}
@@ -36,9 +42,14 @@ function Preferences() {
                     natures={natures}/>
 
             </section>
-                <section>
-                    <EmpoleonDex/>
-                </section>
+            <section>
+                <EmpoleonDex/>
+            </section>
+            <section>
+                <p> Click <a
+                    href="https://lparchive.org/Pokemon-Platinum-%28by-Crosspeice%29/Update%2038/2-Berry.png"
+                    target="_blank"> Here</a> for our recommendations per flavor</p>
+            </section>
             <section>
                 All Pokémon have poke-food preferences based on their Nature. The nature can be found in the summary of
                 your pokemon. For example in the Diamond and Pearl gameplay the summary will look like this:

@@ -1,12 +1,24 @@
 
+.member-header {
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    height: fit-content;
+}
+
+.hi-member {
+    padding: 2em 0 1em 0;
+}
+
+.snack-berries {
+    padding-top:10px ;
+    height: 5em;
+}
+
 .member-page button {
     margin-top: 0.5em;
 }
 
 .member-page section {
     padding: 2em 0 0.5em 0;
-}
-
-.hi-member {
-    padding-top: 2em;
 }

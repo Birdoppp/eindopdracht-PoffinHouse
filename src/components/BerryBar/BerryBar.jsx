@@ -137,9 +137,10 @@ export default function BerryBar({isOpen}) {
                         {selectedBerry && <BerryDexCard selectedBerry={selectedBerry}/>}
                     </section>
                 </div>
-                <footer className="berry-dex-footer"> For the flavor-potency of All berries in one
+                <footer className="berry-dex-footer"><p> For the flavor-potency of All berries in one
                     list &nbsp; click&nbsp; <a href="https://bulbapedia.bulbagarden.net/wiki/Flavor"
-                                               target="_blank"> Here </a>!
+                                               target="_blank"> Here </a>!</p>
+
                 </footer>
             </div>
         </div>

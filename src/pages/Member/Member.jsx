@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import {AuthContext} from './../../context/AuthContext';
 import axios from 'axios';
 import NewPassword from "../../components/NewPassword/NewPassword.jsx";
+import snackBerries from './../../assets/assorted-collection/three-poke-berries.png'
 
 function Member() {
     const [profileData, setProfileData] = useState({});
@@ -47,7 +48,10 @@ function Member() {
 
     return (
         <div className="member-page">
-            <h1 className="hi-member">Hi {user.username}!</h1>
+            <div className="member-header">
+                <h1 className="hi-member">Hi {user.username}!</h1>
+                <img className="snack-berries" src={snackBerries} alt="Berries"/>
+            </div>
 
 
             <section className="member-content">
