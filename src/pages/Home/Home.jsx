@@ -1,7 +1,8 @@
 import "./Home.css"
 import welcome from './../../assets/assorted-collection/welcome.gif'
-import {EmpoleonDex, BulbaDex, MudkipDex} from "../../components/PokedexImageSlider/PokedexImageSlider.jsx";
+import {EmpoleonDex, BulbaDex, MudkipDex, PikachuDex} from "../../components/PokedexImageSlider/PokedexImageSlider.jsx";
 import {Link} from "react-router-dom";
+
 
 export default function Home() {
 
@@ -33,6 +34,14 @@ export default function Home() {
                 stats. By strategically feeding Poffins to your Pokémon, you can increase their chances of winning in
                 Contests and earning ribbons.
             </section>
+
+            <iframe width="560" height="315"
+                    className="poke-contest-vid"
+                    src="https://www.youtube.com/embed/pSFNfm2ycJQ?si=GFS6wkIZ5wsK4PIU&amp;start=840"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+
             <h4>
 
             </h4>
@@ -46,6 +55,10 @@ export default function Home() {
 
                 It is more generally known that there is a list of pokemon that
             </section>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/f8uNPRSF7n8?si=Fhw1lfIkGc9UXeAC"
+                    title="YouTube video player" frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen></iframe>
 
             <h3>Learn about Pokémon Contest</h3>
             <section>
@@ -60,18 +73,7 @@ export default function Home() {
                                                                                       className="in-text-link"> preferences </Link>
                 and be how to make the best poffins, for desired effect on our Pokémon.
             </section>
-            <section>
-                <EmpoleonDex/>
-            </section>
-            <section>
-                <BulbaDex/>
-            </section>
-            <section>
-                <MudkipDex/>
-            </section>
-            <section>
 
-            </section>
         </>
 
     )

@@ -10,6 +10,9 @@
     border: #f6919a 2px solid;
     border-radius: 12px;
 }
+.dex-display{
+    width: 17em;
+}
 
 .image-slider button{
     align-items: center;

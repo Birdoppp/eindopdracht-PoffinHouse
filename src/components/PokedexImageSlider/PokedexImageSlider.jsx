@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './PokedexImageSlider.css'
-import {empoleonImages} from "../../constants/dexConstants.jsx";
+import {empoleonImages, pikachuImages} from "../../constants/dexConstants.jsx";
 
 export const PokedexImageSlider = ({pokedexImages}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,7 +18,7 @@ export const PokedexImageSlider = ({pokedexImages}) => {
 
     return (
         <div className="image-slider">
-            <img src={`${pokedexImages[currentIndex]}`} alt={`Image ${currentIndex + 1}`}/>
+            <img className="dex-display" src={`${pokedexImages[currentIndex]}`} alt={`Image ${currentIndex + 1}`}/>
             <div className="dex-button-wrapper">
                 <button className="image-back-btn" onClick={goToPreviousImage}>&lt;</button>
                 <button className="image-next-btn" onClick={goToNextImage}>&gt;</button>
@@ -34,6 +34,14 @@ export const EmpoleonDex = () => {
         </div>
     );
 };
+
+export const PikachuDex = () => {
+    return (
+        <div>
+            <PokedexImageSlider pokedexImages={pikachuImages}/>
+        </div>
+    )
+}
 
 export const MudkipDex = () => {
     const mudkipImages = [
