@@ -1,12 +1,13 @@
 import './Member.css';
-import {useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import {AuthContext} from './../../context/AuthContext';
 import axios from 'axios';
 import NewPassword from "../../components/NewPassword/NewPassword.jsx";
 import snackBerries from './../../assets/assorted-collection/three-poke-berries.png'
-import {BulbaDex, MudkipDex, PikachuDex} from "../../components/PokedexImageSlider/PokedexImageSlider.jsx";
+import {PokedexImageSlider} from "../../components/PokedexImageSlider/PokedexImageSlider.jsx";
 import pixelball from './../../assets/assorted-collection/poke-ball-pixel-nbg.png'
+import {bulbaImages, mudkipImages, pikachuImages} from "../../constants/dexConstants.jsx";
 
 function Member() {
     const [profileData, setProfileData] = useState({});
@@ -56,10 +57,10 @@ function Member() {
         <div className="member-page">
             <div className="member-page-wrapper">
                 <div className="starter-wrapper">
-            <div className="member-header">
-                <h1 className="hi-member">Hi {user.username}!</h1>
-                <img className="snack-berries" src={snackBerries} alt="Berries"/>
-            </div>
+                    <div className="member-header">
+                        <h1 className="hi-member">Hi {user.username}!</h1>
+                        <img className="snack-berries" src={snackBerries} alt="Berries"/>
+                    </div>
                     <h2>To thank you for becoming a member we would like to offer you a starter Pokémon!
                     </h2>
                     <h3>
@@ -77,9 +78,9 @@ function Member() {
                         </section>
                     </div>
                     <div className="starter-dex">
-                        {selectedDex === 'BulbaDex' && <BulbaDex/>}
-                        {selectedDex === 'MudkipDex' && <MudkipDex/>}
-                        {selectedDex === 'PikachuDex' && <PikachuDex/>}
+                        {selectedDex === 'BulbaDex' && <PokedexImageSlider pokedexImages={bulbaImages}/>}
+                        {selectedDex === 'MudkipDex' && <PokedexImageSlider pokedexImages={mudkipImages}/>}
+                        {selectedDex === 'PikachuDex' && <PokedexImageSlider pokedexImages={pikachuImages}/>}
                     </div>
                     {selectedDex !== "" && <h3> Try adding your Pokémon to your team!</h3>}
                 </div>

@@ -24,8 +24,9 @@
 }
 
 .snack-berries {
-    padding-top: 10px;
-    height: 5em;
+    margin-left: 1em;
+    padding-top: 17px;
+    height: 4em;
 }
 
 .starter-wrapper {
@@ -37,6 +38,9 @@
 
 .starter-choice {
     display: flex;
+}
+.starter-dex.dex-display{
+    width: 20px;
 }
 
 

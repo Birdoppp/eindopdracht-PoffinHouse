@@ -2,7 +2,9 @@ import './Preferences.css'
 import React, {useEffect, useState} from "react";
 import {natures} from "../../constants/constants.jsx";
 import NaturesTable from "../../components/NaturesTable/NaturesTable.jsx";
-import {EmpoleonDex} from "../../components/PokedexImageSlider/PokedexImageSlider.jsx";
+import {PokedexImageSlider} from "../../components/PokedexImageSlider/PokedexImageSlider.jsx";
+import OpeningElement from "../../components/OpeningElement/OpeningElement.jsx";
+import {empoleonImages} from "../../constants/dexConstants.jsx";
 
 
 function Preferences() {
@@ -43,7 +45,9 @@ function Preferences() {
 
             </section>
             <section>
-                <EmpoleonDex/>
+                <OpeningElement openingText="Open PokéDex" closingText="Close Pokédex">
+                    <PokedexImageSlider pokedexImages={empoleonImages}/>
+                </OpeningElement>
             </section>
             <section>
                 <p> Click <a

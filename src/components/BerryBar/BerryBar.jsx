@@ -53,10 +53,17 @@ export default function BerryBar({isOpen}) {
 
     // handleClick for flavor-buttons
     const handleButtonClick = (flavorName) => {
-        setSelectedButton(flavorName);
-        setSelectedFlavor(flavorName);
-        void fetchBerriesByFlavor(flavorName);
-        setSearchDisabled(true); // Disable search bar when filter button is clicked
+        // Toggle selection state
+        if (selectedButton === flavorName) {
+            setSelectedButton("All"); // Deselect the button
+            setFilteredBerries(null); // Clear filtered berries
+            setSearchDisabled(false); // Enable search bar
+        } else {
+            setSelectedButton(flavorName); // Select the button
+            setSelectedFlavor(flavorName);
+            void fetchBerriesByFlavor(flavorName);
+            setSearchDisabled(true); // Disable search bar when filter button is clicked
+        }
     };
 
     // Disable flavor-buttons if search input is active
