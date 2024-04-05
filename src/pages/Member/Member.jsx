@@ -78,6 +78,7 @@ function Member() {
                             </h3>
                         </section>
                     }
+
                     <ul className="starter-choice">
                         <li onClick={() => handleDexClick('Bulbasaur')}>
                             <img className="pixelball" src={pixelball} alt="Bulbasaur"/>
@@ -95,6 +96,7 @@ function Member() {
                             You chose {selectedDex}!
                         </p>
                     }
+
                     <div className="starter-dex">
                         {selectedDex === 'Bulbasaur' &&
                             <PokedexImageSlider className="member-dex" pokedexImages={bulbaImages}/>}
@@ -109,17 +111,17 @@ function Member() {
                     </>
                     }
                 </div>
+
+
                 <div className="member-content">
                     <section className="member-info">
                         <h2>User data</h2>
                         <p><strong>Username:</strong> {user.username}</p>
                         <p><strong>Email:</strong> {user.email}</p>
                     </section>
-
                     <section className="password-wrapper">
                         <NewPassword/>
                     </section>
-
                     <section>
                         <p className="">Back to <Link to="/">Homepage</Link></p>
                         <button className="logout-btn" onClick={logout}>Logout</button>
