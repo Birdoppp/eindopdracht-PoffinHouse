@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './PokedexImageSlider.css'
 
-export const PokedexImageSlider = ({pokedexImages}) => {
+export const PokedexImageSlider = ({pokedexImages, className}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const goToNextImage = () => {
@@ -17,7 +17,10 @@ export const PokedexImageSlider = ({pokedexImages}) => {
 
     return (
         <div className="image-slider">
-            <img className="dex-display" src={`${pokedexImages[currentIndex]}`} alt={`Image ${currentIndex + 1}`}/>
+            <div className="dex-display">
+
+            <img className={className} src={`${pokedexImages[currentIndex]}`} alt={`Image ${currentIndex + 1}`}/>
+            </div>
             <div className="dex-button-wrapper">
                 <button className="image-back-btn" onClick={goToPreviousImage}>&lt;</button>
                 <button className="image-next-btn" onClick={goToNextImage}>&gt;</button>

@@ -78,9 +78,9 @@ function Member() {
                         </section>
                     </div>
                     <div className="starter-dex">
-                        {selectedDex === 'BulbaDex' && <PokedexImageSlider pokedexImages={bulbaImages}/>}
-                        {selectedDex === 'MudkipDex' && <PokedexImageSlider pokedexImages={mudkipImages}/>}
-                        {selectedDex === 'PikachuDex' && <PokedexImageSlider pokedexImages={pikachuImages}/>}
+                        {selectedDex === 'BulbaDex' && <PokedexImageSlider className="member-dex" pokedexImages={bulbaImages}/>}
+                        {selectedDex === 'MudkipDex' && <PokedexImageSlider className="member-dex" pokedexImages={mudkipImages}/>}
+                        {selectedDex === 'PikachuDex' && <PokedexImageSlider  className="member-dex" pokedexImages={pikachuImages}/>}
                     </div>
                     {selectedDex !== "" && <h3> Try adding your Pokémon to your team!</h3>}
                 </div>

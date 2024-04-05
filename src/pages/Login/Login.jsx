@@ -1,5 +1,5 @@
 import "./Login.css";
-import {useContext, useEffect, useState} from 'react';
+import {useContext, useState} from 'react';
 import {Link} from 'react-router-dom';
 import {AuthContext} from './../../context/AuthContext';
 import {useForm} from 'react-hook-form';
@@ -30,7 +30,7 @@ function Login() {
             const {jwt} = result.data;
             login(jwt);
             // Save initial team to local storage
-            const initialTeam = Array.from({length: 6}, () => ({name: 'Poliwag', nature: ''}));
+            const initialTeam = Array.from({length: 6}, () => ({name: '', nature: ''}));
 
 
             if (localStorage.getItem(`team-${data.username}`)) {

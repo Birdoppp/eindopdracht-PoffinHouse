@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Sriracha&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Outfit:wght@100..900');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900');
 
 * {
     margin: 0;
@@ -8,6 +8,9 @@
     font-family: "Outfit", sans-serif;
 
 
+}
+html{
+    width: 100%
 }
 
 h1 {

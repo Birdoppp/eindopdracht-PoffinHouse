@@ -7,8 +7,6 @@ import BerryDescription from "../BerryDescription/BerryDescription.jsx";
 
 
 function BerryDexCard({selectedBerry}) {
-    // console.log(selectedBerry)
-
     // Find the corresponding berryID object
     const matchingBerryID = berryID.find(berry => berry.name === selectedBerry.name);
 
