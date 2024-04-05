@@ -21,7 +21,7 @@
 .flavor-container{
     border: snow solid 2px;
     background-color: #ddf;
-    min-width: 8em ;
+    min-width: 132px ;
 }
 .selected-nature{
     /*color: purple;*/

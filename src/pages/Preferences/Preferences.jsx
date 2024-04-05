@@ -45,7 +45,7 @@ function Preferences() {
 
             </section>
             <section>
-                <OpeningElement openingText="Open PokéDex" closingText="Close Pokédex">
+                <OpeningElement openingText="Open Pokédex" closingText="Close Pokédex">
                     <PokedexImageSlider pokedexImages={empoleonImages}/>
                 </OpeningElement>
             </section>

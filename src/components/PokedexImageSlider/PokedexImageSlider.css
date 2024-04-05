@@ -11,7 +11,12 @@
     border-radius: 12px;
 }
 .dex-display{
-    width: 400px;
+    /*min-width: 300px;*/
+    /*max-width: 400px;*/
+}
+.dex-img{
+    width: 100%;
+    height: auto;
 }
 
 .image-slider button{
