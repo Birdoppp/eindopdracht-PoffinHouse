@@ -5,9 +5,9 @@
     align-items: center;
     justify-content: center;
 
-    min-height:30em;
+    height: 100%;
     width: 100%;
-    padding: 1em;
+    padding: 1.5em 15px 0 1.5em;
 }
 
 .no-berry-text {
@@ -23,7 +23,6 @@
 }
 
 .dex-container1 {
-    /*border: orangered solid 2px;*/
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -32,14 +31,12 @@
 }
 
 .berry-img {
-    /*border: cornflowerblue 2px solid;*/
     display: flex;
     height: 7em;
     width: 6em;
 }
 
 .dex-container2 {
-    /*border: #b15c54 solid 2px;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,7 +48,6 @@
 
 .berry-name {
     color: floralwhite;
-    /*padding: 2em 0;*/
     height: 2em;
     font-size: 1.5em;
 }
@@ -59,12 +55,10 @@
 .berry-id {
     font-family: pixelate, sans-serif;
     font-size: 1em;
-    /*padding: 2em 0;*/
     height: 2em;
 }
 
 .dex-container3 {
-    /*border: salmon solid 2px;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,15 +67,3 @@
 
 }
 
-/*.berry-description-box {*/
-/*    border: palegreen solid 2px;*/
-/*    height: 100%;*/
-/*    min-height: 6em;*/
-/*    width: 100%;*/
-/*    max-width: 20em;*/
-/*}*/
-
-.berry-dex-footer {
-    display: flex;
-    justify-content: center;
-}

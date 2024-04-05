@@ -1,12 +1,93 @@
+.member-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: brown;
+    width: 60%;
+}
 
-.member-page button {
-    margin-top: 0.5em;
+.member-page-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.member-header {
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    height: fit-content;
+}
+
+.hi-member {
+    padding: 2em 0 1em 0;
+}
+
+.snack-berries {
+    margin-left: 1em;
+    padding-top: 17px;
+    height: 4em;
+}
+
+.starter-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.starter-choice {
+    display: flex;
+}
+.member-dex{
+    width: 350px;
+    height: 250px;
+}
+
+
+.pixelball {
+    height: 3em;
+    width: 2.5em;
+}
+
+/*------------------------------------------*/
+.member-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 70%;
+    height: 70%;
+    margin: 5em 0 0 1em;
+    padding: 1em;
+    border-radius: 12px;
+    background-color: #fd9f9f;
+}
+
+.logout-btn,
+.password-wrapper button {
+    background: linear-gradient(to bottom right, #b15c54, #fd9f9f);
+    border: 0;
+    border-radius: 12px;
+    color: floralwhite;
+
+    display: inline-block;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.5;
+
+    padding: 0 1rem;
+    margin: 1em 0;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
 }
 
 .member-page section {
     padding: 2em 0 0.5em 0;
 }
 
-.hi-member {
-    padding-top: 2em;
+.member-page h2 {
+    font-family: pixelate, sans-serif;
 }

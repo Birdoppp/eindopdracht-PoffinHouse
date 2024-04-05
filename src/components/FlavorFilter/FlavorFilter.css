@@ -1,0 +1,65 @@
+.flavor-filter{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+    min-height: 80px;
+    background-color: #fd9f9f;
+}
+
+.flavor-filter button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: transparent solid 2px;
+
+    height: 3em;
+    width: 4em;
+    margin: 0 4px;
+    border-radius: 20px;
+}
+
+.flavor-filter button.selected {
+    border-color: palegoldenrod;
+    color: white;
+}
+
+/*---------------------------------------------------------*/
+
+
+.spicy-button {
+    background-color: orangered;
+}
+
+.dry-button {
+    background-color: deepskyblue;
+}
+
+.sweet-button {
+    background-color: hotpink;
+}
+
+.bitter-button {
+    background-color: limegreen;
+}
+
+.sour-button {
+    background-color: gold;
+}
+
+#sour-button.selected {
+    color: darkgrey;
+}
+
+.show-all-button{
+    background-color: #fc6673;
+    color: floralwhite;
+}
+
+.sort-button {
+    background-color: papayawhip;
+    min-height: 5em;
+}

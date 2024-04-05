@@ -1,13 +1,16 @@
 import './BerryBar.css';
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
 import ListBerryCard from "../ListBerryCard/ListBerryCard.jsx";
 import BerryDexCard from "../BerryDexCard/BerryDexCard.jsx";
-import { berryID } from "../../constants/constants.jsx";
+import {berryID} from "../../constants/constants.jsx";
+import SearchBar from "../SearchBar/SearchBar.jsx";
+import FlavorFilter from "../FlavorFilter/FlavorFilter.jsx";
+import SortButton from "../SortButton/SortButton.jsx";
 
-export default function BerryBar({ isOpen }) {
+export default function BerryBar({isOpen}) {
     const [berries, setBerries] = useState([]);
-    const [selectedBerry, setSelectedBerry] = useState({ name: "" });
+    const [selectedBerry, setSelectedBerry] = useState({name: ""});
     const [selectedFlavor, setSelectedFlavor] = useState('');
     const [selectedButton, setSelectedButton] = useState('All');
     const [filteredBerries, setFilteredBerries] = useState(null);
@@ -50,10 +53,17 @@ export default function BerryBar({ isOpen }) {
 
     // handleClick for flavor-buttons
     const handleButtonClick = (flavorName) => {
-        setSelectedButton(flavorName);
-        setSelectedFlavor(flavorName);
-        void fetchBerriesByFlavor(flavorName);
-        setSearchDisabled(true); // Disable search bar when filter button is clicked
+        // Toggle selection state
+        if (selectedButton === flavorName) {
+            setSelectedButton("All"); // Deselect the button
+            setFilteredBerries(null); // Clear filtered berries
+            setSearchDisabled(false); // Enable search bar
+        } else {
+            setSelectedButton(flavorName); // Select the button
+            setSelectedFlavor(flavorName);
+            void fetchBerriesByFlavor(flavorName);
+            setSearchDisabled(true); // Disable search bar when filter button is clicked
+        }
     };
 
     // Disable flavor-buttons if search input is active
@@ -75,6 +85,7 @@ export default function BerryBar({ isOpen }) {
         setSelectedButton("All")
         setFilteredBerries("");
         setSearchDisabled(false);
+        setSearchQuery("");
     };
 
     // Toggle sorting order
@@ -98,33 +109,27 @@ export default function BerryBar({ isOpen }) {
         <div className={`aside ${isOpen ? "aside--isOpen" : "aside--isClosed"}`}>
             <div className="berry-bar">
                 <div className="filter-tool">
-                    <button className={`spicy-button ${selectedButton === '1' ? 'selected' : ''}`} onClick={() => handleButtonClick('1')} disabled={filterDisabled}>Spicy</button>
-                    <button className={`dry-button ${selectedButton === '2' ? 'selected' : ''}`} onClick={() => handleButtonClick('2')} disabled={filterDisabled}>Dry</button>
-                    <button className={`sweet-button ${selectedButton === '3' ? 'selected' : ''}`} onClick={() => handleButtonClick('3')} disabled={filterDisabled}>Sweet</button>
-                    <button className={`bitter-button ${selectedButton === '4' ? 'selected' : ''}`} onClick={() => handleButtonClick('4')} disabled={filterDisabled}>Bitter</button>
-                    <button className={`sour-button ${selectedButton === '5' ? 'selected' : ''}`} onClick={() => handleButtonClick('5')} disabled={filterDisabled}>Sour</button>
-                    <button className={`show-all-button ${selectedButton === 'All'? 'selected' : ''}`} onClick={handleDeselectAll}>Show All</button>
-                    <button className="sort-button" onClick={toggleSortingOrder}>Sort by <br/> berry number</button>
+                    <FlavorFilter
+                        selectedButton={selectedButton}
+                        handleButtonClick={handleButtonClick}
+                        filterDisabled={filterDisabled}
+                        handleDeselectAll={handleDeselectAll}
+                    />
+                    <SortButton sortOrder={sortOrder} toggleSortingOrder={toggleSortingOrder}/>
 
-                            <input
-                                className="search-bar"
-                                type="text"
-                                placeholder={searchDisabled ? 'Please select Show All' : 'Search berries...'}
-                                value={searchQuery}
-                                onChange={(e) => setSearchQuery(e.target.value)}
-                                disabled={searchDisabled}
-                            />
-
-                        {searchQuery && (
-                            <button className="clear-search-button" onClick={() => setSearchQuery("")}>
-                                Clear
-                            </button>
-                        )}
+                    <SearchBar
+                        searchQuery={searchQuery}
+                        setSearchQuery={setSearchQuery}
+                        searchDisabled={searchDisabled}
+                        clearSearch={() => setSearchQuery("")}
+                    />
 
                 </div>
                 <div className="berry-tool">
                     <ul className="berry-list">
-                        {searchQuery && <div className="search-message"> Showing results for: <strong> {searchQuery} </strong>  </div>}
+                        {searchQuery &&
+                            <div className="search-message"> Showing results for <strong> {searchQuery} </strong>
+                            </div>}
                         {sortedBerries().map((sorted, index) => (
                             <ListBerryCard
                                 key={index}
@@ -136,10 +141,14 @@ export default function BerryBar({ isOpen }) {
                         ))}
                     </ul>
                     <section className="berry-display">
-                        {selectedBerry && <BerryDexCard selectedBerry={selectedBerry} />}
+                        {selectedBerry && <BerryDexCard selectedBerry={selectedBerry}/>}
                     </section>
                 </div>
-                <footer className="berry-dex-footer"> For the flavor-potency of All berries in one list &nbsp; click&nbsp; <a href="https://bulbapedia.bulbagarden.net/wiki/Flavor" target="_blank" > Here </a>! </footer>
+                <footer className="berry-dex-footer"><p> For the flavor-potency of All berries in one
+                    list &nbsp; click&nbsp; <a href="https://bulbapedia.bulbagarden.net/wiki/Flavor"
+                                               target="_blank"> Here </a>!</p>
+
+                </footer>
             </div>
         </div>
     );

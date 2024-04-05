@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext, useState} from 'react';
 import "./TeamForm.css";
 import InputField from "../InputField/InputField.jsx";
 import {natures} from "../../constants/constants.jsx";
@@ -46,7 +46,7 @@ export function TeamForm() {
         setTeam(updatedTeam);
         // Update the local storage with the updated team data
         localStorage.setItem(`team-${user.username}`, JSON.stringify(updatedTeam));
-        console.log("Form submitted:", updatedTeam);
+        // console.log("Form submitted:", updatedTeam);
     };
 
     return (

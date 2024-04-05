@@ -1,0 +1,18 @@
+.opening-container{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #ffc5c7;
+}
+
+.opening-button{
+    padding: 7px 20px;
+    background-color: #ffc5c7;
+    color: ghostwhite;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}

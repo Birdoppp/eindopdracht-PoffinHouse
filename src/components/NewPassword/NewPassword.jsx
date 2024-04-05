@@ -1,3 +1,4 @@
+import './NewPassword.css'
 import React, {useContext, useState} from 'react';
 import {AuthContext} from "../../context/AuthContext.jsx";
 import axios from "axios";
@@ -51,12 +52,12 @@ export function NewPassword() {
             <form autoComplete='off' onSubmit={handleChangePassword}>
             <div>
                 <label htmlFor="newPassword">New Password:</label>
-                <input type="password" id="newPassword" value={newPassword}
+                <input className="password" type="password" id="newPassword" value={newPassword}
                        onChange={(e) => setNewPassword(e.target.value)}/>
             </div>
             <div>
                 <label htmlFor="confirmPassword">Confirm Password:</label>
-                <input type="password" id="confirmPassword" value={confirmPassword}
+                <input className="password" type="password" id="confirmPassword" value={confirmPassword}
                        onChange={(e) => setConfirmPassword(e.target.value)}/>
             </div>
             <button className="password-btn" type='submit'>Change Password</button>
