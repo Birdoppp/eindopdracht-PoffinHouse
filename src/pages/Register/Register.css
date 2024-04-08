@@ -1,14 +1,20 @@
-.register-page-wrapper{
-    height: 50vh;
+.register-page-wrapper {
     display: flex;
     flex-direction: column;
-    /*justify-content: space-evenly;*/
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    height: 50vh;
+    width: 30vw;
     padding-top: 3em;
 }
+
 .register-title {
     margin-bottom: 1em;
 }
-.register-page-wrapper input{
+
+.register-page-wrapper input {
     margin: 20px 0 10px 20px;
     height: 1em;
     padding: 1em;
@@ -16,20 +22,31 @@
     border: 1px solid lightgrey;
     box-shadow: 0 0 20px -18px;
 }
-.register-page-wrapper label{
+
+.register-page-wrapper label {
     font-family: "pixelate", sans-serif;
     font-weight: normal;
     font-style: oblique;
     color: maroon;
-    /*padding-right: 1em;*/
 }
-.error-EN{
-font-family: game_paused, sans-serif;
+
+.error-EN {
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+    font-family: 'pixelate', sans-serif;
     font-weight: bold;
+    padding: 2px;
 }
 
 .error-U {
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
     font-family: unown-lower, sans-serif;
+    padding: 4px 2px 2px 2px;
 }
 
 .form-button {
@@ -39,7 +56,7 @@ font-family: game_paused, sans-serif;
     color: floralwhite;
 
     display: inline-block;
-    font-family: "Segoe UI",sans-serif;
+    font-family: "Segoe UI", sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 2.5;

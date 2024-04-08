@@ -7,7 +7,6 @@ import axios from 'axios';
 import {TeamContext} from "../../context/TeamContext.jsx";
 
 function Login() {
-    const {user} = useContext(AuthContext);
     const {handleSubmit, register} = useForm();
     const {login} = useContext(AuthContext);
     const {setTeam} = useContext(TeamContext); // Import setTeam function
@@ -73,12 +72,9 @@ function Login() {
                         />
                     </label>
                     {error && <p className="error-EN">Invalid login information</p>}
-                    {/*{error && <p className="error-U">Combination of the e-mailadres and password are invalid</p>}*/}
+                    {error && <p className="error-U">Invalid login information</p>}
 
-                    <button
-                        type="submit"
-                        className="form-button"
-                    >
+                    <button type="submit" className="form-button">
                         Log in
                     </button>
                 </form>
