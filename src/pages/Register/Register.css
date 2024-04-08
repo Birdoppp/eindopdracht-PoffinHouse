@@ -1,8 +1,9 @@
 .register-page-wrapper{
     height: 50vh;
+    width: 50vw;
     display: flex;
     flex-direction: column;
-    /*justify-content: space-evenly;*/
+    align-items: center;
     padding-top: 3em;
 }
 .register-title {
@@ -24,7 +25,7 @@
     /*padding-right: 1em;*/
 }
 .error-EN{
-font-family: game_paused, sans-serif;
+font-family: 'pixelate', sans-serif;
     font-weight: bold;
 }
 

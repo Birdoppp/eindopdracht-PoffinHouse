@@ -27,10 +27,20 @@ function Register() {
         toggleLoading(true);
 
         if (data.password.length < 8) {
+            setErrorMessage('The password must be at least 8 characters long');
             toggleError(true);
             toggleLoading(false);
             return;
         }
+
+
+        if (!data.email || !data.username || !data.password) {
+            setErrorMessage('Please fill in all fields');
+            toggleError(true);
+            toggleLoading(false);
+            return;
+        }
+
 
         try {
         const response =   await axios.post('https://api.datavortex.nl/poffinhouse/users', {
@@ -45,10 +55,10 @@ function Register() {
             });
             console.log(response)
 
-
             navigate('/login');
         } catch(e) {
             console.error(e);
+            console.log(e.response.data);
             setErrorMessage(e.response.data);
             toggleError(true);
         }
