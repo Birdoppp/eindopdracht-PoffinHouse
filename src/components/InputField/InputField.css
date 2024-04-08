@@ -3,3 +3,16 @@ label {
     flex-direction: row;
     align-items: center;
 }
+
+.input-field {
+    padding: 2px 2px 2px 10px;
+    border-radius: 20px; /* Apply border-radius */
+    border: 1px solid #ccc;
+    background-color: whitesmoke;
+    font-size: 1em;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #fd9f9f;
+}

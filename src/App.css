@@ -107,3 +107,17 @@ a:visited {
     margin-top: 2em;
 }
 
+/*----------------------------------*/
+
+html::-webkit-scrollbar {
+    width: 12px;
+}
+
+html::-webkit-scrollbar-track {
+    background: #f6d8d1;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #fd9f9f;
+    border-radius: 6px;
+}

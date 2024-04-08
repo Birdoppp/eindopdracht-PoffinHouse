@@ -1,0 +1,38 @@
+
+select {
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background-color: whitesmoke;
+    font-size: 1em;
+    padding: 2px 2px 2px 7px;
+
+    overflow: auto;
+    scrollbar-color: #fc6673 peachpuff;
+}
+select::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+select::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+}
+
+select::-webkit-scrollbar-thumb {
+    background: #fd9f9f; /* Color of the thumb */
+    border-radius: 6px; /* Roundness of the thumb */
+}
+
+
+
+select:focus {
+    border: #fd9f9f solid 1px;
+}
+
+option{
+    border-radius: 20px;
+}
+
+option:checked {
+    background-color: #fd9f9f;
+    color: #fff;
+}

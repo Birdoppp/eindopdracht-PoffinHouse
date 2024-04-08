@@ -1,10 +1,9 @@
-import React, {useContext, useState} from 'react';
 import "./TeamForm.css";
+import React, {useContext, useState} from 'react';
 import InputField from "../InputField/InputField.jsx";
-import {natures} from "../../constants/constants.jsx";
 import {Dropdown} from "./../Dropdown/Dropdown.jsx";
+import {natures} from "../../constants/constants.jsx";
 import pixelball from './../../assets/assorted-collection/poke-ball-pixel-nbg.png';
-import Button from "../Button/Button.jsx";
 import {TeamContext} from "../../context/TeamContext.jsx";
 import {AuthContext} from "../../context/AuthContext.jsx";
 
@@ -20,6 +19,7 @@ export function TeamForm() {
         {name: '', nature: ''}])// Initial state for the sixth Pokémon in from
 
     const [charCounts, setCharCounts] = useState(Array(combined.length).fill(0));
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const handleNameChange = (index, value) => {
         const updatedTeam = [...combined];
         updatedTeam[index].name = value;
@@ -70,13 +70,15 @@ export function TeamForm() {
                                 value={combined[index].nature}
                                 optionsArray={natures}
                                 onChange={(value) => handleNatureChange(index, value)}
+                                isOpen={isDropdownOpen}
+                                toggleDropdown={() => setIsDropdownOpen(!isDropdownOpen)}
                             />
                         </div>
                         {charCounts[index] === 12 &&
                             <div className="char-limit-message">Maximum character limit reached</div>}
                     </div>
                 ))}
-                <Button className="team-submit-btn" type="submit">Ready!</Button>
+                <button className="team-submit-btn" type="submit">Save your Team!</button>
             </form>
         </>
     );
