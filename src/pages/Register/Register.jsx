@@ -28,6 +28,13 @@ function Register() {
         toggleError(false);
         toggleLoading(true);
 
+        // Validate if all fields are filled
+        if (!data.email || !data.username || !data.password) {
+            setErrorMessage('Please fill in all fields');
+            toggleError(true);
+            toggleLoading(false);
+            return;
+        }
         // Validate if email contains @ symbol
         if (!data.email.includes('@')) {
             setErrorMessage('Please enter a valid email address');
@@ -39,13 +46,6 @@ function Register() {
         // Validate password length
         if (data.password.length < 8) {
             setErrorMessage('The password must be at least 8 characters long');
-            toggleError(true);
-            toggleLoading(false);
-            return;
-        }
-        // Validate if all fields are filled
-        if (!data.email || !data.username || !data.password) {
-            setErrorMessage('Please fill in all fields');
             toggleError(true);
             toggleLoading(false);
             return;
