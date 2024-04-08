@@ -14,6 +14,7 @@ function InputField({ name, type, label, value, handleChange, maxLength}) {
                 value={value}
                 maxLength={maxLength}
                 onChange={handleChange}
+                className="input-field"
             />
         </>
     );

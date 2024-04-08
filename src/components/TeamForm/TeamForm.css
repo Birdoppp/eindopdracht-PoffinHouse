@@ -1,8 +1,15 @@
 .edit-team-form {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 50vh;
+}
+
+.pixelball{
+    display: flex;
+    align-content: center;
+    height: 3em;
+    width: 2.5em;
 }
 
 .individual-pokemon {
@@ -18,9 +25,26 @@
     padding: 10px ;
 }
 
-.pixelball{
-    display: flex;
-    align-content: center;
-    height: 3em;
-    width: 2.5em;
+
+
+.team-submit-btn{
+    background: linear-gradient(to bottom right, #b15c54, #fd9f9f);
+    border: 0;
+    border-radius: 12px;
+    color: floralwhite;
+
+    display: inline-block;
+    font-family: "Segoe UI",sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.5;
+
+    padding: 0 20px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.team-submit-btn:active{
+    background: linear-gradient(to bottom right, orangered, crimson);
 }
