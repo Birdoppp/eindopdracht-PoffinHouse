@@ -17,6 +17,8 @@
 
 .individual-pokemon label{
     padding: 10px ;
+    color: #d17874;
+    font-weight: bold;
 }
 
 .X-btn{
@@ -38,7 +40,7 @@
     width: 24px;
 }
 
-
+/*--------------------------------------------------*/
 
 .team-submit-btn{
     background: linear-gradient(to bottom right, #b15c54, #fd9f9f);

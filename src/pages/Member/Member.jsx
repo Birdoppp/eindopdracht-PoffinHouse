@@ -91,10 +91,9 @@ function Member() {
                         </li>
                     </ul>
                     {selectedDex !== "" &&
-                        <p className="member-text">
-
+                        <h3 className="member-text">
                             You chose {selectedDex}!
-                        </p>
+                        </h3>
                     }
 
                     <div className="starter-dex">
@@ -107,7 +106,7 @@ function Member() {
                     </div>
                     {selectedDex && <>
                         <h3> Try adding your Pokémon to your team! </h3>
-                        <p>Look for your Pokémon their nature</p>
+                        <p>Find the nature of your Pokémon in the trainers memo</p>
                     </>
                     }
                 </div>
