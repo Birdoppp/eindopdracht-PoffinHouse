@@ -12,9 +12,11 @@
 }
 
 .edit-title {
-    color: black;
+    color: #d17874;
+    -webkit-text-stroke: 1px #d17874;
+
     font-family: "Dubai Light", serif;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 2em;
     padding: 10px 0;
 }
@@ -24,8 +26,8 @@
     flex-shrink: 1;
     justify-content: center;
     align-content: space-evenly;
-    /*border: orchid 2px solid;*/
-    width: 35em;
+
+    height: 15em;
     padding: 10px 0;
 }
 .form-team {

@@ -1,4 +1,4 @@
-import "./TeamForm.css";
+import './TeamForm.css'
 import React, {useContext, useState} from 'react';
 import InputField from "../InputField/InputField.jsx";
 import {Dropdown} from "./../Dropdown/Dropdown.jsx";
@@ -6,25 +6,30 @@ import {natures} from "../../constants/constants.jsx";
 import pixelball from './../../assets/assorted-collection/poke-ball-pixel-nbg.png';
 import {TeamContext} from "../../context/TeamContext.jsx";
 import {AuthContext} from "../../context/AuthContext.jsx";
+import DeleteConfirmation from "../DeleteConfirmation/DeleteConfirmation.jsx";
 
 export function TeamForm() {
     const {team, setTeam} = useContext(TeamContext);
     const {user} = useContext(AuthContext);
-    const [combined, setCombined] = useState(JSON.parse(localStorage.getItem(`team-${user.username}`)) || [
-        {name: '', nature: ''}, // Initial state for the first Pokémon in form
-        {name: '', nature: ''}, // Initial state for the second Pokémon in form
-        {name: '', nature: ''}, // Initial state for the third Pokémon in form
-        {name: '', nature: ''}, // Initial state for the fourth Pokémon in from
-        {name: '', nature: ''}, // Initial state for the fifth Pokémon in from
-        {name: '', nature: ''}])// Initial state for the sixth Pokémon in from
+    const [combined, setCombined] = useState(
+        JSON.parse(localStorage.getItem(`team-${user.username}`)) || [
+            {name: '', nature: ''},
+            {name: '', nature: ''},
+            {name: '', nature: ''},
+            {name: '', nature: ''},
+            {name: '', nature: ''},
+            {name: '', nature: ''}
+        ]
+    );
 
     const [charCounts, setCharCounts] = useState(Array(combined.length).fill(0));
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [confirmIndex, setConfirmIndex] = useState(null); // State to keep track of the index of the Pokémon to be confirmed for deletion
+
     const handleNameChange = (index, value) => {
         const updatedTeam = [...combined];
         updatedTeam[index].name = value;
         setCombined(updatedTeam);
-        // Update character count for the input field
         const counts = [...charCounts];
         counts[index] = value.length;
         setCharCounts(counts);
@@ -36,6 +41,25 @@ export function TeamForm() {
         setCombined(updatedTeam);
     };
 
+    const handleClearPokemon = (index) => {
+        if (confirmIndex === index) {
+            setConfirmIndex(null);
+        } else {
+            setConfirmIndex(index);
+        }
+    };
+
+    const handleConfirmDelete = () => {
+        const updatedTeam = [...combined];
+        updatedTeam[confirmIndex] = {name: '', nature: ''};
+        setCombined(updatedTeam);
+        setConfirmIndex(null); // Reset the confirmIndex state
+    };
+
+    const handleCancelDelete = () => {
+        setConfirmIndex(null); // Reset the confirmIndex state
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -44,17 +68,15 @@ export function TeamForm() {
             nature: pokemon.nature
         }));
         setTeam(updatedTeam);
-        // Update the local storage with the updated team data
         localStorage.setItem(`team-${user.username}`, JSON.stringify(updatedTeam));
-        // console.log("Form submitted:", updatedTeam);
     };
 
     return (
         <>
-            <form className="Edit-team-form" onSubmit={handleSubmit}>
-                {Object.keys(combined).length > 0 && combined.map((pokemon, index) => (
+            <form className="edit-team-form" onSubmit={handleSubmit}>
+                {combined.map((pokemon, index) => (
                     <div className="individual-pokemon-wrapper" key={index}>
-                        <div className="individual-pokemon" key={index}>
+                        <div className="individual-pokemon">
                             <img className="pixelball" src={pixelball} alt="Pokeball"/>
                             <InputField
                                 name={`pokemon-${index}`}
@@ -73,7 +95,25 @@ export function TeamForm() {
                                 isOpen={isDropdownOpen}
                                 toggleDropdown={() => setIsDropdownOpen(!isDropdownOpen)}
                             />
+                            {combined[index].name !== '' ? ( // Render the "Clear" button only if the Pokémon has input
+                                <button
+                                    className="X-btn"
+                                    type="button"
+                                    onClick={() => handleClearPokemon(index)}
+                                >
+                                    X
+                                </button>
+                            ) : (
+                                <span className="empty-space"></span>
+                            )}
                         </div>
+                        {confirmIndex === index && (
+                            <DeleteConfirmation
+                                message="Do you want to delete this Pokémon?"
+                                onConfirm={handleConfirmDelete}
+                                onCancel={handleCancelDelete}
+                            />
+                        )}
                         {charCounts[index] === 12 &&
                             <div className="char-limit-message">Maximum character limit reached</div>}
                     </div>
