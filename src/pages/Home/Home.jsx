@@ -34,7 +34,7 @@ export default function Home() {
                 stats. By strategically feeding Poffins to your Pokémon, you can increase their chances of winning in
                 Contests and earning ribbons.
             </section>
-            <OpeningElement openingText="Show Contest Footage" closingText="Close">
+            <OpeningElement openingText="show contest footage" closingText="Close">
                 <iframe width="560" height="315"
                         src="https://www.youtube.com/embed/pSFNfm2ycJQ?si=v3pPf9LztQtcNnIM&amp;start=840"
                         title="YouTube video player"
@@ -55,7 +55,7 @@ export default function Home() {
 
                 It is more generally known that there is a list of pokemon that
             </section>
-            <OpeningElement openingText="Show berry guide" closingText="Close">
+            <OpeningElement openingText="show berry guide" closingText="Close">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/f8uNPRSF7n8?si=270SijMM5vIW3hmC"
                         title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
