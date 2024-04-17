@@ -27,6 +27,12 @@
     height: 4em;
 }
 
+.member-text {
+    margin-right: 0.2em;
+    font-family: pixelate, sans-serif;
+    color: brown;
+}
+
 .starter-wrapper {
     display: flex;
     flex-direction: column;
@@ -38,7 +44,8 @@
 .starter-choice {
     display: flex;
 }
-.member-dex{
+
+.member-dex {
     width: 350px;
     height: 250px;
 }
@@ -64,7 +71,8 @@
     border-radius: 12px;
     background-color: #fd9f9f;
 }
-.homepage-link{
+
+.homepage-link {
     color: floralwhite;
 }
 
@@ -86,14 +94,6 @@
     text-align: center;
     text-decoration: none;
     transition: box-shadow .2s ease-in-out;
-}
-
-.member-page section {
-    padding: 2em 0 0.5em 0;
-}
-
-.member-page h2 {
-    font-family: pixelate, sans-serif;
 }
 
 

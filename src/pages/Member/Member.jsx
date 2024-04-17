@@ -70,8 +70,8 @@ function Member() {
                         <img className="snack-berries" src={snackBerries} alt="Berries"/>
                     </header>
                     {selectedDex === "" &&
-                        <section className="member-text">
-                            <h2>To thank you for becoming a member we would like to offer you a starter Pokémon!
+                        <section>
+                            <h2 className="member-text">To thank you for becoming a member we would like to offer you a starter Pokémon!
                             </h2>
                             <h3>
                                 Please select one below!
@@ -105,7 +105,7 @@ function Member() {
                             <PokedexImageSlider className="member-dex" pokedexImages={pikachuImages}/>}
                     </div>
                     {selectedDex && <>
-                        <h3> Try adding your Pokémon to your team! </h3>
+                        <h3 className="starter-text"> Try adding your Pokémon to your team! </h3>
                         <p>Find the nature of your Pokémon in the trainers memo</p>
                     </>
                     }
