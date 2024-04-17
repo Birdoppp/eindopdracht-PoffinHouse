@@ -22,7 +22,7 @@ export default function TeamDisplay({isOpen}) {
 
     return (
         <div className={`team ${isOpen ? "team--isOpen" : "team--isClosed"}`}>
-            {team && team[0].name !== "" ? (
+            {team && team.filter(pokemon => pokemon.name.trim() !== "").length !== 0 ? (
                 team.filter(pokemon => pokemon.name.trim() !== "").map((pokemon, index) => (
                     <PokemonCard
                         key={index}

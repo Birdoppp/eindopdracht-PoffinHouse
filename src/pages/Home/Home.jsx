@@ -10,7 +10,7 @@ export default function Home() {
     return (
         <>
             <img className="welcome-img" src={welcome} alt="welcome"/>
-            <h1>Here at the PoffinHouse we learn how to best feed our Pokémon!</h1>
+            <h1 className="poffinhouse-text">Here at the PoffinHouse we learn how to best feed our Pokémon!</h1>
             <h3>Located in the Sinnoh region, Poffin House is The hotspot for poffin making!</h3>
             <section>
                 Whether you're a seasoned Trainer or just starting out on your adventure, our site is your
@@ -34,7 +34,7 @@ export default function Home() {
                 stats. By strategically feeding Poffins to your Pokémon, you can increase their chances of winning in
                 Contests and earning ribbons.
             </section>
-            <OpeningElement openingText="hoi" closingText="doei">
+            <OpeningElement openingText="show contest footage" closingText="Close">
                 <iframe width="560" height="315"
                         src="https://www.youtube.com/embed/pSFNfm2ycJQ?si=v3pPf9LztQtcNnIM&amp;start=840"
                         title="YouTube video player"
@@ -55,9 +55,9 @@ export default function Home() {
 
                 It is more generally known that there is a list of pokemon that
             </section>
-            <OpeningElement openingText="hoi" closingText="doei">
+            <OpeningElement openingText="show berry guide" closingText="Close">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/f8uNPRSF7n8?si=270SijMM5vIW3hmC"
-                        title="YouTube video player" frameBorder="0"
+                        title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowFullScreen></iframe>
             </OpeningElement>

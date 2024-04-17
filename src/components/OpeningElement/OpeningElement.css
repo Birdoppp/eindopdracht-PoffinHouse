@@ -9,9 +9,10 @@
 }
 
 .opening-button{
+    font-weight: bold;
     padding: 7px 20px;
     background-color: #ffc5c7;
-    color: ghostwhite;
+    color: whitesmoke;
     border-radius: 20px;
     border: none;
     cursor: pointer;
