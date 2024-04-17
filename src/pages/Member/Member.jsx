@@ -122,7 +122,7 @@ function Member() {
                         <NewPassword/>
                     </section>
                     <section>
-                        <p className="">Back to <Link to="/">Homepage</Link></p>
+                        <p className="">Back to <Link to="/" className="homepage-link">Homepage</Link></p>
                         <button className="logout-btn" onClick={logout}>Logout</button>
                     </section>
                 </div>
