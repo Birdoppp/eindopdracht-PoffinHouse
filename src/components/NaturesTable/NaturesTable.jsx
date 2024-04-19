@@ -19,9 +19,9 @@ function NaturesTable({natures, onFlavorClick, selectedNature, dislikedFlavor, f
                     <h3 className="selected-nature">{selectedNature}</h3>
                     {!noPreference && (
                         <div>
-                            <h5>Favorite flavor: </h5>
+                            <h5 className="flavor-text">Favorite flavor: </h5>
                             <p>{favoriteFlavor}</p>
-                            <h5>Disliked flavor:</h5>
+                            <h5 className="flavor-text">Disliked flavor:</h5>
                             <p>{dislikedFlavor}</p>
                         </div>
                     )}

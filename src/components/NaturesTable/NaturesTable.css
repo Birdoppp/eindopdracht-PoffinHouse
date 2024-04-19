@@ -5,7 +5,7 @@
     border-radius: 10px;
     border: 3px solid #bbbbe8;
     background: #a0a0c4;
-    color: #b892e0;
+    color: #ac74e0;
 }
 
 .table-rule {
@@ -24,9 +24,12 @@
     min-width: 132px ;
 }
 .selected-nature{
-    /*color: purple;*/
-
+    color: #934AD7;
 }
+.flavor-text{
+    color: #c18cf3;
+}
+
 
 .preferences-tab-text {
     display: flex;
@@ -88,6 +91,10 @@
 
 .nature-table p:hover {
      cursor: pointer;
+}
+
+.preferences-tab-text p:active {
+    animation: none;
 }
 
 @keyframes glow {
