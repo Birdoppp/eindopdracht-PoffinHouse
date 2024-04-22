@@ -1,13 +1,29 @@
 .preference-page-wrapper{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+.preference-page-wrapper section{
+    margin: 1em 0;
 }
 
 .main-flav-tbl{
     border-radius: 12px;
 }
 
-.empoleon-dex.dex-display{
-    width: 20px;
+.natures-table-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: lightcoral;
+}
+
+.empoleon-wrapper{
+    padding: 0 2em;
+}
+
+.feebas-evolution img{
+    border-radius: 12px;
+    height: 11.5em;
+    width: 20em;
 }

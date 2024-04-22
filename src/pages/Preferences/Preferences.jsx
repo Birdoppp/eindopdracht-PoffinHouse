@@ -5,6 +5,8 @@ import NaturesTable from "../../components/NaturesTable/NaturesTable.jsx";
 import {PokedexImageSlider} from "../../components/PokedexImageSlider/PokedexImageSlider.jsx";
 import OpeningElement from "../../components/OpeningElement/OpeningElement.jsx";
 import {empoleonImages} from "../../constants/dexConstants.jsx";
+import feebas from "../../assets/pokemon-assets/feebas-evo.png"
+import milotic from "../../assets/pokemon-assets/milotic.png"
 
 
 function Preferences() {
@@ -34,7 +36,7 @@ function Preferences() {
                 levels up. Whether your Pikachu is bashful, your Charizard is adamant, or your Eevee is quirky, each
                 nature brings its own set of characteristics and traits to the table.
             </section>
-            <section>
+            <section className="natures-table-wrapper">
                 <NaturesTable
                     selectedNature={selectedNature}
                     dislikedFlavor={dislikedFlavor}
@@ -43,16 +45,16 @@ function Preferences() {
                     onFlavorClick={handleFlavorClick}
                     natures={natures}/>
 
+                <p> Click <a
+                    href="https://lparchive.org/Pokemon-Platinum-%28by-Crosspeice%29/Update%2038/2-Berry.png"
+                    target="_blank"> Here</a> for our recommendations per flavor</p>
             </section>
-            <section>
+            <section className="empoleon-wrapper">
                 <OpeningElement openingText="Open Pokédex" closingText="Close Pokédex">
                     <PokedexImageSlider pokedexImages={empoleonImages}/>
                 </OpeningElement>
             </section>
             <section>
-                <p> Click <a
-                    href="https://lparchive.org/Pokemon-Platinum-%28by-Crosspeice%29/Update%2038/2-Berry.png"
-                    target="_blank"> Here</a> for our recommendations per flavor</p>
             </section>
             <section>
                 All Pokémon have poke-food preferences based on their Nature. The nature can be found in the summary of
@@ -70,6 +72,11 @@ function Preferences() {
                 on Pokémon and usability in Poké-contests. Unlock secrets about a special evolutions You will find the
                 berries in the BerryDex on the left of your screen.
             </section>
+            <section className="feebas-evolution">
+                <img className="feebas" src={feebas} alt="Feebas Evolution"/>
+                <img className="milotic" src={milotic} alt="Feebas Evolution"/>
+            </section>
+
         </div>
     );
 }
