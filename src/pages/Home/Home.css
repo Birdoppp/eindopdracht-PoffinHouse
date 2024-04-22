@@ -1,4 +1,34 @@
+.home-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    /*justify-content: center;*/
+    align-items: center;
+    /*align-content: center;*/
+    /*text-align: center;*/
+}
+
+.welcome-wrapper {
+    height: 6em;
+}
+
 .welcome-img {
     width: 50%;
+}
+
+.home-wrapper section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5em;
+}
+.berry-to-poffin{
+    min-width: 35em;
+}
+
+.home-wrapper img {
+    width: auto;
+    height: 10em;
+    border-radius: 12px;
 }
 

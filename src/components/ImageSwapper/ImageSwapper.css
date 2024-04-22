@@ -1,0 +1,16 @@
+.image-swapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+
+}
+.image-swapper img{
+    border-radius: 5px;
+}
+
+.image-swapper-btn{
+    background-color: #ffc5c7;
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+}

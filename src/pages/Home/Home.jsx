@@ -1,28 +1,61 @@
 import "./Home.css"
 import welcome from './../../assets/assorted-collection/welcome.gif'
+import oranTree from './../../assets/assorted-collection/oran-berry-growth.gif'
+import peachaBasket from './../../assets/assorted-collection/peacha-basket.png'
+import poffinPlatter from './../../assets/assorted-collection/poffin-platter.png'
+import arrow from './../../assets/assorted-collection/pink-arrow.png'
 import {Link} from "react-router-dom";
 import OpeningElement from "../../components/OpeningElement/OpeningElement.jsx";
 import React from "react";
+import ImageSwapper from "../../components/ImageSwapper/ImageSwapper.jsx";
 
 
 export default function Home() {
 
     return (
-        <>
-            <img className="welcome-img" src={welcome} alt="welcome"/>
-            <h1 className="poffinhouse-text">Here at the PoffinHouse we learn how to best feed our Pokémon!</h1>
-            <h3>Located in the Sinnoh region, Poffin House is The hotspot for poffin making!</h3>
+        <div className="home-wrapper">
+            <div className="welcome-wrapper">
+                <img className="welcome-img" src={welcome} alt="welcome"/>
+            </div>
             <section>
-                Whether you're a seasoned Trainer or just starting out on your adventure, our site is your
-                ultimate destination for all things berry-related in the Pokémon universe.
+                <ImageSwapper/>
+                <h1 className="poffinhouse-text">Here at the PoffinHouse we learn how to best feed our Pokémon!</h1>
+                <h3>Located in the Sinnoh region, Poffin House is The hotspot for poffin making!</h3>
+                <article>
+                    Whether you're a seasoned Trainer or just starting out on your adventure, our site is your
+                    ultimate destination for all things berry-related in the Pokémon universe.
+                </article>
             </section>
-            <h4>
-                Poffin Making
-            </h4>
             <section>
+                <h3> Berries in Pokémon aren't just tasty snacks </h3>
+                <article>
+                    They're super helpful tools for Trainers. Truely where flavor meets function! They can heal Pokémon,
+                    give a speed-boost or make them more beautiful. Find more information in the BerryDex on the
+                    leftside of your screen.
+                    They make our Pokémon stronger in battles and contests. Sometimes even help them evolve!<br/>
+                    {/*Feebas evolution link*/}
+                </article>
+                <img className="oran-img" src={oranTree} alt="oran life cycle"/>
+                <OpeningElement openingText="show berry guide" closingText="Close">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/f8uNPRSF7n8?si=270SijMM5vIW3hmC"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen></iframe>
+                </OpeningElement>
+            </section>
+
+            <section>
+                <h4>
+                    Poffin Making
+                </h4>
                 Inside the Poffin House, you'll find a group of people gathered around tables. Here, you can mix Berries
                 together in a mini-game to create Poffins. The type and quality of the Poffin depend on the Berries you
                 choose and how well you perform in the mixing mini-game.
+                <div className="berry-to-poffin">
+                    <img className="peacha-img" src={peachaBasket} alt="Peacha berry Basket"/>
+                    <img className="pink-arrow" src={arrow} alt="pink-arrow"/>
+                    <img className="poffin-platter" src={poffinPlatter} alt="Platter of sweet Poffin"/>
+                </div>
             </section>
             <h4>
                 Poffin Effects & Contest enhancement
@@ -42,25 +75,6 @@ export default function Home() {
                         referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </OpeningElement>
 
-            <h4>
-
-            </h4>
-            <section>
-
-            </section>
-            <h3> Berries in Pokémon aren't just tasty snacks </h3>
-            <section>
-                They're super helpful tools for Trainers, where flavor meets function! They can heal Pokémon, make them
-                stronger in battles and contests. Sometimes even help them evolve!<br/>
-
-                It is more generally known that there is a list of pokemon that
-            </section>
-            <OpeningElement openingText="show berry guide" closingText="Close">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/f8uNPRSF7n8?si=270SijMM5vIW3hmC"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen></iframe>
-            </OpeningElement>
 
             <h3>Learn about Pokémon Contest</h3>
             <section>
@@ -76,7 +90,13 @@ export default function Home() {
                 and be how to make the best poffins, for desired effect on our Pokémon.
             </section>
 
-        </>
+            <h4>
+
+            </h4>
+            <section>
+
+            </section>
+        </div>
 
     )
 }
