@@ -40,7 +40,12 @@ li {
 }
 
 a {
-    color: #D17874
+   font-family: inherit;
+}
+
+a:active {
+    color: #fc6673;
+    style: none;
 }
 
 a:visited {

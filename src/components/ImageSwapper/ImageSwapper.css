@@ -4,13 +4,24 @@
     margin-left: 5px;
 
 }
-.image-swapper img{
-    border-radius: 5px;
-}
 
+.image-swapper-label,
 .image-swapper-btn{
+    font-size: 1em;
+    text-align: center;
     background-color: #ffc5c7;
     color: whitesmoke;
     border: none;
-    border-radius: 5px;
+    padding: 4px;
+}
+
+.image-swapper-label{
+    border-radius: 12px 12px 0 0;
+}
+.image-swapper-btn{
+    border-radius: 0 0 12px 12px ;
+}
+.image-swapper-btn:hover{
+    color: hotpink;
+    cursor: pointer;
 }

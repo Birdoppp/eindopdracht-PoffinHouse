@@ -29,6 +29,7 @@ const ImageSwapper = () => {
 
     return (
         <div className="image-swapper">
+            <p className="image-swapper-label">Poffin house in-game</p>
             {isFirstImage ? (
                 <img src={poffinHouse} alt="Poffin House,Pokémon Diamond and Pearl, Gen 4" />
             ) : (

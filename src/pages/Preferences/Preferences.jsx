@@ -2,9 +2,6 @@ import './Preferences.css'
 import React, {useEffect, useState} from "react";
 import {natures} from "../../constants/constants.jsx";
 import NaturesTable from "../../components/NaturesTable/NaturesTable.jsx";
-import {PokedexImageSlider} from "../../components/PokedexImageSlider/PokedexImageSlider.jsx";
-import OpeningElement from "../../components/OpeningElement/OpeningElement.jsx";
-import {empoleonImages} from "../../constants/dexConstants.jsx";
 import feebas from "../../assets/pokemon-assets/feebas-evo.png"
 import milotic from "../../assets/pokemon-assets/milotic.png"
 
@@ -32,6 +29,7 @@ function Preferences() {
     return (
         <div className="preference-page-wrapper">
             <section>
+                <h3> Nature & Preference</h3>
                 Each Pokémon has its own unique nature, influencing how it behaves in battle and how it grows as it
                 levels up. Whether your Pikachu is bashful, your Charizard is adamant, or your Eevee is quirky, each
                 nature brings its own set of characteristics and traits to the table.
@@ -45,17 +43,11 @@ function Preferences() {
                     onFlavorClick={handleFlavorClick}
                     natures={natures}/>
 
-                <p> Click <a
-                    href="https://lparchive.org/Pokemon-Platinum-%28by-Crosspeice%29/Update%2038/2-Berry.png"
-                    target="_blank"> Here</a> for our recommendations per flavor</p>
+                <p> Click <a className="purple-link"
+                             href="https://lparchive.org/Pokemon-Platinum-%28by-Crosspeice%29/Update%2038/2-Berry.png"
+                             target="_blank"> Here</a> for our recommendations per flavor</p>
             </section>
-            <section className="empoleon-wrapper">
-                <OpeningElement openingText="Open Pokédex" closingText="Close Pokédex">
-                    <PokedexImageSlider pokedexImages={empoleonImages}/>
-                </OpeningElement>
-            </section>
-            <section>
-            </section>
+
             <section>
                 All Pokémon have poke-food preferences based on their Nature. The nature can be found in the summary of
                 your pokemon. For example in the Diamond and Pearl gameplay the summary will look like this:
@@ -72,9 +64,12 @@ function Preferences() {
                 on Pokémon and usability in Poké-contests. Unlock secrets about a special evolutions You will find the
                 berries in the BerryDex on the left of your screen.
             </section>
-            <section className="feebas-evolution">
-                <img className="feebas" src={feebas} alt="Feebas Evolution"/>
-                <img className="milotic" src={milotic} alt="Feebas Evolution"/>
+            <section>
+                <h3>Special Evolution!</h3>
+                <div className="feebas-evolution">
+                    <img className="feebas" src={feebas} alt="Feebas Evolution"/>
+                    <img className="milotic" src={milotic} alt="Feebas Evolution"/>
+                </div>
             </section>
 
         </div>
