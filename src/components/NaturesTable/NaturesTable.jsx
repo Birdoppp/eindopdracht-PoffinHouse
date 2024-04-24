@@ -9,7 +9,7 @@ function NaturesTable({natures, onFlavorClick, selectedNature, dislikedFlavor, f
             <table className="nature-table"  cellSpacing="2">
                 <tbody>
                 <tr>
-                    <th colSpan="7" id="nature-table-text" >Nature table
+                    <th colSpan="7" className="nature-table-text" >Nature table
                     </th>
                 </tr>
                 <tr>
@@ -37,12 +37,12 @@ function NaturesTable({natures, onFlavorClick, selectedNature, dislikedFlavor, f
                     </th>
 
                     <th
-                        colSpan="7" id="disliked-th" > Disliked flavor <br/>  (decreased stat ↓)
+                        colSpan="7" className="disliked-th" > Disliked flavor <br/>  (decreased stat ↓)
                     </th>
                 </tr>
                 <tr>
                     <td  rowSpan="1" colSpan="1"
-                        id="nature-table-text"> <i>No preference </i>
+                        className="nature-table-text"> <i>No preference </i>
                     </td>
                     <th className="spicy"> Spicy <br/> (↓Attack)
                     </th>
@@ -58,7 +58,7 @@ function NaturesTable({natures, onFlavorClick, selectedNature, dislikedFlavor, f
                 <tr className="table-rule">
                     <th
                         rowSpan="5"
-                        id="favorite-th">  Favorite flavor<br/><br/>(increased stat ↑)
+                        className="favorite-th">  Favorite flavor<br/><br/>(increased stat ↑)
                     </th>
                     <th className="spicy">Spicy <br/>(↑Attack)
                     </th>

@@ -61,7 +61,7 @@ export default function Home() {
             <section>
                 <h3>
                     Poffin Making
-                    <img id="poffin-lady" src={poffinLady} alt="Poffin Lady"/>
+                    <img className="poffin-lady" src={poffinLady} alt="Poffin Lady"/>
                 </h3>
                 Inside the Poffin House, you'll find the Poffin Cooking Station, the lady there would like to help you.
                 Here, you can mix Berries together in a mini-game to create Poffins. The flavor-type and quality of the
@@ -83,7 +83,7 @@ export default function Home() {
 
             <section>
                 <h3> Pokémon Contest
-                    <img id="contest-hall" src={contestHall} alt="Poffin Lady"/></h3>
+                    <img className="contest-hall" src={contestHall} alt="Poffin Lady"/></h3>
                 They are dazzling showcases of skill, style, and creativity.
                 Behind every winning performance in a Pokémon Contest lies the perfect berry. Explore our extensive
                 collection of berries, each with its unique flavors, effects, and potential to elevate your Pokémon's

@@ -114,7 +114,7 @@ function Register() {
             )}
 
             <p>
-                Already a member? You can log in <Link to="/login">here</Link>.
+                Already a member? You can log in <Link className="pink-link" to="/login">Here</Link>.
             </p>
         </div>
     );

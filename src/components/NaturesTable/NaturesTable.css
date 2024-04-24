@@ -12,7 +12,7 @@
     background: #d1d1ff
 }
 
-#nature-table-text {
+.nature-table-text {
     text-align:revert;
     background: #bbbbe8;
     color: snow;
@@ -43,13 +43,13 @@
 }
 
 
-#disliked-th {
+.disliked-th {
     background: #ddf;
     color: #768DE5;
     padding: 1em;
 }
 
-#favorite-th {
+.favorite-th {
     background: #ddf;
     color: #fc6673;
     padding: 1em;

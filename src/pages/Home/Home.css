@@ -47,12 +47,7 @@
     align-items: center;
 }
 
-#contest-hall,
-#poffin-lady {
+.contest-hall,
+.poffin-lady {
     height: 3em;
-}
-
-.pink-link {
-    display: inline;
-    color: #de9195;
 }

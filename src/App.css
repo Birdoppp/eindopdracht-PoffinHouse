@@ -43,6 +43,9 @@ a {
    font-family: inherit;
 }
 
+.pink-link {
+    color: #de9195;
+}
 a:active {
     color: #fc6673;
     style: none;
