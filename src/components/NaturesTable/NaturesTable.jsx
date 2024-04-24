@@ -6,7 +6,7 @@ function NaturesTable({natures, onFlavorClick, selectedNature, dislikedFlavor, f
 
     return (
         <div>
-            <table className="nature-table"  cellSpacing="2">
+            <table className="purple-table" cellSpacing="2">
                 <tbody>
                 <tr>
                     <th colSpan="7" className="nature-table-text" >Nature table

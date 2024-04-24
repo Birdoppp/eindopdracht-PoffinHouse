@@ -1,6 +1,7 @@
-.nature-table {
+.purple-table {
     text-align: center;
-    width: 30em;
+    width: fit-content;
+    max-width: 30em;
     margin: auto;
     border-radius: 10px;
     border: 3px solid #bbbbe8;
@@ -85,11 +86,11 @@
 }
 
 
-.nature-table p:active {
+.purple-table p:active {
     animation: glow 1s ease-in-out infinite alternate;
 }
 
-.nature-table p:hover {
+.purple-table p:hover {
      cursor: pointer;
 }
 

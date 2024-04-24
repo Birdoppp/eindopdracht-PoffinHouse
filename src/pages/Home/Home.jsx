@@ -14,6 +14,7 @@ import ImageSwapper from "../../components/ImageSwapper/ImageSwapper.jsx";
 import OpeningElement from "../../components/OpeningElement/OpeningElement.jsx";
 import {PokedexImageSlider} from "../../components/PokedexImageSlider/PokedexImageSlider.jsx";
 import {empoleonImages} from "../../constants/dexConstants.jsx";
+import FlavorTable from "../../components/FlavorTable/FlavorTable.jsx";
 
 
 export default function Home() {
@@ -133,6 +134,7 @@ export default function Home() {
                 <OpeningElement openingText="Meet Empoleon" closingText="Close Pokédex">
                     <PokedexImageSlider pokedexImages={empoleonImages}/>
                 </OpeningElement>
+                    <FlavorTable/>
             </section>
         </div>
 
