@@ -84,16 +84,12 @@
     font-family: "pixelate", serif;
     font-weight: bold;
     font-size: 1.4em;
-    /*color: #eb2a89;*/
-    /*color: #ff2e95;*/
-    /*color: #f98787;*/
     color: deeppink;
 }
 
 
 
 .links-container {
-    /*border: orangered solid 4px ;*/
     display: flex;
     justify-content: flex-end;
     align-items: center;

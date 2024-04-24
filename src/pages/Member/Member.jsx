@@ -63,7 +63,6 @@ function Member() {
 
     return (
         <div className="member-page">
-            <div className="member-page-wrapper">
                 <div className="starter-wrapper">
                     <header className="member-header">
                         <h1 className="hi-member">Hi {user.username}!</h1>
@@ -126,7 +125,6 @@ function Member() {
                         <button className="logout-btn" onClick={logout}>Logout</button>
                     </section>
                 </div>
-            </div>
         </div>
     );
 }
