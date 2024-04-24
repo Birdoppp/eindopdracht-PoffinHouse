@@ -50,11 +50,12 @@ export default function Home() {
                 </article>
                 <img className="oran-img" src={oranTree} alt="Oran berry Life cycle"/>
             </section>
-            <OpeningElement openingText="show berry guide" closingText="Close">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/f8uNPRSF7n8?si=270SijMM5vIW3hmC"
+            <OpeningElement openingText="Show Berry guide" closingText="Close">
+                <iframe width="560" height="315"
+                        src="https://www.youtube-nocookie.com/embed/f8uNPRSF7n8?si=PFtuN7Ex5YPsFVgB"
                         title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen></iframe>
+                        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </OpeningElement>
 
             <section>
@@ -71,6 +72,13 @@ export default function Home() {
                     <img className="pink-arrow" src={arrow} alt="pink-arrow"/>
                     <img className="poffin-platter" src={poffinPlatter} alt="Platter of sweet Poffin"/>
                 </div>
+                <OpeningElement openingText="Poffin making footage" closingText="Close">
+                    <iframe width="560" height="315"
+                            src="https://www.youtube-nocookie.com/embed/pSFNfm2ycJQ?si=_algAXqwfzLSH6q4&amp;start=59"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                </OpeningElement>
             </section>
 
             <section>
@@ -82,11 +90,11 @@ export default function Home() {
                 Contest performance to new heights. From enhancing beauty and appeal to boosting performance in key
                 Contest categories, the right berry can make all the difference.
             </section>
-            <OpeningElement openingText="Show in-game footage" closingText="Close">
+            <OpeningElement openingText="Super Contest making footage" closingText="Close">
                 <iframe width="560" height="315"
-                        src="https://www.youtube.com/embed/pSFNfm2ycJQ?si=v3pPf9LztQtcNnIM&amp;start=840"
+                        src="https://www.youtube-nocookie.com/embed/pSFNfm2ycJQ?si=zuVkSCbrZup1OCDW&amp;start=840"
                         title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allow="accelerometer; autoplay; modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </OpeningElement>
 
@@ -101,7 +109,7 @@ export default function Home() {
                 stats. By strategically feeding Poffins to your Pokémon, you can increase their chances of winning in
                 Contests and earning ribbons.
             </section>
-            <OpeningElement openingText="Open Pokédex" closingText="Close Pokédex">
+            <OpeningElement openingText="Meet Empoleon" closingText="Close Pokédex">
                 <PokedexImageSlider pokedexImages={empoleonImages}/>
             </OpeningElement>
         </div>
