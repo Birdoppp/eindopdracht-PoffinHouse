@@ -1,15 +1,15 @@
-.opening-container{
+.opening-container {
     display: flex;
     flex-direction: column;
     width: fit-content;
-    margin-bottom: 20px;
+    margin: 7px 20px;
     padding: 10px;
     border-radius: 20px;
     background-color: #ffc5c7;
 }
 
-.opening-button{
-    padding: 7px 20px;
+.opening-button {
+    padding: 10px 20px;
     background-color: #ffc5c7;
     color: whitesmoke;
     border-radius: 20px;

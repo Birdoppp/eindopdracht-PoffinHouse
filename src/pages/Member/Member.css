@@ -24,8 +24,9 @@
 }
 
 .member-text {
-    margin-right: 0.2em;
     font-family: pixelate, sans-serif;
+    width: 22em;
+    margin-right: 0.2em;
     color: brown;
 }
 

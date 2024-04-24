@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0.5em;
+    margin: 0.7em;
 }
 
 .berry-to-poffin {
@@ -24,10 +24,10 @@
     min-width: 35em;
 }
 
-.intro-wrapper img {
-    width: auto;
+.welcome-img{
     height: 12em;
 }
+
 .berry-section img{
     border-radius: 12px;
 }
@@ -47,7 +47,10 @@
     align-items: center;
 }
 
-.contest-hall,
-.poffin-lady {
+.hearthome,
+.poffin-lady,
+.contest-hall{
+    margin: 4px;
     height: 3em;
 }
+
