@@ -65,9 +65,10 @@ function Preferences() {
             {/*    on Pokémon and usability in Poké-contests. Unlock secrets about a special evolutions You will find the*/}
             {/*    berries in the BerryDex on the left of your screen.*/}
             {/*</section>*/}
+
             <section>
-                <h3>Berry Special Evolution!</h3>
-                <div className="feebas-evolution">
+                <h3>Condition-dependent Evolution</h3>
+                <div className="feebas-evolution" id="feebas-evolution">
                     <img className="feebas" src={feebas} alt="Feebas Evolution"/>
                     <img className="milotic" src={milotic} alt="Feebas Evolution"/>
                 </div>

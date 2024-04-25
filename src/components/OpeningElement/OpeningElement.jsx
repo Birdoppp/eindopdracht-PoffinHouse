@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './OpeningElement.css'
+import './OpeningElement.css';
 
-const OpeningElement = ({ children, openingText, closingText}) => {
+const OpeningElement = ({ children, openingText, closingText, className }) => {
     const [open, toggleOpen] = useState(false);
 
     const handleClick = () => {
@@ -9,7 +9,7 @@ const OpeningElement = ({ children, openingText, closingText}) => {
     };
 
     return (
-        <div className="opening-container">
+        <div className={`opening-container ${className} ${open ? 'open' : 'closed'}`}>
             <button className="opening-button" onClick={handleClick}>
                 {open ? closingText : openingText}
             </button>
@@ -17,6 +17,5 @@ const OpeningElement = ({ children, openingText, closingText}) => {
         </div>
     );
 };
-
 
 export default OpeningElement;

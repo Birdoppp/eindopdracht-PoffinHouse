@@ -52,6 +52,9 @@
     height: 3em;
     width: 2.5em;
 }
+.pixelball:hover{
+    cursor: pointer;
+}
 
 /*------------------------------------------*/
 .member-content {
@@ -89,6 +92,7 @@
     margin: 1em 0;
     text-align: center;
     text-decoration: none;
+    cursor: pointer;
     transition: box-shadow .2s ease-in-out;
 }
 

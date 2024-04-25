@@ -1,4 +1,5 @@
 import React from 'react';
+import './FlavorTable.css'
 
 const FlavorTable = () => {
     const flavorData = [

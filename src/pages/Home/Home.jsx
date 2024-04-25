@@ -7,6 +7,7 @@ import poffinLady from './../../assets/assorted-collection/poffin-lady.png'
 import arrow from './../../assets/assorted-collection/pink-arrow.png'
 import contestHall from './../../assets/assorted-collection/Super-Contest-Hall.png'
 import redBarrette from './../../assets/assorted-collection/Accessory_Red_Barrette_Sprite.png'
+import contestPika from './../../assets/pokemon-assets/contest-Pikachu.png'
 
 import React from "react";
 import {Link} from "react-router-dom";
@@ -46,14 +47,20 @@ export default function Home() {
 
             <section className="berry-section">
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
-                <h3> Berries in Pokémon aren't just tasty snacks </h3>
+                <h3> Berries in Pokémon aren't just tasty snacks
+                    <img className="small-berry"
+                         src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cheri-berry.png"
+                         alt="Berry"/></h3>
+                <img className="oran-img" src={oranTree} alt="Oran berry Life cycle"/>
                 <article>
-                    Berries are helpful tools for Trainers. Truely where flavor meets function! In contrary to human
-                    made heal potions, Pokémon know how to use berries intuitively and will use it when needed in
-                    battle. For example they can heal Pokémon, give a speed-boost and even help them become cooler in
-                    beauty contests.
-                    Berries make our Pokémon stronger and sometimes even help them <Link
-                    to="/preferences" className="pink-link">evolve! </Link><br/><br/>
+                    Berries are helpful tools for Trainers. Truely where flavor meets function.
+                    In contrary to human made healing potions<img className="potion"
+                                                                  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/potion.png"
+                                                                  alt="Potion"/>, Pokémon know how to use berries
+                    intuitively and will use it when needed in battle. For example they can heal Pokémon, give a
+                    speed-boost and even help them become cooler in beauty contests. Berries make our Pokémon stronger
+                    and sometimes even help them <Link to="/preferences#feebas-evolution"
+                                                       className="pink-link">evolve! </Link><br/><br/>
 
 
                     On the left side of your screen you will find the BerryDex with more information to find the right
@@ -61,7 +68,7 @@ export default function Home() {
                     berry for you. Whether you'd like your Pokémon to hold the berry, to cook poffins with it or plant
                     them back in soil, the option is yours to research which best fits your needs.
                 </article>
-                <img className="oran-img" src={oranTree} alt="Oran berry Life cycle"/>
+
                 <OpeningElement openingText="Show Berry guide" closingText="Close">
                     <iframe width="560" height="315"
                             src="https://www.youtube-nocookie.com/embed/f8uNPRSF7n8?si=PFtuN7Ex5YPsFVgB"
@@ -76,19 +83,37 @@ export default function Home() {
                     Poffin Making
                     <img className="poffin-lady" src={poffinLady} alt="Poffin Lady"/>
                 </h3>
-                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                Inside the Poffin House, you'll find the Poffin Cooking Station, the lady there would like to help you.
-                Here, you can mix Berries together in a mini-game to create Poffins. The flavor-type and quality of the
-                Poffin depends on the Berries you choose and how well you perform in the mixing mini-game. Your Pokémon
-                will gain 1 Sheen everytime they eat a Poffin with the max of 12 Sheen. To maximize effectiveness on
-                their condition, it is advisory to feed only strong Poffins to a Pokémon training for the Super Contest
-                Championships, as Sheen can not be decreased or reset.<br/><br/>
-                Poffin making is available to do with multiple friends online and would result into a stronger Poffin.
                 <div className="berry-to-poffin">
                     <img className="peacha-basket" src={peachaBasket} alt="Peacha berry Basket"/>
                     <img className="pink-arrow" src={arrow} alt="pink-arrow"/>
                     <img className="poffin-platter" src={poffinPlatter} alt="Platter of sweet Poffin"/>
                 </div>
+                <article>
+                    {/* eslint-disable-next-line react/no-unescaped-entities */}
+                    Inside the Poffin House, you'll find the Poffin Cooking Station, the lady there would like to help
+                    you.
+                    Here, you can mix Berries together in a mini-game to create Poffins. The flavor-type and quality of
+                    the
+                    Poffin depends on the Berries you choose and how well you perform in the mixing mini-game. Your
+                    Pokémon
+                    will gain 1 Sheen everytime they eat a Poffin with the max of 12 Sheen. To maximize effectiveness on
+                    their condition, it is advisory to feed only strong Poffins to a Pokémon training for the Super
+                    Contest
+                    Championships, as Sheen can not be decreased or reset.
+                </article>
+                <label className="Sceptile-lbl"> Sceptile with full Sheen
+                    <img className="Sceptile" src="https://archives.bulbagarden.net/media/upload/c/cb/Sheen_IV.png"
+                         alt="Sceptile with full Sheen"/>
+                </label>
+                {/*<br/><br/>*/}
+                <article>
+                    Poffin making is available to do with multiple friends online and would result into a stronger
+                    Poffin.
+                    If you take in account the <Link to="/preferences"
+                                                     className="pink-link">Nature </Link> (/personality)
+                    of your Pokémon, that is how to give your the best shot to become a Super Contest Champion!
+                </article>
+
                 <OpeningElement openingText="Poffin making footage" closingText="Close">
                     <iframe width="560" height="315"
                             src="https://www.youtube-nocookie.com/embed/pSFNfm2ycJQ?si=_algAXqwfzLSH6q4&amp;start=59"
@@ -104,11 +129,15 @@ export default function Home() {
                 <article>
                     Super Contest are a whole new way to compete and partner up with your Pokémon. They are
                     dazzling showcases of skill, style, and creativity.
-                    Pokémon compete in 5 different categories, named after Conditions: Coolness, Beauty, Cuteness,
-                    Cleverness, or Toughness.
-                    The contests consist of 3 rounds: Visual, Dance and Acting Competition. For more details learn about <a className="pink-link" target="_blank"
-                       href="https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Super_Contest">Super Contest</a>!
+                    Pokémon compete in 5 different categories named after the Contest Conditions: Coolness, Beauty,
+                    Cuteness,
+                    Cleverness, or Toughness. The contests consist of 3 rounds: Visual, Dance and Acting. For more
+                    details learn about <a className="pink-link" target="_blank"
+                                           href="https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Super_Contest">Super
+                    Contest</a>!
                 </article>
+                <img className="contest-pikachu" src={contestPika}
+                     alt="Pikachu competing in Cute Super Contest"/>
                 <OpeningElement openingText="Super Contest making footage" closingText="Close">
                     <iframe width="560" height="315"
                             src="https://www.youtube-nocookie.com/embed/pSFNfm2ycJQ?si=zuVkSCbrZup1OCDW&amp;start=840"
@@ -126,15 +155,16 @@ export default function Home() {
                 <article>
                     Poffins come in different flavors and qualities, affecting various aspects of Pokémon performance in
                     Pokémon Contests. Depending on the Poffins flavor, it will boost a particular Contest stat
-                    (Coolness, Beauty, Cuteness, Smartness, or Toughness). Higher-quality Poffins provide greater boosts to these
+                    (Coolness, Beauty, Cuteness, Smartness, or Toughness). Higher-quality Poffins provide greater boosts
+                    to these
                     stats. By strategically feeding Poffins to your Pokémon, you can increase their chances of winning
                     in
                     Contests and earning ribbons.
                 </article>
-                <OpeningElement openingText="Meet Empoleon" closingText="Close Pokédex">
-                    <PokedexImageSlider pokedexImages={empoleonImages}/>
+                <OpeningElement className="empoleon" openingText="Meet Empoleon" closingText="Close Pokédex">
+                    <PokedexImageSlider  pokedexImages={empoleonImages}/>
                 </OpeningElement>
-                    <FlavorTable/>
+                <FlavorTable/>
             </section>
         </div>
 

@@ -10,10 +10,7 @@
     border: #f6919a 2px solid;
     border-radius: 12px;
 }
-.dex-display{
-    /*min-width: 300px;*/
-    /*max-width: 400px;*/
-}
+
 .dex-img{
     width: 100%;
     height: auto;
@@ -37,10 +34,8 @@
 .image-back-btn {
     border-radius: 12px 0 0 12px;
 }
+
 .image-next-btn {
     border-radius:0 12px 12px 0;
-
-    /*text-align: center;*/
-
 }
 

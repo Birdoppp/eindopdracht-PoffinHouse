@@ -28,13 +28,34 @@
     height: 12em;
 }
 
-.berry-section img{
+.oran-img{
     border-radius: 12px;
+    margin: 0 1em 1em 1em;
+}
+.Sceptile{
+    border-radius: 0 0 12px 12px;
 }
 
+.Sceptile-lbl{
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    margin: 0 1em 1em 1em;
+
+    font-size: 14px;
+    background-color: #fd9f9f;
+    color: floralwhite;
+}
+
+.potion{
+    height:20px;
+}
+
+.contest-pikachu,
 .berry-to-poffin img {
     height: 10em;
     border-radius: 12px;
+    margin: 0 1em 1em 1em;
 }
 .peacha-basket,
 .poffin-platter{
@@ -46,6 +67,10 @@
     justify-content: center;
     align-items: center;
     min-width: 800px;
+}
+.small-berry,
+.red-barret{
+    height: 30px;
 }
 
 .hearthome,

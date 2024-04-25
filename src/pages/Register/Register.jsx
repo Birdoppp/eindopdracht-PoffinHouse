@@ -107,7 +107,7 @@ function Register() {
                     </label>
                     {error && <p className="error-EN">{errorMessage}</p>}
                     {error && <p className="error-U">{errorMessage}</p>}
-                    <button type="submit" className="form-button" disabled={loading}>
+                    <button type="submit" className="register-btn" disabled={loading}>
                         {loading ? 'Registering...' : 'Register'}
                     </button>
                 </form>

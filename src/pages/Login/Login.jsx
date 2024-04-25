@@ -74,7 +74,7 @@ function Login() {
                     {error && <p className="error-EN">Invalid login information</p>}
                     {error && <p className="error-U">Invalid login information</p>}
 
-                    <button type="submit" className="form-button">
+                    <button type="submit" className="login-btn">
                         Log in
                     </button>
                 </form>

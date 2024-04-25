@@ -1,3 +1,4 @@
+
 .opening-container {
     display: flex;
     flex-direction: column;
@@ -5,12 +6,20 @@
     margin: 7px 20px;
     padding: 10px;
     border-radius: 20px;
-    background-color: #ffc5c7;
+    transition: background-color 0.3s ease;
+}
+
+.opening-container.closed {
+    background-color:  #fd9f9f;
+}
+
+.opening-container.open {
+    background-color:pink;
 }
 
 .opening-button {
     padding: 10px 20px;
-    background-color: #ffc5c7;
+    background-color: transparent;
     color: whitesmoke;
     border-radius: 20px;
     border: none;
