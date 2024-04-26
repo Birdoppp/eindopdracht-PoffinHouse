@@ -1,5 +1,4 @@
 
-
 .edit-page {
     display: flex;
     flex-direction: column;
@@ -31,9 +30,70 @@
     height: 15em;
     padding: 10px 0;
 }
-.form-team {
+
+/*!*------------------------------------------------------------*!*/
+.pixelball{
     display: flex;
-    justify-content: flex-end;
-    min-height: fit-content;
-    background-color: papayawhip;
+    align-content: center;
+    height: 3em;
+    width: 2.5em;
+}
+
+.individual-pokemon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    max-height: 10em;
+    padding: 0.5em 0;
+}
+
+.individual-pokemon label{
+    padding: 10px ;
+    color: #d17874;
+    font-weight: bold;
+}
+
+.X-btn{
+    border-color:transparent ;
+    background-color: transparent;
+
+    width: 20px;
+    margin: 3px;
+
+    font-size: 1em;
+    font-weight: bold;
+
+    color: white;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 1px #fc6673;
+}
+
+.empty-space{
+    width: 24px;
+}
+
+/*--------------------------------------------------*/
+
+.team-submit-btn{
+    background: linear-gradient(to bottom right, #e6393b, #fd9f9f);
+    border: 0;
+    border-radius: 12px;
+    color: floralwhite;
+
+    display: inline-block;
+    font-family: "Segoe UI",sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.5;
+
+    padding: 0 20px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.team-submit-btn:active{
+    background: linear-gradient(to bottom right, orangered, crimson);
 }
