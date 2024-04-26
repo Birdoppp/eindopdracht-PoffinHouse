@@ -1,3 +1,6 @@
 .flavor-table{
     font-weight: bold;
 }
+.flavor-table td{
+    padding: 0.1em 0.7em;
+}

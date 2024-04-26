@@ -12,24 +12,24 @@ const FlavorTable = () => {
 
     return (
             <div>
-            <h4>Flavor Stats</h4>
+            <h4>Flavor Association</h4>
         <div className="purple-table">
             <table className="flavor-table">
                 <thead>
                 <tr className="table-rule">
                     <th>Flavor</th>
-                    <th>Associated Stat</th>
+                    <th>Condition</th>
                 </tr>
                 </thead>
                 <tbody>
-                {flavorData.map((item, index) => (
+                {flavorData.map((flavorData, index) => (
                     <tr key={index} className="table-rule">
                         {/*Uses Css from NatureTable*/}
-                        <td className={`${item.flavor.toLowerCase()}`}>
-                            {item.flavor}
+                        <td className={`${flavorData.flavor.toLowerCase()}`}>
+                            {flavorData.flavor}
                         </td>
-                        <td className={`${item.flavor.toLowerCase()}`}>
-                            {item.stat}
+                        <td className={`${flavorData.flavor.toLowerCase()}`}>
+                            {flavorData.stat}
                         </td>
                     </tr>
                 ))}

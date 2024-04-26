@@ -56,7 +56,13 @@ a:visited {
 }
 
 .nav-bar {
-    min-height: 7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 7em;
+
+    background-color: peachpuff;
     position: sticky;
     top: 0;
     left: 0;
@@ -82,6 +88,7 @@ a:visited {
     min-height: calc(100vh - 7em);
     max-height: calc(100% - 7em);
     min-width: fit-content;
+
     position: sticky;
     top: 7em;
     z-index: 10;
@@ -98,7 +105,7 @@ a:visited {
     min-height: 80vh;
     width: 100%;
     margin: 30px 20px;
-    background-color: papayawhip;
+    background-color: transparent;
 }
 
 .loading {
@@ -106,6 +113,7 @@ a:visited {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     height: 100vh;
     width: 100vw;
     background-color: papayawhip;

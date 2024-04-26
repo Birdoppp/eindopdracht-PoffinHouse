@@ -12,6 +12,11 @@
 
 .login-title{
     margin-bottom: 1em;
+    padding: 0.5em 2em;
+    border: #e87f7f 3px solid;
+    border-radius: 50px;
+    /*background-color: #ffafae;*/
+    color: #e87f7f;
 
 }
 

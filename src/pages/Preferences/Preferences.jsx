@@ -29,7 +29,7 @@ function Preferences() {
 
     return (
         <div className="preference-page-wrapper">
-            <section>
+            <section id="preference">
                 <h3> Nature & Preference</h3>
                 Each Pokémon has its own unique nature, influencing how it behaves in battle and how it grows as it
                 levels up. Whether your Pikachu is bashful, your Charizard is adamant, or your Eevee is quirky, each

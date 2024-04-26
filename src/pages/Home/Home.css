@@ -3,7 +3,8 @@
     flex-direction: column;
     flex-shrink: 1;
     align-items: center;
-    max-width: 65vw;
+    width: fit-content;
+    max-width: 60%;
 }
 
 .welcome-container {
@@ -17,6 +18,9 @@
     flex-direction: column;
     align-items: center;
     margin: 0.7em;
+}
+.home-wrapper article {
+    margin: 0.2em 0.5em;
 }
 
 .berry-to-poffin {
@@ -78,5 +82,10 @@
 .contest-hall{
     margin: 4px;
     height: 3em;
+    border-radius: 5px;
 }
 
+.effects-container{
+    display: flex;
+    align-items: center;
+}
