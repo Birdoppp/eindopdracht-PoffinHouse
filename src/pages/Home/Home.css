@@ -70,8 +70,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 800px;
 }
+
 .small-berry,
 .red-barret{
     height: 30px;

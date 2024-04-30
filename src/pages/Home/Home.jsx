@@ -33,7 +33,7 @@ export default function Home() {
                         Pokémon!</h1>
                     <h3>Located in&nbsp;<a className="pink-link" target="_blank"
                                            href="https://bulbapedia.bulbagarden.net/wiki/Hearthome_City"> Hearthome
-                        City </a>, the Poffin House is The hotspot for everything Berry!
+                        City </a>, The hotspot for everything Berry!
                         <img className="hearthome"
                              src="https://archives.bulbagarden.net/media/upload/4/4f/Sinnoh_Hearthome_City_Map.png"
                              alt="hearthome-map"/></h3>
