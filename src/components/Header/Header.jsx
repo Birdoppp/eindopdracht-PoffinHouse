@@ -1,7 +1,7 @@
 import { NavLink, Link } from "react-router-dom";
 import React, { useContext, useState } from "react";
 import './Header.css'
-import logo from './../../assets/assorted-collection/PoffinHouse-mini-pixel.png'
+import logo from '../../assets/assorted-collection/PoffinHouse-text.png'
 import berry from './../../assets/assorted-collection/1.png'
 import { AuthContext } from "../../context/AuthContext.jsx";
 import TeamDisplay from "../TeamDisplay/TeamDisplay.jsx";
