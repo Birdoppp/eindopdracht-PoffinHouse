@@ -6,6 +6,7 @@ import peachaBasket from './../../assets/assorted-collection/peacha-berry-basket
 import poffinPlatter from './../../assets/assorted-collection/poffin-platter.png'
 import poffinLady from './../../assets/assorted-collection/poffin-lady.png'
 import arrow from './../../assets/assorted-collection/pink-arrow.png'
+import sceptile from './../../assets/pokemon-assets/sheen.png'
 import contestHall from './../../assets/assorted-collection/Super-Contest-Hall.png'
 import redRibbon from './../../assets/assorted-collection/Red_Ribbon_Cool_Sprite.png'
 import contestPika from './../../assets/pokemon-assets/contest-Pikachu.png'
@@ -102,15 +103,13 @@ export default function Home() {
                     effectiveness on their Contest Condition, as Sheen can not be decreased or reset.
                 </article>
                 <label className="Sceptile-lbl"> Sceptile with full Sheen
-                    <img className="Sceptile" src="https://archives.bulbagarden.net/media/upload/c/cb/Sheen_IV.png"
-                         alt="Sceptile with full Sheen"/>
+                    <img className="Sceptile" src={sceptile} alt="Sceptile with full Sheen"/>
                 </label>
                 <article>
                     Poffin making is available to do with multiple friends online, and would result into a stronger
-                    Poffin.
-                    If you take in account the <Link to="/preferences"
-                                                     className="pink-link">Nature </Link> (personality)
-                    of your Pokémon, it would give your Pokémon the best shot to become a Super Contest Champion!
+                    Poffin. If you take in account the <Link to="/preferences"
+                                                             className="pink-link">Nature </Link> (personality) of your
+                    Pokémon, it would give your Pokémon the best shot to become a Super Contest Champion!
                 </article>
                 <OpeningElement openingText="Poffin making footage" closingText="Close">
                     <iframe width="560" height="315"
