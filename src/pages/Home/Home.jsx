@@ -30,7 +30,7 @@ export default function Home() {
                     <img className="welcome-img" src={welcome} alt="welcome"/>
                 </div>
                 <section>
-                    <h1>To Poffin House!</h1>
+                    <h1>to Poffin House!</h1>
                     <ImageSwapper/>
                     <h1 className="poffinhouse-text">Here we learn how to best feed our
                         Pokémon!</h1>
@@ -69,9 +69,9 @@ export default function Home() {
                     On the left side of your screen you will find the BerryDex with more information. A sure fire way to
                     {/* eslint-disable-next-line react/no-unescaped-entities */}
                     &nbsp;find a suitable berry for you. Whether you'd like your Pokémon to hold on to the berry, use it
-                    to
-                    cook poffins with or plant them back into the soil, the option is yours to to what best fits your
-                    needs.
+                    to cook poffins with or plant them back into the soil, the option is yours to find out what best
+                    fits
+                    your needs.
                 </article>
 
                 <OpeningElement openingText="Show Berry guide" closingText="Close">
@@ -167,12 +167,9 @@ export default function Home() {
 
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
                 <article>According to the Trainer Memo (second screen in the Pokédex), Empoleon "likes Sweet food".
-                    Unfortunately it does
-                    not show you what Flavor it dislikes. This is useful to know because feeding a Pokémon a Poffin they
-                    will dislike, will regress their
-                    progress. We have provided a table which includes disliked Flavor in <Link
-                        to="/preferences#preferences"
-                        className="pink-link">preferences</Link>.
+                    Unfortunately it does not show you what Flavor it dislikes. This is useful to know because feeding a
+                    Pokémon a Poffin they will dislike, will regress their progress. We have provided a table which
+                    includes disliked Flavor in <Link to="/preferences#preferences" className="pink-link">preferences</Link>.
                     <br/><br/>
                     In the Contest Moves (The yellow tab in the PokéDex) it is notable that Empoleon has acces to 3
                     Beauty Contest Moves yet has a wide collection of Ribbons. With dedication and effort your Pokémon
