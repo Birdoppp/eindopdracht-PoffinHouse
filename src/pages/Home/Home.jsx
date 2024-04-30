@@ -1,5 +1,6 @@
 import "./Home.css"
 import welcome from './../../assets/assorted-collection/welcome.gif'
+import hearthome from './../../assets/assorted-collection/Sinnoh_Hearthome_City_Map.png'
 import oranTree from './../../assets/assorted-collection/oran-berry-growth.gif'
 import peachaBasket from './../../assets/assorted-collection/peacha-berry-basket.png'
 import poffinPlatter from './../../assets/assorted-collection/poffin-platter.png'
@@ -35,13 +36,13 @@ export default function Home() {
                                            href="https://bulbapedia.bulbagarden.net/wiki/Hearthome_City"> Hearthome
                         City </a>, The hotspot for everything Berry!
                         <img className="hearthome"
-                             src="https://archives.bulbagarden.net/media/upload/4/4f/Sinnoh_Hearthome_City_Map.png"
-                             alt="hearthome-map"/></h3>
+                             src={hearthome} alt="hearthome-map"/></h3>
                     <article>
                         {/* eslint-disable-next-line react/no-unescaped-entities */}
                         Whether you're a seasoned Trainer or just started out on your adventure, our site is a
                         resource for you to expand your knowledge. Poffin House is a place where we get together and
-                        share advice about topics like Berries, Poffins and Super Contests. Feel free to grab a cup of tea and take your time🌸
+                        share advice about topics like Berries, Poffins and Super Contests. Feel free to grab a cup of
+                        tea and take your time🌸
                     </article>
                 </section>
             </div>
@@ -65,7 +66,8 @@ export default function Home() {
 
                     On the left side of your screen you will find the BerryDex with more information. A sure fire way to
                     {/* eslint-disable-next-line react/no-unescaped-entities */}
-                    &nbsp;find a suitable berry for you. Whether you'd like your Pokémon to hold on to the berry, use it to
+                    &nbsp;find a suitable berry for you. Whether you'd like your Pokémon to hold on to the berry, use it
+                    to
                     cook poffins with or plant them back into the soil, the option is yours to to what best fits your
                     needs.
                 </article>

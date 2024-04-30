@@ -88,4 +88,5 @@
 .effects-container{
     display: flex;
     align-items: center;
+    height: 9.5em;
 }
