@@ -1,17 +1,25 @@
-.opening-container{
+
+.opening-container {
     display: flex;
     flex-direction: column;
     width: fit-content;
-    margin-bottom: 20px;
+    margin: 7px 20px;
     padding: 10px;
     border-radius: 20px;
-    background-color: #ffc5c7;
+    transition: background-color 0.3s ease;
 }
 
-.opening-button{
-    font-weight: bold;
-    padding: 7px 20px;
-    background-color: #ffc5c7;
+.opening-container.closed {
+    background-color:  #fd9f9f;
+}
+
+.opening-container.open {
+    background-color:pink;
+}
+
+.opening-button {
+    padding: 10px 20px;
+    background-color: transparent;
     color: whitesmoke;
     border-radius: 20px;
     border: none;

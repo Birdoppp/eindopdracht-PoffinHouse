@@ -107,14 +107,14 @@ function Register() {
                     </label>
                     {error && <p className="error-EN">{errorMessage}</p>}
                     {error && <p className="error-U">{errorMessage}</p>}
-                    <button type="submit" className="form-button" disabled={loading}>
+                    <button type="submit" className="register-btn" disabled={loading}>
                         {loading ? 'Registering...' : 'Register'}
                     </button>
                 </form>
             )}
 
             <p>
-                Already a member? You can log in <Link to="/login">here</Link>.
+                Already a member? You can log in <Link className="pink-link" to="/login">Here</Link>.
             </p>
         </div>
     );

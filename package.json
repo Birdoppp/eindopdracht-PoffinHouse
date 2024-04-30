@@ -19,9 +19,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.50.1",
     "react-modal": "^3.16.1",
-    "react-router-dom": "^6.21.3",
-    "react-youtube": "^10.1.0",
-    "youtube-embed": "^1.0.0"
+    "react-router-dom": "^6.21.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
@@ -31,6 +29,6 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
-    "vite": "^5.0.8"
+    "vite": "5.1.0"
   }
 }

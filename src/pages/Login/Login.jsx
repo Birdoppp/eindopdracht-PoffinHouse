@@ -74,12 +74,12 @@ function Login() {
                     {error && <p className="error-EN">Invalid login information</p>}
                     {error && <p className="error-U">Invalid login information</p>}
 
-                    <button type="submit" className="form-button">
+                    <button type="submit" className="login-btn">
                         Log in
                     </button>
                 </form>
 
-                <p>Are you not a member yet?<br/> Click <Link to="/register">here</Link> to create an account.</p>
+                <p>Are you not a member yet?<br/> Click <Link className="pink-link" to="/register">Here</Link> to create an account.</p>
             </div>
         </>
     );

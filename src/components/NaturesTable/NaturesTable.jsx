@@ -2,47 +2,47 @@ import React from 'react';
 import './NaturesTable.css'
 
 
-function NaturesTable({natures, onFlavorClick, selectedNature, dislikedFlavor, favoriteFlavor, noPreference }) {
+function NaturesTable({natures, onFlavorClick, selectedNature, dislikedFlavor, favoriteFlavor, noPreference}) {
 
     return (
         <div>
-            <table className="nature-table"  cellSpacing="2">
+            <table className="purple-table" cellSpacing="2">
                 <tbody>
                 <tr>
-                    <th colSpan="7" id="nature-table-text" >Nature table
+                    <th colSpan="7" className="nature-table-text">Nature table
                     </th>
                 </tr>
+
                 <tr>
-                    <th className="flavor-container" rowSpan="2" colSpan="1" >
-            {selectedNature && (
-                <div className="preferences-tab-text">
-                    <h3 className="selected-nature">{selectedNature}</h3>
-                    {!noPreference && (
-                        <div>
-                            <h5>Favorite flavor: </h5>
-                            <p>{favoriteFlavor}</p>
-                            <h5>Disliked flavor:</h5>
-                            <p>{dislikedFlavor}</p>
-                        </div>
-                    )}
-                    {noPreference && (
-                        <div>
-                            <p>This Nature<br/> has no <br/> Preference</p>
-                        </div>
-                    )}
-                </div>
-            )}
-
-
+                    <th className="flavor-container" rowSpan="2" colSpan="1">
+                        {selectedNature && (
+                            <div className="preferences-tab-text">
+                                <h3 className="selected-nature">{selectedNature}</h3>
+                                {!noPreference && (
+                                    <div>
+                                        <h5 className="flavor-text">Favorite flavor: </h5>
+                                        <p>{favoriteFlavor}</p>
+                                        <h5 className="flavor-text">Disliked flavor:</h5>
+                                        <p>{dislikedFlavor}</p>
+                                    </div>
+                                )}
+                                {noPreference && (
+                                    <div>
+                                        <p>This Nature<br/> has no <br/> Preference</p>
+                                    </div>
+                                )}
+                            </div>
+                        )}
                     </th>
 
                     <th
-                        colSpan="7" id="disliked-th" > Disliked flavor <br/>  (decreased stat ↓)
+                        colSpan="7" className="disliked-th"> Disliked flavor <br/> (decreased stat ↓)
                     </th>
                 </tr>
+
                 <tr>
-                    <td  rowSpan="1" colSpan="1"
-                        id="nature-table-text"> <i>No preference </i>
+                    <td rowSpan="1" colSpan="1"
+                        className="nature-table-text">No preference↘
                     </td>
                     <th className="spicy"> Spicy <br/> (↓Attack)
                     </th>
@@ -55,10 +55,11 @@ function NaturesTable({natures, onFlavorClick, selectedNature, dislikedFlavor, f
                     <th className="sweet">Sweet <br/> (↓Speed)
                     </th>
                 </tr>
+
                 <tr className="table-rule">
                     <th
                         rowSpan="5"
-                        id="favorite-th">  Favorite flavor<br/><br/>(increased stat ↑)
+                        className="favorite-th"> Favorite flavor<br/><br/>(increased stat ↑)
                     </th>
                     <th className="spicy">Spicy <br/>(↑Attack)
                     </th>
@@ -75,6 +76,7 @@ function NaturesTable({natures, onFlavorClick, selectedNature, dislikedFlavor, f
                     <th><p onClick={() => onFlavorClick(21)}>{natures[21].name}</p>
                     </th>
                 </tr>
+
                 <tr className="table-rule">
                     <th className="sour"> Sour <br/> ↑Defense
                     </th>
@@ -91,6 +93,7 @@ function NaturesTable({natures, onFlavorClick, selectedNature, dislikedFlavor, f
                     <th><p onClick={() => onFlavorClick(22)}>{natures[22].name}</p>
                     </th>
                 </tr>
+
                 <tr className="table-rule">
                     <th className="dry"> Dry <br/>↑Sp.Atk
                     </th>
@@ -107,6 +110,7 @@ function NaturesTable({natures, onFlavorClick, selectedNature, dislikedFlavor, f
                     <th><p onClick={() => onFlavorClick(23)}>{natures[23].name}</p>
                     </th>
                 </tr>
+
                 <tr className="table-rule">
                     <th className="bitter"> Bitter< br/> ↑Sp.Def
                     </th>
@@ -123,6 +127,7 @@ function NaturesTable({natures, onFlavorClick, selectedNature, dislikedFlavor, f
                     <th><p onClick={() => onFlavorClick(24)}>{natures[24].name}</p>
                     </th>
                 </tr>
+
                 <tr className="table-rule">
                     <th className="sweet">Sweet <br/> ↑Speed
                     </th>

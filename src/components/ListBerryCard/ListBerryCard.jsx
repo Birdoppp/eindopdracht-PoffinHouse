@@ -1,7 +1,7 @@
 import './ListBerryCard.css'
 import React from "react";
 
-const ListBerryCard = ({name, id, url, onSelect}) => {
+const ListBerryCard = ({name, id, onSelect}) => {
     // Function to handle button click and pass the berry name to the parent component
     const handleClick = () => {
         console.log(`${name} berry selected!`)
@@ -9,10 +9,9 @@ const ListBerryCard = ({name, id, url, onSelect}) => {
     };
 
     return (
-        // will get reversed to place the scrollbar on the left
+        //ul will get reversed order to place the scrollbar on the left
         <ul className="single-berry" onClick={handleClick}>
             <li className="list-berry-name">
-                {/*img from items sprites*/}
                 <button className="list-berry-name-button">{name} berry</button>
             </li>
             <li>

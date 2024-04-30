@@ -1,18 +1,19 @@
-.nature-table {
+.purple-table {
     text-align: center;
-    width: 30em;
+    width: fit-content;
+    max-width: 30em;
     margin: auto;
     border-radius: 10px;
     border: 3px solid #bbbbe8;
     background: #a0a0c4;
-    color: #b892e0;
+    color: #ac74e0;
 }
 
 .table-rule {
     background: #d1d1ff
 }
 
-#nature-table-text {
+.nature-table-text {
     text-align:revert;
     background: #bbbbe8;
     color: snow;
@@ -24,9 +25,12 @@
     min-width: 132px ;
 }
 .selected-nature{
-    /*color: purple;*/
-
+    color: #934AD7;
 }
+.flavor-text{
+    color: #c18cf3;
+}
+
 
 .preferences-tab-text {
     display: flex;
@@ -40,13 +44,13 @@
 }
 
 
-#disliked-th {
+.disliked-th {
     background: #ddf;
     color: #768DE5;
     padding: 1em;
 }
 
-#favorite-th {
+.favorite-th {
     background: #ddf;
     color: #fc6673;
     padding: 1em;
@@ -82,12 +86,16 @@
 }
 
 
-.nature-table p:active {
+.purple-table p:active {
     animation: glow 1s ease-in-out infinite alternate;
 }
 
-.nature-table p:hover {
+.purple-table p:hover {
      cursor: pointer;
+}
+
+.preferences-tab-text p:active {
+    animation: none;
 }
 
 @keyframes glow {

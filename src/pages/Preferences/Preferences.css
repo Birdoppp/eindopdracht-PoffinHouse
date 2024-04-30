@@ -1,13 +1,59 @@
 .preference-page-wrapper{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    width: 60%;
+    min-width: 45vw;
+}
+
+.preference-page-wrapper h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preference-page-wrapper section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0.7em;
+    }
+.preference-page-wrapper article {
+    margin: 0.5em 0.5em 0.2em 0.5em;
+}
+
+.milotic-sprite,
+.gible-img{
+    height: 4em;
 }
 
 .main-flav-tbl{
     border-radius: 12px;
 }
 
-.empoleon-dex.dex-display{
-    width: 20px;
+.natures-table-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: mediumpurple;
 }
+.purple-link{
+    color: mediumpurple;
+}
+
+.empoleon-wrapper{
+    padding: 0 2em;
+}
+.feebas-evolution{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feebas-evolution img{
+    border-radius: 12px;
+    height: 11.5em;
+    width: 20em;
+    margin: 3px;
+}
+

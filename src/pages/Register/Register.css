@@ -49,11 +49,14 @@
     padding: 4px 2px 2px 2px;
 }
 
-.form-button {
+/*also for Login*/
+.login-btn,
+.register-btn {
     background: linear-gradient(to bottom right, #b15c54, #fd9f9f);
-    border: 0;
+    border: none;
     border-radius: 12px;
     color: floralwhite;
+    cursor: pointer;
 
     display: inline-block;
     font-family: "Segoe UI", sans-serif;

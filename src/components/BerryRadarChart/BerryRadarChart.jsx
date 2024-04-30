@@ -25,12 +25,6 @@ function BerryRadarChart({selectedBerry}) {
         void fetchBerryFlavors();
     }, [selectedBerry]);
 
-    // Sets flavors to trigger empty radar chart
-    //
-    // useEffect(() => {
-    //     setFlavors([0,0,0,0,0])
-    // }, []);
-
 
     useEffect(() => {
         const createRadarChart = () => {
@@ -73,18 +67,6 @@ function BerryRadarChart({selectedBerry}) {
                             colors: ['#F44336', '#E91E63', '#9C27B0']
                         }
                     },
-                    // plugins: {
-                    //     tooltip: {
-                    //         backgroundColor: 'rgba(0, 0, 0, 0.7)',
-                    //         titleColor: '#ffffff',
-                    //         bodyColor: '#ffffff',
-                    //         callbacks: {
-                    //             labelTextColor: function(context) {
-                    //                 return 'rgb(139, 0, 0)';
-                    //             }
-                    //         }
-                    //     }
-                    // }
                 },
             });
 
