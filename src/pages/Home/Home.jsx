@@ -29,12 +29,13 @@ export default function Home() {
                     <img className="welcome-img" src={welcome} alt="welcome"/>
                 </div>
                 <section>
+                    <h1>To Poffin House!</h1>
                     <ImageSwapper/>
                     <h1 className="poffinhouse-text">Here we learn how to best feed our
                         Pokémon!</h1>
                     <h3>Located in&nbsp;<a className="pink-link" target="_blank"
                                            href="https://bulbapedia.bulbagarden.net/wiki/Hearthome_City"> Hearthome
-                        City </a>, The hotspot for everything Berry!
+                        City </a>, it is The hotspot for everything Berry!
                         <img className="hearthome"
                              src={hearthome} alt="hearthome-map"/></h3>
                     <article>
@@ -107,7 +108,7 @@ export default function Home() {
                 <article>
                     Poffin making is available to do with multiple friends online, and would result into a stronger
                     Poffin.
-                    If you take in account the <Link to="/preferences#preferences"
+                    If you take in account the <Link to="/preferences"
                                                      className="pink-link">Nature </Link> (personality)
                     of your Pokémon, it would give your Pokémon the best shot to become a Super Contest Champion!
                 </article>

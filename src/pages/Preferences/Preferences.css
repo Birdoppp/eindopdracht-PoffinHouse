@@ -5,12 +5,27 @@
     width: 60%;
     min-width: 45vw;
 }
+
+.preference-page-wrapper h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .preference-page-wrapper section{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 0.5em;
+        margin: 0.7em;
     }
+.preference-page-wrapper article {
+    margin: 0.5em 0.5em 0.2em 0.5em;
+}
+
+.milotic-sprite,
+.gible-img{
+    height: 4em;
+}
 
 .main-flav-tbl{
     border-radius: 12px;

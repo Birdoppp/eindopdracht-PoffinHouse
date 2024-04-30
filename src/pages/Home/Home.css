@@ -10,14 +10,14 @@
 .welcome-container {
     display: flex;
     justify-content: center;
-    height: 7.5em;
+    height: 7em;
 }
 
 .home-wrapper section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0.7em;
+    margin: 0.8em;
 }
 .home-wrapper article {
     margin: 0.2em 0.5em;
@@ -59,7 +59,8 @@
 .berry-to-poffin img {
     height: 10em;
     border-radius: 12px;
-    margin: 0 1em 1em 1em;
+    margin-bottom: 0.7em;
+    /*margin: 0 1em 1em 1em;*/
 }
 .peacha-basket,
 .poffin-platter{
@@ -88,5 +89,5 @@
 .effects-container{
     display: flex;
     align-items: center;
-    height: 9.5em;
+    /*height: 10em;*/
 }
