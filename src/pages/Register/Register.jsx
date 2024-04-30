@@ -113,7 +113,7 @@ function Register() {
                 </form>
             )}
 
-            <p>
+            <p className="register-text">
                 Already a member? You can log in <Link className="pink-link" to="/login">Here</Link>.
             </p>
         </div>
