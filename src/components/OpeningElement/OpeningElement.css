@@ -9,6 +9,10 @@
     transition: background-color 0.3s ease;
 }
 
+.opening-container.closed:hover{
+    background-color:pink;
+}
+
 .opening-container.closed {
     background-color:  #fd9f9f;
 }

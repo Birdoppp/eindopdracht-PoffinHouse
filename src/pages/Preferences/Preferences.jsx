@@ -5,7 +5,8 @@ import NaturesTable from "../../components/NaturesTable/NaturesTable.jsx";
 import OpeningElement from "../../components/OpeningElement/OpeningElement.jsx";
 import gible from "./../../assets/pokemon-assets/gible-eating.gif"
 import miloticSprite from "./../../assets/pokemon-assets/milotic-sprite.png"
-import feebas from "../../assets/pokemon-assets/feebas-evo.png"
+import feebasSprite from "./../../assets/pokemon-assets/feebas-sprite.png"
+import feebasEvo from "../../assets/pokemon-assets/feebas-evo.png"
 import maxBeauty from "../../assets/pokemon-assets/milotic.png"
 
 
@@ -67,7 +68,9 @@ function Preferences() {
 
 
             <section>
-                <h3>Contest Condition dependent Evolution
+                <h3>
+                    <img className="feebas-sprite" src={feebasSprite} alt="Feebas sprite"/>
+                    Contest Condition dependent Evolution
                     <img className="milotic-sprite" src={miloticSprite} alt="Milotic sprite"/>
                 </h3>
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
@@ -97,7 +100,7 @@ function Preferences() {
                 </article>
                 <div className="feebas-evolution" id="feebas-evolution">
                     <img className="maxBeauty" src={maxBeauty} alt="Milotic w/ Max Beauty"/>
-                    <img className="feebas" src={feebas} alt="Feebas Evolution"/>
+                    <img className="feebas" src={feebasEvo} alt="Feebas Evolution"/>
                 </div>
                 <article>
                     In later games (after Gen IV), a new way of Evolution is introduced. The second method requires you
@@ -106,7 +109,6 @@ function Preferences() {
                     Scale</a>, evolving him into Milotic.
                 </article>
             </section>
-
         </div>
     );
 }

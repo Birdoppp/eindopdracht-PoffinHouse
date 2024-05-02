@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+   margin-right: 1em;
 }
 
 .preference-page-wrapper section{
@@ -22,11 +23,6 @@
     margin: 0.5em 0.5em 0.2em 0.5em;
 }
 
-.milotic-sprite,
-.gible-img{
-    height: 4em;
-}
-
 .main-flav-tbl{
     border-radius: 12px;
 }
@@ -37,13 +33,20 @@
     align-items: center;
     color: mediumpurple;
 }
+
 .purple-link{
     color: mediumpurple;
 }
 
-.empoleon-wrapper{
-    padding: 0 2em;
+.milotic-sprite,
+.gible-img{
+    height: 4em;
 }
+
+.milotic-sprite{
+    margin-left: 1em;
+}
+
 .feebas-evolution{
     display: flex;
     justify-content: center;
