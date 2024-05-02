@@ -1,13 +1,14 @@
 import './Member.css';
 import React, {useContext, useEffect, useState} from 'react';
+import axios from 'axios';
 import {Link} from 'react-router-dom';
 import {AuthContext} from './../../context/AuthContext';
-import axios from 'axios';
 import NewPassword from "../../components/NewPassword/NewPassword.jsx";
-import snackBerries from './../../assets/assorted-collection/three-poke-berries.png'
 import {PokedexImageSlider} from "../../components/PokedexImageSlider/PokedexImageSlider.jsx";
+import snackBerries from './../../assets/assorted-collection/three-poke-berries.png'
 import pixelball from './../../assets/assorted-collection/poke-ball-pixel-nbg.png'
 import {bulbaImages, mudkipImages, pikachuImages} from "../../constants/dexConstants.jsx";
+import charmander from './../../assets/pokemon-assets/charmander.png'
 
 function Member() {
     const [profileData, setProfileData] = useState({});
@@ -70,7 +71,7 @@ function Member() {
                     </header>
                     {selectedDex === "" &&
                         <section>
-                            <h2 className="member-text">To thank you for becoming a member we would like to offer you a starter Pokémon!
+                            <h2 className="chose-text">To thank you for becoming a member we would like to offer you a starter Pokémon!
                             </h2>
                             <h3>
                                 Please select one below!
@@ -90,7 +91,7 @@ function Member() {
                         </li>
                     </ul>
                     {selectedDex !== "" &&
-                        <h3 className="member-text">
+                        <h3 className="chose-text">
                             You chose {selectedDex}!
                         </h3>
                     }
@@ -113,6 +114,7 @@ function Member() {
 
                 <div className="member-content">
                     <section className="member-info">
+                        <img className="charmander" src={charmander} alt="Charmander"/>
                         <h2>User data</h2>
                         <p><strong>Username:</strong> {user.username}</p>
                         <p><strong>Email:</strong> {user.email}</p>

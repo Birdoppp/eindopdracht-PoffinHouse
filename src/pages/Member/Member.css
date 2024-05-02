@@ -23,7 +23,7 @@
     height: 4em;
 }
 
-.member-text {
+.chose-text {
     font-family: pixelate, sans-serif;
     width: 22em;
     margin-right: 0.2em;
@@ -57,6 +57,9 @@
 }
 
 /*------------------------------------------*/
+.charmander{
+    height: 5em;
+}
 .member-content {
     display: flex;
     flex-direction: column;
