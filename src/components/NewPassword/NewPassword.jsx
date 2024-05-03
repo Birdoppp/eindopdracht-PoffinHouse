@@ -1,3 +1,4 @@
+import './NewPassword.css'
 import React, { useContext, useState } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../../context/AuthContext.jsx';
