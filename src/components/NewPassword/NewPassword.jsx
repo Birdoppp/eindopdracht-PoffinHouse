@@ -1,4 +1,3 @@
-import './NewPassword.css';
 import React, { useContext, useState } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../../context/AuthContext.jsx';
@@ -11,17 +10,16 @@ export function NewPassword() {
     const { user } = useContext(AuthContext);
 
     const handleChangePassword = async (e) => {
-        // prevents page reload
         e.preventDefault();
 
-        if (newPassword.length < 8) {
-            setErrorMessage('Password should have a minimum of 8 characters.');
+        if (newPassword.length < 8 || newPassword.length > 25) {
+            setErrorMessage('The password has to be between 8 and 25 characters.');
             setSuccessMessage('');
             return;
         }
 
         if (newPassword !== confirmPassword) {
-            setErrorMessage('New password and confirm password do not match.');
+            setErrorMessage('The new password and confirm password do not match.');
             setSuccessMessage('');
             return;
         }
@@ -58,12 +56,12 @@ export function NewPassword() {
                 <div>
                     <label htmlFor="newPassword">New Password:</label>
                     <input className="password" type="password" id="newPassword" value={newPassword}
-                           onChange={(e) => setNewPassword(e.target.value)} />
+                           onChange={(e) => setNewPassword(e.target.value)} maxLength={25} />
                 </div>
                 <div>
                     <label htmlFor="confirmPassword">Confirm Password:</label>
                     <input className="password" type="password" id="confirmPassword" value={confirmPassword}
-                           onChange={(e) => setConfirmPassword(e.target.value)} />
+                           onChange={(e) => setConfirmPassword(e.target.value)} maxLength={25} />
                 </div>
                 <button className="password-btn" type='submit'>Change Password</button>
             </form>
