@@ -28,13 +28,13 @@ function App() {
                 <Header/>
             </header>
 
-            <div className="content-wrapper">
-                <div className="berry-container">
+            <body className="content-wrapper">
+                <aside className="berry-container">
                     <BerryBar isOpen={isOpen}/>
                     <BerryToggle handleClick={handleClickIsOpen} isOpen={isOpen}/>
-                </div>
+                </aside>
 
-                <section className="page">
+                <main className="page">
                     <Routes>
                         <Route index element={<Home/>}/>;
                         <Route path="/preferences" element={<Preferences/>}/>;
@@ -45,8 +45,8 @@ function App() {
                         <Route path="/my-team" element={<TeamDisplay/>}/>;
                         <Route path="/*" element={<NotFound/>}/>;
                     </Routes>
-                </section>
-            </div>
+                </main>
+            </body>
         </>
     )
 }

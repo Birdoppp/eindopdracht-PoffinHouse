@@ -1,7 +1,7 @@
-import './ListBerryCard.css'
+import './BerryListCard.css'
 import React from "react";
 
-const ListBerryCard = ({name, id, onSelect}) => {
+const BerryListCard = ({name, id, onSelect}) => {
     // Function to handle button click and pass the berry name to the parent component
     const handleClick = () => {
         console.log(`${name} berry selected!`)
@@ -28,4 +28,4 @@ const ListBerryCard = ({name, id, onSelect}) => {
     );
 };
 
-export default ListBerryCard;
+export default BerryListCard;
