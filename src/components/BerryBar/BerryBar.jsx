@@ -1,7 +1,7 @@
 import './BerryBar.css';
 import React, {useEffect, useState} from "react";
 import axios from "axios";
-import ListBerryCard from "../ListBerryCard/ListBerryCard.jsx";
+import BerryListCard from "../BerryListCard/BerryListCard.jsx";
 import BerryDexCard from "../BerryDexCard/BerryDexCard.jsx";
 import {berryID} from "../../constants/constants.jsx";
 import SearchBar from "../SearchBar/SearchBar.jsx";
@@ -131,7 +131,7 @@ export default function BerryBar({isOpen}) {
                             <div className="search-message"> Showing results for <strong> {searchQuery} </strong>
                             </div>}
                         {sortedBerries().map((sorted, index) => (
-                            <ListBerryCard
+                            <BerryListCard
                                 key={index}
                                 name={filteredBerries ? sorted.berry.name : sorted.name}
                                 id={filteredBerries ? berryID.find(item => item.name === sorted.berry.name).id : berryID.find(item => item.name === sorted.name).id}

@@ -1,41 +1,46 @@
 import './ImageSwapper.css';
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import poffinHouse from './../../assets/assorted-collection/poffinhouse-new-gen.jpg';
 import poffinHouseNew from './../../assets/assorted-collection/Poffin-house.png';
 
 const ImageSwapper = () => {
     const [isFirstImage, setIsFirstImage] = useState(false);
-    const [intervalId, setIntervalId] = useState(null);
+    const [intervalCount, setIntervalCount] = useState(null);
 
     useEffect(() => {
-        const id = setInterval(() => {
+        // Interval that switches the image every 5 seconds
+        const count = setInterval(() => {
             setIsFirstImage((prev) => !prev);
         }, 5000);
 
-        setIntervalId(id);
+        // Save the interval in the state
+        setIntervalCount(count);
 
-        return () => clearInterval(id);
+        return () => clearInterval(count);
     }, []);
 
+    // Switch between images onClick and reset the interval
     const toggleImage = () => {
+        // Switch between the current image
         setIsFirstImage((prev) => !prev);
-        // Clear existing interval and start a new one to show the full 5 seconds
-        clearInterval(intervalId);
-        const newIntervalId = setInterval(() => {
+
+        // Stop the existing interval and start a new one to show the full 5 seconds
+        clearInterval(intervalCount);
+        const newIntervalCount = setInterval(() => {
             setIsFirstImage((prev) => !prev);
         }, 5000);
-        setIntervalId(newIntervalId);
+        setIntervalCount(newIntervalCount);
     };
 
     return (
         <div className="image-swapper">
             <p className="image-swapper-label">Poffin house in-game</p>
             {isFirstImage ? (
-                <img src={poffinHouse} alt="Poffin House,Pokémon Diamond and Pearl, Gen 4" />
+                <img src={poffinHouse} alt="Poffin House, Pokémon Diamond and Pearl, Gen 4"/>
             ) : (
-                <img src={poffinHouseNew} alt="Poffin House, Brilliant Diamond and Shining Pearl, Gen 8" />
+                <img src={poffinHouseNew} alt="Poffin House, Brilliant Diamond and Shining Pearl, Gen 8"/>
             )}
-            <button className="image-swapper-btn" onClick={toggleImage}>Travel trough Time!</button>
+            <button className="image-swapper-btn" onClick={toggleImage}>Travel through Time!</button>
         </div>
     );
 };
