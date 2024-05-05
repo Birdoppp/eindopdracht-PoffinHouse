@@ -70,3 +70,9 @@ Or
    URL: [http://localhost:5173](http://localhost:5173)
 
 ### Now you are ready to use the application! Enjoy!
+
+ **Optional commands:**
+   ```
+   npm run lint
+   ```
+   This command will analyze the code and provide feedback on any issues found according to the project's linting rules.
